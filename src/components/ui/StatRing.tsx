@@ -9,10 +9,10 @@ export default function StatRing({
   return (
     <div className="flex flex-col items-center">
       <div
-        className="grid size-44 place-items-center rounded-full p-2"
+        className="grid size-44 place-items-center rounded-full p-[5px] shadow-[0_12px_40px_rgba(126,34,206,0.18)]"
         style={{
           background:
-            "conic-gradient(from 220deg, #581c87 0% 40%, #7e22ce 40% 75%, #d8b4fe 75% 100%)",
+            "conic-gradient(from 200deg, #7e22ce, #d946ef 55%, #ede9fe 55% 100%)",
         }}
       >
         <div className="grid size-full place-items-center rounded-full bg-white">

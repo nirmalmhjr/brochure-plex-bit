@@ -1,17 +1,13 @@
 export interface PageHeaderProps {
-  /** Plain (dark) part of the heading, e.g. "Our". */
   title: string;
-  /** Brand-gradient part of the heading, e.g. "Services". */
   highlight?: string;
-  /** Small grey text above the heading. */
   kicker?: string;
-  /** Small grey text below the heading. */
   subtitle?: string;
   align?: "left" | "center";
 }
 
 /**
- * Tricore-style section heading: accent bar + two-tone bold title.
+ * Modern section heading: kicker pill + two-tone bold title + gradient rule.
  */
 export default function PageHeader({
   title,
@@ -22,14 +18,13 @@ export default function PageHeader({
 }: PageHeaderProps) {
   const centered = align === "center";
   return (
-    <header className={`px-14 pt-10 ${centered ? "text-center" : ""}`}>
-      <div className={`mb-3 h-1.5 w-16 rounded-full bg-brand ${centered ? "mx-auto" : ""}`} />
+    <header className={`px-14 pt-11 ${centered ? "text-center" : ""}`}>
       {kicker && (
-        <p className="text-[13px] font-medium uppercase tracking-widest text-zinc-400">
+        <span className="mb-3 inline-block rounded-full bg-brand-soft px-4 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-dark">
           {kicker}
-        </p>
+        </span>
       )}
-      <h2 className="text-[38px] font-bold leading-[1.15] tracking-tight">
+      <h2 className="text-[40px] font-extrabold leading-[1.12] tracking-tight">
         {title}{" "}
         {highlight && (
           <span className="bg-gradient-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
@@ -37,10 +32,9 @@ export default function PageHeader({
           </span>
         )}
       </h2>
+      <div className={`mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-brand to-fuchsia-400 ${centered ? "mx-auto" : ""}`} />
       {subtitle && (
-        <p
-          className={`mt-2 max-w-4xl text-[13px] leading-relaxed text-zinc-500 ${centered ? "mx-auto" : ""}`}
-        >
+        <p className={`mt-3 max-w-4xl text-[13px] leading-relaxed text-zinc-500 ${centered ? "mx-auto" : ""}`}>
           {subtitle}
         </p>
       )}

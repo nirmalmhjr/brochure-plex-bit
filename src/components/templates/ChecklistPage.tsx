@@ -37,9 +37,9 @@ export default function ChecklistPage({
         {items.map((item) => (
           <div
             key={item.title}
-            className="flex items-start gap-4 rounded-xl bg-gradient-to-r from-brand-soft/60 to-transparent p-4"
+            className="flex items-start gap-4 rounded-2xl border border-zinc-100 bg-white p-4 shadow-[0_8px_30px_rgba(59,7,100,0.05)]"
           >
-            <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-md bg-green-600 text-[13px] font-bold text-white">
+            <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-brand to-fuchsia-500 text-[13px] font-bold text-white shadow-md shadow-brand/30">
               ✓
             </span>
             <div>

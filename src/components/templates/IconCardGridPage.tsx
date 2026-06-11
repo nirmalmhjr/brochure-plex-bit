@@ -16,6 +16,8 @@ export interface IconCardGridPageProps extends Pick<PageProps, "pageNumber"> {
   subtitle?: string;
   items: IconCard[];
   columns?: 2 | 3 | 4;
+  /** "row" = icon beside title (default). "tile" = centered showcase tile. */
+  variant?: "row" | "tile";
 }
 
 const colClass = {
@@ -36,8 +38,45 @@ export default function IconCardGridPage({
   subtitle,
   items,
   columns = 3,
+  variant = "row",
 }: IconCardGridPageProps) {
   const dense = items.length > 6;
+
+  if (variant === "tile") {
+    return (
+      <Page pageNumber={pageNumber}>
+        <PageHeader title={title} highlight={highlight} kicker={kicker} subtitle={subtitle} />
+        <div className={`grid ${colClass[columns]} gap-4 px-14 pt-7`}>
+          {items.map((item) => (
+            <div
+              key={item.title}
+              className="group relative overflow-hidden rounded-2xl border border-zinc-100 bg-white p-4 text-center shadow-[0_8px_30px_rgba(59,7,100,0.06)]"
+            >
+              {/* faint corner glow */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-8 -top-8 size-24 rounded-full"
+                style={{ background: "radial-gradient(circle, rgba(217,70,239,.12), transparent 70%)" }}
+              />
+              <span className="mx-auto grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-brand to-fuchsia-500 text-xl text-white shadow-md shadow-brand/30">
+                {item.icon}
+              </span>
+              <h3 className="mt-2.5 text-[16px] font-bold text-brand-dark">{item.title}</h3>
+              {item.meta && (
+                <span className="mt-2 inline-block rounded-full bg-brand-soft px-3.5 py-1 text-[11px] font-semibold text-brand-dark">
+                  {item.meta}
+                </span>
+              )}
+              {item.desc && (
+                <p className="mt-2 text-[12px] leading-relaxed text-zinc-500">{item.desc}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </Page>
+    );
+  }
+
   return (
     <Page pageNumber={pageNumber}>
       <PageHeader title={title} highlight={highlight} kicker={kicker} subtitle={subtitle} />
@@ -46,13 +85,13 @@ export default function IconCardGridPage({
         {items.map((item) => (
           <div
             key={item.title}
-            className={`rounded-2xl border border-zinc-200 bg-gradient-to-br from-white to-brand-soft/40 shadow-sm ${
+            className={`rounded-2xl border border-zinc-100 bg-white shadow-[0_8px_30px_rgba(59,7,100,0.06)] ${
               dense ? "p-4" : "p-6"
             }`}
           >
             <div className="flex items-center gap-3">
               <span
-                className={`grid shrink-0 place-items-center rounded-full bg-brand text-white ${
+                className={`grid shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand to-fuchsia-500 text-white shadow-md shadow-brand/30 ${
                   dense ? "size-9 text-base" : "size-12 text-xl"
                 }`}
               >

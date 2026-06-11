@@ -108,6 +108,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     subtitle="We always focus on getting industry expertise along with tech, as we believe technology is just a tool to support the innovative business."
     items={industries}
     columns={3}
+    variant="tile"
   />,
 
   <LogoGridPage

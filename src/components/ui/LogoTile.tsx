@@ -17,7 +17,7 @@ export default function LogoTile({
 
   return (
     <div
-      className={`flex items-center justify-center rounded-xl border border-zinc-200 bg-white px-4 py-3 shadow-sm ${className}`}
+      className={`flex items-center justify-center rounded-xl border border-zinc-100 bg-white px-4 py-3 shadow-[0_6px_20px_rgba(59,7,100,0.06)] ${className}`}
     >
       {src && !failed ? (
         <img
