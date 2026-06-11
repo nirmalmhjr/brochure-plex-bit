@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Plex Bit brand palette (purple, from logo) */
+  --color-brand: #7e22ce;
+  --color-brand-dark: #581c87;
+  --color-brand-deep: #3b0764;
+  --color-brand-soft: #f3e8ff;
+  --color-ink: #111118;
+
+  --font-sans: "Poppins", system-ui, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------------------------------------------------------------- */
+/* Brochure page geometry — every .page is one PDF page (16:9-ish   */
+/* landscape, same ratio as the reference brochures).               */
+/* ---------------------------------------------------------------- */
+
+:root {
+  --page-w: 1280px;
+  --page-h: 720px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #d7d9de;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: var(--page-w);
+  height: var(--page-h);
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Screen preview: stacked, centered pages with shadows */
+@media screen {
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    padding: 28px 0;
+  }
+  .page {
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.22);
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* Print / Save-as-PDF                                              */
+/* ---------------------------------------------------------------- */
+
+@page {
+  size: 1280px 720px; /* exact page size = exact PDF page, no margins */
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: #fff;
+  }
+  #root {
+    display: block;
+  }
+  .page {
+    break-after: page;
+    page-break-after: always;
+    box-shadow: none;
+  }
+  .page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+  .no-print {
+    display: none !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
