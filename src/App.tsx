@@ -7,6 +7,7 @@ import PeopleGridPage from "./components/templates/PeopleGridPage";
 import TimelinePage from "./components/templates/TimelinePage";
 import LogoGridPage from "./components/templates/LogoGridPage";
 import CertificationsPage from "./components/templates/CertificationsPage";
+import RecognitionPage from "./components/templates/RecognitionPage";
 import CategoryLogoPage from "./components/templates/CategoryLogoPage";
 import ChecklistPage from "./components/templates/ChecklistPage";
 import StatsPage from "./components/templates/StatsPage";
@@ -157,7 +158,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     columns={3}
   />,
 
-  <LogoGridPage
+  <RecognitionPage
     key="recognition"
     title="Our"
     highlight="Recognition"

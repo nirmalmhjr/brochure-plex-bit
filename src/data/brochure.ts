@@ -279,9 +279,9 @@ export const recognition = {
   subtitle:
     "Over the years of our activity, we have earned several awards and honors for our custom web development services.",
   logos: [
-    { name: "⭐ Top Rated — Upwork" },
-    { name: "✓ Trusted on TechBehemoths" },
-    { name: "★★★★★ 5.0 Rating — Clutch" },
+    { name: "Top Rated — Upwork",       src: "/images/recognition/upwork.png" },
+    { name: "Trusted on TechBehemoths", src: "/images/recognition/behemoths.png" },
+    { name: "5.0 Rating — Clutch",      src: "/images/recognition/clutch.png" },
   ],
 };
 
