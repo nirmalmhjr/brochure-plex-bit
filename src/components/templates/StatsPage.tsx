@@ -1,5 +1,4 @@
 import Page, { type PageProps } from "../layout/Page";
-import PageHeader from "../layout/PageHeader";
 import StatRing from "../ui/StatRing";
 
 export interface Stat {
@@ -15,9 +14,6 @@ export interface StatsPageProps extends Pick<PageProps, "pageNumber"> {
   note?: string;
 }
 
-/**
- * Big numbers page — Tricore-style stat rings + an optional note card.
- */
 export default function StatsPage({
   pageNumber,
   title,
@@ -28,19 +24,42 @@ export default function StatsPage({
 }: StatsPageProps) {
   return (
     <Page pageNumber={pageNumber}>
-      <PageHeader title={title} highlight={highlight} subtitle={subtitle} />
+      <div className="flex h-full">
+        {/* Left panel — brand gradient */}
+        <div className="relative flex w-[42%] flex-col justify-center overflow-hidden bg-gradient-to-br from-brand-deep via-brand to-fuchsia-600 px-12 py-14">
+          {/* decorative circles */}
+          <div aria-hidden className="absolute -bottom-24 -left-24 size-72 rounded-full bg-white/5" />
+          <div aria-hidden className="absolute -right-16 -top-16 size-56 rounded-full bg-white/5" />
+          <div aria-hidden className="absolute bottom-28 right-10 size-28 rounded-full bg-white/5" />
 
-      <div className="flex items-center justify-center gap-14 px-14 pt-14">
-        {stats.map((stat) => (
-          <StatRing key={stat.label} value={stat.value} label={stat.label} />
-        ))}
-      </div>
+          <h2 className="relative text-[42px] font-extrabold leading-[1.1] tracking-tight text-white">
+            {title}{" "}
+            {highlight && <span className="text-fuchsia-200">{highlight}</span>}
+          </h2>
+          <div className="mt-3 h-1 w-16 rounded-full bg-white/40" />
 
-      {note && (
-        <div className="mx-auto mt-12 max-w-3xl rounded-2xl bg-brand px-10 py-5 text-center">
-          <p className="text-[14px] font-medium leading-relaxed text-white">{note}</p>
+          {subtitle && (
+            <p className="mt-5 max-w-xs text-[12.5px] leading-relaxed text-white/80">
+              {subtitle}
+            </p>
+          )}
+
+          {note && (
+            <div className="mt-7 rounded-xl border border-white/20 bg-white/10 px-5 py-4">
+              <p className="text-[12px] leading-relaxed text-white/90">{note}</p>
+            </div>
+          )}
         </div>
-      )}
+
+        {/* Right panel — 2×2 stat ring grid */}
+        <div className="flex flex-1 items-center justify-center">
+          <div className="grid grid-cols-2 gap-10">
+            {stats.map((stat) => (
+              <StatRing key={stat.label} value={stat.value} label={stat.label} sizePx={210} />
+            ))}
+          </div>
+        </div>
+      </div>
     </Page>
   );
 }
