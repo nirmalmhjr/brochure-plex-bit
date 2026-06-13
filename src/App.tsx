@@ -9,8 +9,8 @@ import LogoGridPage from "./components/templates/LogoGridPage";
 import CertificationsPage from "./components/templates/CertificationsPage";
 import RecognitionPage from "./components/templates/RecognitionPage";
 import CategoryLogoPage from "./components/templates/CategoryLogoPage";
-import ChecklistPage from "./components/templates/ChecklistPage";
 import HourlyModelPage from "./components/templates/HourlyModelPage";
+import DedicatedModelPage from "./components/templates/DedicatedModelPage";
 import StatsPage from "./components/templates/StatsPage";
 import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
 import CaseStudyPage from "./components/templates/CaseStudyPage";
@@ -185,7 +185,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     items={hourlyModel.items}
   />,
 
-  <ChecklistPage
+  <DedicatedModelPage
     key="dedicated-model"
     title={dedicatedModel.title}
     highlight={dedicatedModel.highlight}
