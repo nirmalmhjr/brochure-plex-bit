@@ -17,13 +17,13 @@ export default function LogoTile({
 
   return (
     <div
-      className={`flex items-center justify-center rounded-xl border border-zinc-100 bg-white px-4 py-3 shadow-[0_6px_20px_rgba(59,7,100,0.06)] ${className}`}
+      className={`flex items-center justify-center rounded-xl border border-zinc-100 bg-white px-4 py-2 shadow-[0_6px_20px_rgba(59,7,100,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(59,7,100,0.12)] ${className}`}
     >
       {src && !failed ? (
         <img
           src={src}
           alt={name}
-          className="max-h-12 w-auto object-contain"
+          className="max-h-full w-auto max-w-full object-contain"
           onError={() => setFailed(true)}
         />
       ) : (
