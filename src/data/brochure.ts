@@ -265,12 +265,13 @@ export const certifications = {
   subtitle:
     "Our team is equipped with industry-recognized certifications, ensuring top-quality services and cutting-edge expertise. From advanced technical skills to specialized domains, our certifications reflect our commitment to excellence and continuous growth.",
   logos: [
-    { name: "Google Cloud Certified Architect" },
-    { name: "Professional Scrum Master I" },
-    { name: "AWS Solutions Architect" },
-    { name: "ISTQB Certified" },
-    { name: "Magento Certified Developer" },
-    { name: "Enterprise Blockchain Professional" },
+     { name: "aws-certified",      src: "/images/certifications/aws-certified.png" },
+     { name: "blockchains",      src: "/images/certifications/blockchains.png" },
+     { name: "google-cloud-certifications",      src: "/images/certifications/google-cloud-certified.png" },
+     { name: "istqb",      src: "/images/certifications/istqb.png" },
+     { name: "magneto",      src: "/images/certifications/magneto.png" },
+     { name: "professional-scrum-master",      src: "/images/certifications/professional-scrum-master.png" },
+     
   ],
 };
 

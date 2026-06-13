@@ -6,6 +6,7 @@ import IconCardGridPage from "./components/templates/IconCardGridPage";
 import PeopleGridPage from "./components/templates/PeopleGridPage";
 import TimelinePage from "./components/templates/TimelinePage";
 import LogoGridPage from "./components/templates/LogoGridPage";
+import CertificationsPage from "./components/templates/CertificationsPage";
 import CategoryLogoPage from "./components/templates/CategoryLogoPage";
 import ChecklistPage from "./components/templates/ChecklistPage";
 import StatsPage from "./components/templates/StatsPage";
@@ -147,12 +148,12 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     layout="columns"
   />,
 
-  <LogoGridPage
+  <CertificationsPage
     key="certifications"
     title="Our Team"
     highlight="Certifications"
     subtitle={certifications.subtitle}
-    logos={certifications.logos}
+    certifications={certifications.logos}
     columns={3}
   />,
 
