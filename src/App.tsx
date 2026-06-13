@@ -58,21 +58,21 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     columns={2}
   />,
 
-  <PeopleGridPage
-    key="core-team"
-    title="Our Core"
-    highlight="Team Members"
-    subtitle={coreTeam.subtitle}
-    people={coreTeam.people}
-  />,
+  // <PeopleGridPage
+  //   key="core-team"
+  //   title="Our Core"
+  //   highlight="Team Members"
+  //   subtitle={coreTeam.subtitle}
+  //   people={coreTeam.people}
+  // />,
 
-  <PeopleGridPage
-    key="representatives"
-    title="Our International"
-    highlight="Representatives"
-    subtitle={representatives.subtitle}
-    people={representatives.people}
-  />,
+  // <PeopleGridPage
+  //   key="representatives"
+  //   title="Our International"
+  //   highlight="Representatives"
+  //   subtitle={representatives.subtitle}
+  //   people={representatives.people}
+  // />,
 
   <IntroPage key="solutions" {...solutions} />,
 
@@ -165,14 +165,14 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     columns={3}
   />,
 
-  <ChecklistPage
-    key="capabilities"
-    title={capabilities.title}
-    highlight={capabilities.highlight}
-    intro={capabilities.intro}
-    items={capabilities.items}
-    columns={1}
-  />,
+  // <ChecklistPage
+  //   key="capabilities"
+  //   title={capabilities.title}
+  //   highlight={capabilities.highlight}
+  //   intro={capabilities.intro}
+  //   items={capabilities.items}
+  //   columns={1}
+  // />,
 
   <ChecklistPage
     key="hourly-model"
