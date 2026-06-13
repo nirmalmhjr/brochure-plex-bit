@@ -10,6 +10,7 @@ import CertificationsPage from "./components/templates/CertificationsPage";
 import RecognitionPage from "./components/templates/RecognitionPage";
 import CategoryLogoPage from "./components/templates/CategoryLogoPage";
 import ChecklistPage from "./components/templates/ChecklistPage";
+import HourlyModelPage from "./components/templates/HourlyModelPage";
 import StatsPage from "./components/templates/StatsPage";
 import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
 import CaseStudyPage from "./components/templates/CaseStudyPage";
@@ -176,7 +177,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   //   columns={1}
   // />,
 
-  <ChecklistPage
+  <HourlyModelPage
     key="hourly-model"
     title={hourlyModel.title}
     highlight={hourlyModel.highlight}
