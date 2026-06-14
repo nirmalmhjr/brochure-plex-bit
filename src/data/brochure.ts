@@ -239,10 +239,49 @@ export const techStack = {
   subtitle:
     "We leverage the latest technologies and tools, including modern programming languages, frameworks, and platforms, to deliver innovative and efficient solutions.",
   categories: [
-    { label: "Front-End", items: ["Vue.js", "React", "SolidJS", "Svelte", "Angular"] },
-    { label: "Back-End", items: ["Node.js", "Python", "Flask", "Django", "Laravel", "Rails", "Go"] },
-    { label: "Blockchain", items: ["Bitcoin", "Solana", "Polkadot", "Ethereum", "Skale", "Polygon"] },
-    { label: "Desktop", items: ["C++", "Swift", "Go", "Python", "C#"] },
+    {
+      label: "Front-End",
+      items: [
+        { name: "Vue.js",   src: "/images/technology-stack/frontend/vuejs.png" },
+        { name: "React",    src: "/images/technology-stack/frontend/reactjs.png" },
+        { name: "SolidJS",  src: "/images/technology-stack/frontend/solidjs.png" },
+        { name: "Svelte",   src: "/images/technology-stack/frontend/svelte.png" },
+        { name: "Next.js",  src: "/images/technology-stack/frontend/nextjs.svg" },
+      ],
+    },
+    {
+      label: "Back-End",
+      items: [
+        { name: "Node.js",  src: "/images/technology-stack/backend/nodejs.png" },
+        { name: "Python",   src: "/images/technology-stack/backend/python.png" },
+        { name: "Flask",    src: "/images/technology-stack/backend/flask.png" },
+        { name: "Django",   src: "/images/technology-stack/backend/django.png" },
+        { name: "Laravel",  src: "/images/technology-stack/backend/laravel.png" },
+        { name: "Rails",    src: "/images/technology-stack/backend/rails.png" },
+        { name: "Go",       src: "/images/technology-stack/backend/go.png" },
+      ],
+    },
+    {
+      label: "Blockchain",
+      items: [
+        { name: "Bitcoin",  src: "/images/technology-stack/blockchain/bitcoin.svg" },
+        { name: "Solana",   src: "/images/technology-stack/blockchain/solana.png" },
+        { name: "Polkadot", src: "/images/technology-stack/blockchain/polkadot.png" },
+        { name: "Ethereum", src: "/images/technology-stack/blockchain/ethereum.png" },
+        { name: "Skale",    src: "/images/technology-stack/blockchain/skale.png" },
+        { name: "Polygon",  src: "/images/technology-stack/blockchain/polygon.png" },
+      ],
+    },
+    {
+      label: "Desktop",
+      items: [
+        { name: "C++",    src: "/images/technology-stack/desktop/c.png" },
+        { name: "Swift",  src: "/images/technology-stack/desktop/swift.png" },
+        { name: "Go",     src: "/images/technology-stack/desktop/go.png" },
+        { name: "Python", src: "/images/technology-stack/desktop/python.png" },
+        { name: "C#",     src: "/images/technology-stack/desktop/csharp.png" },
+      ],
+    },
   ],
 };
 
@@ -265,10 +304,32 @@ export const apiIntegrations = {
   subtitle:
     "We specialize in integrating major APIs, including payment gateways, social media platforms, mapping services, and third-party tools, to enhance functionality and user experience.",
   categories: [
-    { label: "Payment Integrations", items: ["Stripe", "PayPal", "Wise", "Mollie", "Swish", "iDEAL"] },
-    { label: "Shipping Integrations", items: ["PostNL", "DPD", "DHL", "FedEx"] },
-    { label: "CRM & IRM Integrations", items: ["Zendesk", "MS Dynamics", "Salesforce", "HubSpot", "Odoo", "Oracle", "Zoho"] },
-    { label: "Accounting / Booking", items: ["Zapier", "Xero", "QuickBooks", "FreshBooks"] },
+    {
+      label: "Payment Integrations",
+      items: [
+        { name: "Stripe" }, { name: "PayPal" }, { name: "Wise" },
+        { name: "Mollie" }, { name: "Swish" }, { name: "iDEAL" },
+      ],
+    },
+    {
+      label: "Shipping Integrations",
+      items: [
+        { name: "PostNL" }, { name: "DPD" }, { name: "DHL" }, { name: "FedEx" },
+      ],
+    },
+    {
+      label: "CRM & IRM Integrations",
+      items: [
+        { name: "Zendesk" }, { name: "MS Dynamics" }, { name: "Salesforce" },
+        { name: "HubSpot" }, { name: "Odoo" }, { name: "Oracle" }, { name: "Zoho" },
+      ],
+    },
+    {
+      label: "Accounting / Booking",
+      items: [
+        { name: "Zapier" }, { name: "Xero" }, { name: "QuickBooks" }, { name: "FreshBooks" },
+      ],
+    },
   ],
 };
 

@@ -2,9 +2,14 @@ import Page, { type PageProps } from "../layout/Page";
 import PageHeader from "../layout/PageHeader";
 import LogoTile from "../ui/LogoTile";
 
+export interface LogoItem {
+  name: string;
+  src?: string;
+}
+
 export interface LogoCategory {
   label: string;
-  items: string[];
+  items: LogoItem[];
 }
 
 export interface CategoryLogoPageProps extends Pick<PageProps, "pageNumber"> {
@@ -43,7 +48,7 @@ export default function CategoryLogoPage({
               </p>
               <div className="flex flex-1 flex-wrap items-center gap-3">
                 {cat.items.map((item) => (
-                  <LogoTile key={item} name={item} className="h-12 min-w-24 px-5" />
+                  <LogoTile key={item.name} name={item.name} src={item.src} className="h-12 min-w-24 px-5" />
                 ))}
               </div>
             </div>
@@ -61,7 +66,7 @@ export default function CategoryLogoPage({
               </p>
               <div className="mt-3 grid grid-cols-2 gap-2">
                 {cat.items.map((item) => (
-                  <LogoTile key={item} name={item} className="h-12" />
+                  <LogoTile key={item.name} name={item.name} src={item.src} className="h-12" />
                 ))}
               </div>
             </div>
