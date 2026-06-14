@@ -288,15 +288,15 @@ export const techStack = {
 export const databases = {
   subtitle:
     "We leverage modern, battle-tested database technologies and cloud platforms to deliver reliable and scalable solutions.",
-  logos: [
-    { name: "Amazon RDS" },
-    { name: "MySQL" },
-    { name: "SQL Server" },
-    { name: "PostgreSQL" },
-    { name: "Google Cloud" },
-    { name: "Amazon S3" },
-    { name: "Oracle" },
-    { name: "MongoDB" },
+  items: [
+    { name: "Amazon RDS",   src: "/images/databases/amazon-rds.png"   },
+    { name: "MySQL",        src: "/images/databases/mysql.png"         },
+    { name: "SQL Server",   src: "/images/databases/sql-server.png"   },
+    { name: "PostgreSQL",   src: "/images/databases/postgreSql.png"   },
+    { name: "Google Cloud", src: "/images/databases/google-cloud.png" },
+    { name: "Amazon S3",    src: "/images/databases/amazon-s3.png"    },
+    { name: "Oracle",       src: "/images/databases/oracle.png"       },
+    { name: "MongoDB",      src: "/images/databases/mongodb.svg"      },
   ],
 };
 

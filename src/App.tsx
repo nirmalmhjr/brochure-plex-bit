@@ -4,6 +4,7 @@ import IntroPage from "./components/templates/IntroPage";
 import IconCardGridPage from "./components/templates/IconCardGridPage";
 import TimelinePage from "./components/templates/TimelinePage";
 import LogoGridPage from "./components/templates/LogoGridPage";
+import DatabasesPage from "./components/templates/DatabasesPage";
 import CertificationsPage from "./components/templates/CertificationsPage";
 import RecognitionPage from "./components/templates/RecognitionPage";
 import CategoryLogoPage from "./components/templates/CategoryLogoPage";
@@ -128,13 +129,12 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     layout="rows"
   />,
 
-  <LogoGridPage
+  <DatabasesPage
     key="databases"
     title="Database That"
     highlight="We Use"
     subtitle={databases.subtitle}
-    logos={databases.logos}
-    columns={4}
+    items={databases.items}
   />,
 
   <CategoryLogoPage
