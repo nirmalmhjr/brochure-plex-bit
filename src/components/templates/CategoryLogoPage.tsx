@@ -55,18 +55,20 @@ export default function CategoryLogoPage({
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-4 gap-5 px-14 pt-7">
+        <div className="grid grid-cols-2 gap-5 px-14 pt-7">
           {categories.map((cat) => (
             <div
               key={cat.label}
-              className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm"
+              className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm"
             >
-              <p className="border-b-2 border-dashed border-brand/40 pb-2 text-center text-[14px] font-bold text-brand-dark">
-                {cat.label}
-              </p>
-              <div className="mt-3 grid grid-cols-2 gap-2">
+              <div className="bg-gradient-to-r from-brand to-brand-dark px-5 py-2.5">
+                <p className="text-center text-[14px] font-bold text-white tracking-wide">
+                  {cat.label}
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-3 p-4">
                 {cat.items.map((item) => (
-                  <LogoTile key={item.name} name={item.name} src={item.src} className="h-12" />
+                  <LogoTile key={item.name} name={item.name} src={item.src} className="h-14 w-28" />
                 ))}
               </div>
             </div>
