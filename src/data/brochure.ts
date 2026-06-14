@@ -267,7 +267,7 @@ export const certifications = {
      { name: "aws-certified",      src: "/images/certifications/aws-certified.png" },
      { name: "blockchains",      src: "/images/certifications/blockchains.png" },
      { name: "google-cloud-certifications",      src: "/images/certifications/google-cloud-certified.png" },
-     { name: "istqb",      src: "/images/certifications/istqb.png" },
+     { name: "istqb",      src: "/images/certifications/ISTQB-International_original.png" },
      { name: "magneto",      src: "/images/certifications/magneto.png" },
      { name: "professional-scrum-master",      src: "/images/certifications/professional-scrum-master.png" },
      
