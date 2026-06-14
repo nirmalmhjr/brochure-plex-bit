@@ -15,6 +15,7 @@ import ProjectPairPage from "./components/templates/ProjectPairPage";
 import OfficesPage from "./components/templates/OfficesPage";
 import ContactPage from "./components/templates/ContactPage";
 import VisionMissionPage from "./components/templates/VisionMissionPage";
+import WhyChooseUsPage from "./components/templates/WhyChooseUsPage";
 
 import {
   welcome,
@@ -74,12 +75,12 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
 
   <IntroPage key="solutions" {...solutions} image="/images/company-pictures/provide-solutions.png" />,
 
-  <IconCardGridPage
+  <WhyChooseUsPage
     key="why-choose-us"
     title="Why You Should"
     highlight="Choose Us?"
     items={whyChooseUs}
-    columns={2}
+    image="/images/company-pictures/image1.png"
   />,
 
   <IconCardGridPage
