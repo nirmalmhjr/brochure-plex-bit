@@ -1,7 +1,6 @@
 import Page, { type PageProps } from "../layout/Page";
 import PageHeader from "../layout/PageHeader";
 import SmartImage from "../ui/SmartImage";
-import type { IconCard } from "./IconCardGridPage";
 
 const iconSrcMap: Record<string, string> = {
   "🌐": "/images/icons/globe.svg",
@@ -10,11 +9,17 @@ const iconSrcMap: Record<string, string> = {
   "💰": "/images/icons/coin.svg",
 };
 
+interface WhyChooseUsItem {
+  icon: string;
+  title: string;
+  desc?: string;
+}
+
 interface WhyChooseUsPageProps extends Pick<PageProps, "pageNumber"> {
   title: string;
   highlight?: string;
   kicker?: string;
-  items: IconCard[];
+  items: WhyChooseUsItem[];
   image?: string;
 }
 

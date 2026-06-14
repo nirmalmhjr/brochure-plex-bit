@@ -5,6 +5,18 @@
 
  */
 
+import {
+  Landmark,
+  HeartPulse,
+  Building2,
+  GraduationCap,
+  Users,
+  Truck,
+  ShoppingBag,
+  MapPin,
+  LayoutGrid,
+} from "lucide-react";
+
 export const company = {
   name: "Plex Bit Infosystems",
   logoTop: "PLEX BIT",
@@ -156,15 +168,15 @@ export const services = [
 ];
 
 export const industries = [
-  { icon: "🏦", title: "Fintech", meta: "+5 successful Fintech products" },
-  { icon: "🏥", title: "Healthcare", meta: "+10 successful Healthtech products" },
-  { icon: "🏠", title: "Proptech", meta: "+3 successful Proptech products" },
-  { icon: "🎓", title: "Education", meta: "+20 successful Edtech products" },
-  { icon: "💬", title: "Social", meta: "+15 successful social products" },
-  { icon: "🚚", title: "Logistics", meta: "+10 successful logistics products" },
-  { icon: "🛍️", title: "Marketplace", meta: "+20 successful marketplaces" },
-  { icon: "🗺️", title: "Geotech", meta: "+5 successful Geotech products" },
-  { icon: "📦", title: "ERP", meta: "+10 successful ERP products" },
+  { icon: Landmark,       title: "Fintech",      meta: "+5 successful Fintech products" },
+  { icon: HeartPulse,     title: "Healthcare",   meta: "+10 successful Healthtech products" },
+  { icon: Building2,      title: "Proptech",     meta: "+3 successful Proptech products" },
+  { icon: GraduationCap,  title: "Education",    meta: "+20 successful Edtech products" },
+  { icon: Users,          title: "Social",       meta: "+15 successful social products" },
+  { icon: Truck,          title: "Logistics",    meta: "+10 successful logistics products" },
+  { icon: ShoppingBag,    title: "Marketplace",  meta: "+20 successful marketplaces" },
+  { icon: MapPin,         title: "Geotech",      meta: "+5 successful Geotech products" },
+  { icon: LayoutGrid,     title: "ERP",          meta: "+10 successful ERP products" },
 ];
 
 /* ------------------------------ Workflow ------------------------------ */
