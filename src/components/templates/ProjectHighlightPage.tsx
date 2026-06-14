@@ -12,23 +12,15 @@ export default function ProjectHighlightPage({
   pageNumber,
   project,
   sectionLabel = "Our Projects",
-  index = 1,
+
 }: ProjectHighlightPageProps) {
-  const num = String(index).padStart(2, "0");
+
 
   return (
     <Page pageNumber={pageNumber}>
       <div className="flex h-full">
         {/* Left — info panel */}
         <div className="relative flex w-2/5 flex-col justify-center overflow-hidden px-14 py-12">
-          {/* Decorative watermark number */}
-          <span
-            aria-hidden
-            className="pointer-events-none absolute bottom-8 right-4 select-none text-9xl font-black leading-none tracking-tighter text-zinc-100"
-          >
-            {num}
-          </span>
-
           <p className="relative text-xs font-bold uppercase tracking-widest text-brand">
             {sectionLabel}
           </p>

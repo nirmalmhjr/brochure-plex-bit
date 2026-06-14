@@ -52,7 +52,7 @@ export default function RecognitionPage({
     <Page pageNumber={pageNumber}>
       <PageHeader title={title} highlight={highlight} subtitle={subtitle} />
 
-      <div className="px-14 pt-14">
+      <div className="px-14 pt-24">
         <div className={`grid ${colClass[columns]} gap-6`}>
           {logos.map((item) => (
             <RecognitionBadge key={item.name} name={item.name} src={item.src} />

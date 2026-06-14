@@ -15,6 +15,7 @@ import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
 import ProjectPairPage from "./components/templates/ProjectPairPage";
 import OfficesPage from "./components/templates/OfficesPage";
 import ContactPage from "./components/templates/ContactPage";
+import ContactMapPage from "./components/templates/ContactMapPage";
 import VisionMissionPage from "./components/templates/VisionMissionPage";
 import WhyChooseUsPage from "./components/templates/WhyChooseUsPage";
 import ServicesHubPage from "./components/templates/ServicesHubPage";
@@ -233,6 +234,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   // <OfficesPage key="business-offices" {...businessOffices} />,
 
   <ContactPage key="contact" />,
+  <ContactMapPage key="contact-map" />,
 ];
 
 export default function App() {
