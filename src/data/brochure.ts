@@ -2,8 +2,7 @@
  * All brochure content lives here. Templates are dumb — change content
  * in this file (or add/remove pages in App.tsx) without touching design.
  *
- * Images: drop real files into /public/images/<folder>/ and set the
- * `image`/`src` fields below. Missing images render styled placeholders.
+
  */
 
 export const company = {
@@ -362,29 +361,33 @@ export const projectPages: { title: string; highlight: string; projects: Project
     projects: [
       {
         name: "BusyKid",
-        image: "/images/projects/busykid.png",
+        image: "/images/projects/busy-kids.png",
         desc: "BusyKid is a chore and allowance app designed to teach kids money management through earning, saving, spending, and giving. It empowers children with financial literacy tools while providing parents with an easy way to assign chores and track progress.",
       },
       {
         name: "Zsenia",
         image: "/images/projects/zsenia.png",
-        desc: "Zsenia is a powerful yet simplified investment, research and analytics platform. It is a decision-making tool that can help anyone improve their investment performance and make better informed investments.",
+        desc: "Zsenia is a personalized learning app that adapts to your unique needs, offering interactive lessons, exercises, and progress tracking. It’s designed to make learning engaging and effective for all users.",
       },
-    ],
-  },
-  {
-    title: "Project",
-    highlight: "Highlights",
-    projects: [
       {
-        name: "8fit",
+        name: "8 Fit",
         image: "/images/projects/8fit.png",
-        desc: "8fit is a fitness and nutrition app that helps you achieve your health goals with personalized workout plans, meal planning, and expert guidance. It's your all-in-one solution for a healthier lifestyle.",
+        desc: "8fit is a fitness and nutrition app that helps you achieve your health goals with personalized workout plans, meal planning, and expert guidance. It’s your all-in-one solution for a healthier lifestyle.",
       },
       {
-        name: "Zetwerk",
-        image: "/images/projects/zetwerk.png",
+        name: "Zet Werk",
+        image: "/images/projects/zet-werk.png",
         desc: "Zetwerk is a global manufacturing platform that connects businesses with reliable suppliers for custom manufacturing. It streamlines the production process, offering solutions for sourcing, quality control, and timely delivery.",
+      },
+      {
+        name: "Trendex",
+        image: "/images/projects/trendex.png",
+        desc: "Trendex is an advanced online trading platform offering tools and resources for trading various financial assets, including stocks, cryptocurrencies, and commodities. It’s designed for both beginners and experienced traders, providing a user-friendly interface and real-time market insights.",
+      },
+      {
+        name: "GoChat",
+        image: "/images/projects/gochat.png",
+        desc: "GoChat is a secure messaging app that focuses on privacy and ease of use. It offers features such as text messaging, voice and video calls, and file sharing, while prioritizing encryption and data protection to ensure users’ communications are safe and confidential.",
       },
     ],
   },
@@ -399,8 +402,64 @@ export const projectPages: { title: string; highlight: string; projects: Project
       },
       {
         name: "KitchenDev",
-        image: "/images/projects/kitchendev.png",
+        image: "/images/projects/kitchen-dev.png",
         desc: "KitchenDev streamlines kitchen business workflows with advanced configure-price-quote products that enhance efficiency, minimize errors, and save labor — with no training required and quick onboarding.",
+      },
+      {
+        name: "Smart Clerk",
+        image: "/images/projects/smart-clerk.png",
+        desc: "Smart Clerk is a digital platform designed to streamline the management of clerical tasks for businesses. It simplifies processes like invoicing, time tracking, and document management, helping companies improve efficiency, reduce administrative burden, and enhance productivity.",
+      },
+      {
+        name: "JFDS",
+        image: "/images/projects/jfds.png",
+        desc: "Joinery Fire Door Software (JFDS) is a comprehensive platform for fire door manufacturing and sales teams in the UK and Ireland. It streamlines the process, ensuring compliance, custom door schedules, and efficient workflows, while saving time, money, and materials.",
+      },
+      {
+        name: "Open Maint",
+        image: "/images/projects/open-maint.png",
+        desc: "OpenMAINT is an open-source software for managing the maintenance of assets, buildings, and infrastructures. It provides tools for tracking maintenance requests, scheduling tasks, managing inventories, and monitoring performance, helping organizations optimize their asset lifecycle and reduce operational costs.",
+      },
+      {
+        name: "Realty Connection",
+        image: "/images/projects/realty-connection.png",
+        desc: "Realty Connection is a real estate platform that connects buyers, sellers, and agents. It offers a seamless property search experience, providing detailed listings, virtual tours, and expert services to help users make informed decisions in the real estate market.",
+      },
+    ],
+  },
+  {
+    title: "E-Commerce",
+    highlight: "Highlights",
+    projects: [
+      {
+        name: "BlueStone",
+        image: "/images/projects/blue-stone.png",
+        desc: "Bluestone is an online retailer specializing in handcrafted jewelry, home decor, and unique gifts. They offer a wide range of personalized and custom-made pieces, combining traditional craftsmanship with modern designs to provide high-quality products for various occasions.",
+      },
+      {
+        name: "Vivino",
+        image: "/images/projects/vivino.png",
+        desc: "Vivino is a wine discovery and rating platform that helps users find, review, and purchase wines. It offers personalized wine recommendations, detailed ratings, and reviews from a global community, making it easier for wine enthusiasts to explore and enjoy new wines.",
+      },
+      {
+        name: "Stair Box",
+        image: "/images/projects/stair-box.png",
+        desc: "Stairbox is a UK-based company specializing in bespoke staircase design and manufacturing. They offer a wide range of custom staircases, including wooden, glass, and metal options, along with accessories, ensuring high-quality and tailored solutions for both residential and commercial projects.",
+      },
+      {
+        name: "Woolworths",
+        image: "/images/projects/woolworths.png",
+        desc: "Woolworths is a major Australian supermarket chain offering a wide variety of groceries, fresh produce, and household items. It provides convenient shopping both in-store and online, with a focus on quality, sustainability, and customer satisfaction.",
+      },
+      {
+        name: "BIG W",
+        image: "/images/projects/bigw.png",
+        desc: "BIG W is an Australian discount department store that offers a wide range of products, including groceries, clothing, electronics, toys, and home goods. Known for its affordable prices, BIG W provides a convenient shopping experience both in-store and online.",
+      },
+      {
+        name: "Proline Hardware",
+        image: "/images/projects/proline.png",
+        desc: "Proline Hardware is an Irish company specializing in high-quality hardware solutions for doors, windows, and cabinetry. They offer a wide range of products, including locks, handles, and accessories, with a focus on providing durable and reliable hardware for residential and commercial applications.",
       },
     ],
   },
@@ -411,12 +470,58 @@ export const projectPages: { title: string; highlight: string; projects: Project
       {
         name: "SAM Learning",
         image: "/images/projects/sam-learning.png",
-        desc: "SAM Learning is an online learning platform that offers interactive courses and assessments for students, primarily in the UK. It provides personalized learning experiences to help students improve in maths, science, and English.",
+        desc: "SAM Learning is an online learning platform that offers interactive courses and assessments for students, primarily in the UK. It provides personalized learning experiences to help students improve in subjects such as maths, science, and English, supporting teachers and schools with tracking progress and performance.",
       },
       {
         name: "EliteFit.AI",
-        image: "/images/projects/elitefit.png",
-        desc: "Elite Fit is an AI-driven virtual trainer offering personalized training programs, nutritional guidance, and wellness support — with real-time prescriptive feedback and accuracy scores that assess movement correctness.",
+        image: "/images/projects/elite-fit.png",
+        desc: "Elite Fit For You is a fitness platform offering personalized training programs, nutritional guidance, and wellness support. It aims to help individuals achieve their fitness goals through tailored workout plans and expert coaching, focusing on overall health and well-being.",
+      },
+      {
+        name: "NUNA AI",
+        image: "/images/projects/nuna-ai.png",
+        desc: "Nuna is an AI-powered platform that provides data analytics solutions for healthcare organizations. It helps optimize the healthcare system by using advanced algorithms to improve decision-making, enhance patient care, and reduce costs through efficient data management and analysis.",
+      },
+      {
+        name: "Lawren",
+        image: "/images/projects/lawren.png",
+        desc: "Lawren is an AI-driven platform that helps businesses streamline and automate their legal workflows. It offers tools for document management, contract analysis, and legal research, enabling teams to save time, reduce errors, and ensure compliance with ease.",
+      },
+    ],
+  },
+  {
+    title: "Website Design",
+    highlight: "Highlights",
+    projects: [
+      {
+        name: "Birkdale",
+        image: "/images/projects/birkdale.png",
+        desc: "Birkdale is a UK-based company specializing in high-quality hardware products for the construction and DIY industries. They offer a wide range of products, including fencing, gates, and garden accessories, with a focus on durability, security, and innovative designs.",
+      },
+      {
+        name: "Intuit",
+        image: "/images/projects/intuit.png",
+        desc: "Intuit is a global software company that provides financial management tools and solutions for individuals, small businesses, and accountants. Its popular products include QuickBooks, TurboTax, and Mint, which help users with accounting, tax preparation, and personal finance management.",
+      },
+      {
+        name: "Fandom",
+        image: "/images/projects/fandom.png",
+        desc: "Fandom is an online community platform dedicated to fan-created content and discussions. It hosts thousands of wikis for movies, TV shows, games, and other entertainment, allowing fans to contribute, share knowledge, and engage with others who share their interests.",
+      },
+      {
+        name: "Chase",
+        image: "/images/projects/chase.png",
+        desc: "Chase is a major financial services company offering a wide range of banking products, including checking and savings accounts, credit cards, mortgages, auto loans, and investment services. It provides customers with secure and convenient digital banking options, both online and through mobile apps.",
+      },
+      {
+        name: "Wozber",
+        image: "/images/projects/wozber.png",
+        desc: "Wozber is an AI-powered resume builder that helps job seekers create optimized and professional resumes. It offers personalized templates, real-time feedback, and suggestions to enhance the quality of resumes, making it easier to apply for jobs with confidence.",
+      },
+      {
+        name: "HomeAdvisor",
+        image: "/images/projects/home-advisor.png",
+        desc: "HomeAdvisor is an online platform that connects homeowners with local service professionals for home improvement, repair, and maintenance projects. It allows users to find, review, and book trusted professionals, while also offering tools for cost estimates and project management.",
       },
     ],
   },

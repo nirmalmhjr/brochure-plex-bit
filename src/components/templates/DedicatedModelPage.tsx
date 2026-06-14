@@ -8,8 +8,9 @@ import {
   ClockIcon,
   PeopleIcon,
 } from "../ui/icons";
+import type { ReactElement } from "react";
+const ITEM_ICONS: Record<string, ReactElement> = {
 
-const ITEM_ICONS: Record<string, JSX.Element> = {
   "Cost-Efficient": <DollarCircleIcon />,
   "Direct Communication": <ChatIcon />,
   "Secure & Reliable": <ShieldIcon />,

@@ -1,9 +1,7 @@
 import { cloneElement, type ReactElement } from "react";
-
 import CoverPage from "./components/templates/CoverPage";
 import IntroPage from "./components/templates/IntroPage";
 import IconCardGridPage from "./components/templates/IconCardGridPage";
-import PeopleGridPage from "./components/templates/PeopleGridPage";
 import TimelinePage from "./components/templates/TimelinePage";
 import LogoGridPage from "./components/templates/LogoGridPage";
 import CertificationsPage from "./components/templates/CertificationsPage";
@@ -13,7 +11,7 @@ import HourlyModelPage from "./components/templates/HourlyModelPage";
 import DedicatedModelPage from "./components/templates/DedicatedModelPage";
 import StatsPage from "./components/templates/StatsPage";
 import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
-import CaseStudyPage from "./components/templates/CaseStudyPage";
+import ProjectPairPage from "./components/templates/ProjectPairPage";
 import OfficesPage from "./components/templates/OfficesPage";
 import ContactPage from "./components/templates/ContactPage";
 
@@ -21,8 +19,7 @@ import {
   welcome,
   solutions,
   visionMission,
-  coreTeam,
-  representatives,
+
   whyChooseUs,
   services,
   industries,
@@ -35,12 +32,9 @@ import {
   recognition,
   hourlyModel,
   dedicatedModel,
-  capabilities,
   stats,
   projectPages,
-  caseStudies,
   devOffices,
-  businessOffices,
   company,
 } from "./data/brochure";
 
@@ -193,7 +187,39 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     items={dedicatedModel.items}
   />,
 
-  <StatsPage
+ 
+
+  // "Our Projects" — one hero page per project
+  ...projectPages[0].projects.map((project, qi) => (
+    <ProjectHighlightPage
+      key={`project-${project.name}`}
+      project={project}
+      sectionLabel={`${projectPages[0].title} ${projectPages[0].highlight}`}
+      index={qi + 1}
+    />
+  )),
+
+  // All other groups — two projects per page
+  ...projectPages.slice(1).flatMap((page) => {
+    const pairs: (typeof page.projects)[] = [];
+    for (let i = 0; i < page.projects.length; i += 2) {
+      pairs.push(page.projects.slice(i, i + 2));
+    }
+    return pairs.map((pair, pi) => (
+      <ProjectPairPage
+        key={`${page.title}-pair-${pi}`}
+        projects={pair}
+        sectionLabel={`${page.title} ${page.highlight}`}
+      />
+    ));
+  }),
+
+  // ...caseStudies.map((study) => (
+  //   <CaseStudyPage key={`case-${study.name}`} study={study} />
+  // )),
+
+  // why choose us
+ <StatsPage
     key="stats"
     title="Why"
     highlight="Choose Us?"
@@ -201,22 +227,8 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     stats={stats.items}
     note={stats.note}
   />,
-
-  ...projectPages.map((page) => (
-    <ProjectHighlightPage
-      key={`projects-${page.highlight}-${page.projects[0].name}`}
-      title={page.title}
-      highlight={page.highlight}
-      projects={page.projects}
-    />
-  )),
-
-  ...caseStudies.map((study) => (
-    <CaseStudyPage key={`case-${study.name}`} study={study} />
-  )),
-
   <OfficesPage key="dev-offices" {...devOffices} />,
-  <OfficesPage key="business-offices" {...businessOffices} />,
+  // <OfficesPage key="business-offices" {...businessOffices} />,
 
   <ContactPage key="contact" />,
 ];
