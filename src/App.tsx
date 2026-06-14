@@ -14,6 +14,7 @@ import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
 import ProjectPairPage from "./components/templates/ProjectPairPage";
 import OfficesPage from "./components/templates/OfficesPage";
 import ContactPage from "./components/templates/ContactPage";
+import VisionMissionPage from "./components/templates/VisionMissionPage";
 
 import {
   welcome,
@@ -45,14 +46,14 @@ import {
 const pages: ReactElement<{ pageNumber?: number }>[] = [
   <CoverPage key="cover" />,
 
-  <IntroPage key="welcome" {...welcome} stamp={`Since ${company.since}`} />,
+  <IntroPage key="welcome" {...welcome} stamp={`Since ${company.since}`} image="/images/company-pictures/welcome-to-our-company.png" />,
 
-  <IconCardGridPage
+  <VisionMissionPage
     key="vision-mission"
     title="Company Vision"
     highlight="& Mission"
     items={visionMission}
-    columns={2}
+    image="/images/company-pictures/image1.png"
   />,
 
   // <PeopleGridPage
@@ -71,7 +72,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   //   people={representatives.people}
   // />,
 
-  <IntroPage key="solutions" {...solutions} />,
+  <IntroPage key="solutions" {...solutions} image="/images/company-pictures/provide-solutions.png" />,
 
   <IconCardGridPage
     key="why-choose-us"

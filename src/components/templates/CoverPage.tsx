@@ -14,7 +14,7 @@ export interface CoverPageProps extends Pick<PageProps, "pageNumber"> {
 export default function CoverPage({
   title = "Company Profile",
   subtitle = company.tagline,
-  image = "/images/brand/cover.jpg",
+  image = "/images/company-pictures/company-profile.png",
   imageLabel = "Cover Photo",
 }: CoverPageProps) {
   return (
