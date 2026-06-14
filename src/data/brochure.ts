@@ -585,17 +585,17 @@ export const devOffices = {
     {
       name: "Netherlands Head Office",
       address: "Teleport Towers Kingsfordweg 151, 1043 GR Amsterdam",
-      image: "/images/offices/amsterdam.jpg",
+      image: "/images/offices/netherlands.png",
     },
     {
-      name: "Nepal Office",
+      name: "Nepal Development Office",
       address: "Gairidhara, 44600, Kathmandu, Nepal",
-      image: "/images/offices/kathmandu.jpg",
+      image: "/images/offices/kathmandu.png",
     },
     {
-      name: "India Office",
+      name: "India Development Office",
       address: "Commercial Complex Tower - C, Central Business District, Sector-21, New Raipur Atal Nagar",
-      image: "/images/offices/raipur.jpg",
+      image: "/images/offices/raipur.png",
     },
   ],
 };

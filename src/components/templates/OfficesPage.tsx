@@ -27,13 +27,13 @@ export default function OfficesPage({
     <Page pageNumber={pageNumber}>
       <PageHeader title={title} highlight={highlight} />
 
-      <div className="flex justify-center gap-10 px-14 pt-12">
+      <div className="flex justify-center gap-10 px-14 pt-20">
         {offices.map((office) => (
           <div key={office.name} className="w-80">
             <SmartImage
               src={office.image}
               label={office.name}
-              className="h-60 w-full rounded-2xl shadow-md"
+              className="h-70 w-full rounded-2xl shadow-md object-contain object-top"
             />
             <p className="mt-5 text-center text-[16px] font-bold text-brand">
               {office.name}
