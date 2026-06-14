@@ -16,6 +16,7 @@ import OfficesPage from "./components/templates/OfficesPage";
 import ContactPage from "./components/templates/ContactPage";
 import VisionMissionPage from "./components/templates/VisionMissionPage";
 import WhyChooseUsPage from "./components/templates/WhyChooseUsPage";
+import ServicesHubPage from "./components/templates/ServicesHubPage";
 
 import {
   welcome,
@@ -83,13 +84,12 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     image="/images/company-pictures/image1.png"
   />,
 
-  <IconCardGridPage
+  <ServicesHubPage
     key="services"
     title="Our"
     highlight="Services"
     subtitle="Empowering your business with innovative solutions. At Plex Bit Infosystems, we specialize in delivering cutting-edge IT solutions tailored to meet the unique needs of various industries."
     items={services}
-    columns={3}
   />,
 
   <TimelinePage
