@@ -1,7 +1,7 @@
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
 import Page, { type PageProps } from "../layout/Page";
-import BrandLogo from "../ui/BrandLogo";
-import SlashAccent from "../ui/SlashAccent";
+// import BrandLogo from "../ui/BrandLogo";
+// import SlashAccent from "../ui/SlashAccent";
 import SmartImage from "../ui/SmartImage";
 import { company } from "../../data/brochure";
 
@@ -23,7 +23,7 @@ export default function ContactPage() {
     <Page showFooter={false} showAccent={false}>
       <div className="flex h-full">
         {/* Left: contact details */}
-        <div className="flex w-1/2 flex-col justify-center pl-16">
+        <div className="flex w-[40%] flex-col justify-center pl-16">
           <div className="mb-3 h-1.5 w-16 rounded-full bg-brand" />
           <h2 className="text-5xl font-extrabold leading-tight tracking-tight text-ink">
             Get In Touch
@@ -55,7 +55,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right: brand panel */}
-        <div className="relative flex w-1/2 flex-col items-center justify-center bg-gradient-to-br from-brand-deep via-brand-dark to-brand">
+        {/* <div className="relative flex w-1/2 flex-col items-center justify-center bg-gradient-to-br from-brand-deep via-brand-dark to-brand">
           <SlashAccent className="absolute right-10 top-10" color="bg-white/60" />
           <BrandLogo variant="light" />
           <SmartImage
@@ -64,6 +64,35 @@ export default function ContactPage() {
             className="mt-10 h-72 w-4/5 rounded-tl-3xl rounded-br-3xl shadow-2xl"
           />
           <SlashAccent className="absolute bottom-10 left-10" color="bg-white/60" />
+        </div> */}
+          {/* Right: Nepal map with location pin + callout */}
+        <div className="relative h-full w-[60%] ">
+          <SmartImage
+            src="/images/map/nepal-map.png"
+            label="Nepal Map"
+            className="h-full w-full"
+            imgClassName="h-full w-full object-contain -ml-12"
+          />
+
+          {/* Pin + connector + callout, anchored over Kathmandu */}
+          <div className="absolute left-[64%] top-[55%] ">
+            {/* Address callout */}
+            <div className="absolute -top-38 left-8 w-56 -translate-x-1/2 rounded-2xl bg-white px-5 py-3 text-center shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+              <p className="text-sm font-medium leading-snug text-ink">
+                {company.address}
+              </p>
+            </div>
+
+            {/* Dotted connector from callout down to the pin */}
+            <div className="absolute -top-22 -left-0.5 h-22 -translate-x-3 border-l-2 border-dotted border-brand" />
+
+            {/* Location pin */}
+            {/* <MapPin
+              size={40}
+              className="-translate-x-1/2 top-10 size-8 fill-brand text-white drop-shadow-md"
+            /> */}
+            <img src="/images/map/map-pin.png" alt="Map pin" className="-translate-x-7 top-10 w-8 fill-brand text-white drop-shadow-md" />
+          </div>
         </div>
       </div>
     </Page>

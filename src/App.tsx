@@ -14,8 +14,9 @@ import StatsPage from "./components/templates/StatsPage";
 import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
 import ProjectPairPage from "./components/templates/ProjectPairPage";
 import OfficesPage from "./components/templates/OfficesPage";
+import WorldMapPage from "./components/templates/WorldMapPage";
 import ContactPage from "./components/templates/ContactPage";
-import ContactMapPage from "./components/templates/ContactMapPage";
+
 import VisionMissionPage from "./components/templates/VisionMissionPage";
 import WhyChooseUsPage from "./components/templates/WhyChooseUsPage";
 import ServicesHubPage from "./components/templates/ServicesHubPage";
@@ -57,7 +58,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     title="Company Vision"
     highlight="& Mission"
     items={visionMission}
-    image="/images/company-pictures/image1.png"
+    image="/images/company-pictures/image.png"
   />,
 
   // <PeopleGridPage
@@ -83,7 +84,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     title="Why You Should"
     highlight="Choose Us?"
     items={whyChooseUs}
-    image="/images/company-pictures/image1.png"
+    image="/images/company-pictures/company-profile.png"
   />,
 
   <ServicesHubPage
@@ -231,10 +232,11 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     note={stats.note}
   />,
   <OfficesPage key="dev-offices" {...devOffices} />,
+  <WorldMapPage key="world-map" />,
   // <OfficesPage key="business-offices" {...businessOffices} />,
 
   <ContactPage key="contact" />,
-  <ContactMapPage key="contact-map" />,
+  // <ContactMapPage key="contact-map" />,
 ];
 
 export default function App() {

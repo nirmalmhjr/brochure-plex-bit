@@ -24,7 +24,7 @@ export default function ContactMapPage() {
     <Page showFooter={false} showAccent={false}>
       <div className="flex h-full items-center">
         {/* Left: contact details */}
-        <div className="w-[42%] pl-16">
+        <div className="w-2/5 pl-16">
           <h2 className="text-5xl font-extrabold tracking-tight text-brand-dark">
             Contact Us
           </h2>
@@ -48,7 +48,7 @@ export default function ContactMapPage() {
         </div>
 
         {/* Right: Nepal map with location pin + callout */}
-        <div className="relative h-full w-[58%]">
+        <div className="relative h-full w-3/5">
           <SmartImage
             src="/images/map/nepal-map.png"
             label="Nepal Map"
@@ -57,16 +57,16 @@ export default function ContactMapPage() {
           />
 
           {/* Pin + connector + callout, anchored over Kathmandu */}
-          <div className="absolute left-[64%] top-[55%] ">
+          <div className="absolute left-2/3 top-3/5">
             {/* Address callout */}
-            <div className="absolute -top-38 left-8 w-56 -translate-x-1/2 rounded-2xl bg-white px-5 py-3 text-center shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+            <div className="absolute -top-40 left-8 w-56 -translate-x-1/2 rounded-2xl bg-white px-5 py-3 text-center shadow-lg">
               <p className="text-sm font-medium leading-snug text-ink">
                 {company.address}
               </p>
             </div>
 
             {/* Dotted connector from callout down to the pin */}
-            <div className="absolute -top-22 -left-0.5 h-22 -translate-x-1/2 border-l-2 border-dotted border-brand" />
+            <div className="absolute -top-24 -left-0.5 h-24 -translate-x-1/2 border-l-2 border-dotted border-brand" />
 
             {/* Location pin */}
             <MapPin

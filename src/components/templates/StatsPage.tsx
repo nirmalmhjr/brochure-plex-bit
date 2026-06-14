@@ -32,21 +32,21 @@ export default function StatsPage({
           <div aria-hidden className="absolute -right-16 -top-16 size-56 rounded-full bg-white/5" />
           <div aria-hidden className="absolute bottom-28 right-10 size-28 rounded-full bg-white/5" />
 
-          <h2 className="relative text-[42px] font-extrabold leading-[1.1] tracking-tight text-white">
+          <h2 className="relative text-5xl font-extrabold leading-[1.1] tracking-tight text-white">
             {title}{" "}
             {highlight && <span className="text-fuchsia-200">{highlight}</span>}
           </h2>
           <div className="mt-3 h-1 w-16 rounded-full bg-white/40" />
 
           {subtitle && (
-            <p className="mt-5 max-w-xs text-[12.5px] leading-relaxed text-white/80">
+            <p className="mt-5 max-w-xs text-base leading-relaxed text-white/80">
               {subtitle}
             </p>
           )}
 
           {note && (
             <div className="mt-7 rounded-xl border border-white/20 bg-white/10 px-5 py-4">
-              <p className="text-[12px] leading-relaxed text-white/90">{note}</p>
+              <p className="text-sm leading-relaxed text-white/90">{note}</p>
             </div>
           )}
         </div>
