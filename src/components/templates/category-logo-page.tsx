@@ -1,10 +1,41 @@
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
 import LogoTile from "../ui/logo-tile";
+import { useImageFallback } from "../ui/use-image-fallback";
 
 export interface LogoItem {
   name: string;
   src?: string;
+}
+
+// Soft pastel card themes cycled across the category grid.
+const CARD_THEMES = [
+  { bg: "from-amber-50/80 to-white", accent: "bg-amber-300", rule: "border-amber-200" },
+  { bg: "from-rose-50/80 to-white", accent: "bg-rose-300", rule: "border-rose-200" },
+  { bg: "from-emerald-50/80 to-white", accent: "bg-emerald-300", rule: "border-emerald-200" },
+  { bg: "from-violet-50/80 to-white", accent: "bg-violet-300", rule: "border-violet-200" },
+] as const;
+
+//  A single logo + name item shown inline (icon beside its label).
+function InlineLogo({ name, src }: LogoItem) {
+  const { failed, ref } = useImageFallback(src);
+  return (
+    <div className="flex items-center gap-2">
+      {src && !failed ? (
+        <img
+          alt={name}
+          className="size-17 shrink-0 object-contain"
+          ref={ref}
+          src={src}
+        />
+      ) : (
+        <span className="grid size-10 shrink-0 place-items-center rounded-md bg-white font-bold text-[11px] text-zinc-400 shadow-sm">
+          {name.slice(0, 2)}
+        </span>
+      )}
+      {/* <span className="font-medium text-[13px] text-zinc-700">{name}</span> */}
+    </div>
+  );
 }
 
 export interface LogoCategory {
@@ -37,27 +68,30 @@ export default function CategoryLogoPage({
       <PageHeader highlight={highlight} subtitle={subtitle} title={title} />
 
       {layout === "rows" ? (
-        <div className="space-y-4 px-14 pt-7">
-          {categories.map((cat) => (
-            <div
-              className="flex items-center gap-6 rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm"
-              key={cat.label}
-            >
-              <p className="w-32 shrink-0 border-brand/30 border-r-2 pr-4 font-bold text-[15px] text-brand-dark">
-                {cat.label}
-              </p>
-              <div className="flex flex-1 flex-wrap items-center gap-3">
-                {cat.items.map((item) => (
-                  <LogoTile
-                    className="h-12 min-w-24 px-5"
-                    key={item.name}
-                    name={item.name}
-                    src={item.src}
-                  />
-                ))}
+        <div className="grid grid-cols-2 gap-5 px-14 pt-7">
+          {categories.map((cat, i) => {
+            const theme = CARD_THEMES[i % CARD_THEMES.length];
+            return (
+              <div
+                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${theme.bg} p-5 pl-7`}
+                key={cat.label}
+              >
+                <span
+                  aria-hidden
+                  className={`absolute inset-y-0 left-0 w-1.5 ${theme.accent}`}
+                />
+                <p className="font-semibold text-[16px] text-zinc-800">
+                  {cat.label}
+                </p>
+                <div className={`mt-2 mb-4 border-b border-dashed ${theme.rule}`} />
+                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                  {cat.items.map((item) => (
+                    <InlineLogo key={item.name} name={item.name} src={item.src} />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       ) : (
         <div className="grid grid-cols-2 gap-5 px-14 pt-7">

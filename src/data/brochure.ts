@@ -647,7 +647,7 @@ export const capabilities = {
   ],
 };
 
-  // Stats
+// Stats
 
 export const stats = {
   subtitle:
