@@ -143,11 +143,19 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   />,
 
   <CategoryLogoPage
-    categories={techStack.categories}
+    categories={techStack.categories.slice(0, 2)}
     highlight="Stack"
     key="tech-stack"
     layout="rows"
     subtitle={techStack.subtitle}
+    title="Our Technology"
+  />,
+
+  <CategoryLogoPage
+    categories={techStack.categories.slice(2)}
+    highlight="Stack"
+    key="tech-stack-2"
+    layout="rows"
     title="Our Technology"
   />,
 

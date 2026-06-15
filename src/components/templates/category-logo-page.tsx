@@ -40,7 +40,7 @@ function InlineLogo({ name, src }: LogoItem) {
       {src && !failed ? (
         <img
           alt={name}
-          className="size-17 shrink-0 object-contain"
+          className="size-22 shrink-0 object-contain"
           ref={ref}
           src={src}
         />
@@ -87,9 +87,14 @@ export default function CategoryLogoPage({
         <div className="grid grid-cols-2 gap-5 px-14 pt-7">
           {categories.map((cat, i) => {
             const theme = CARD_THEMES[i % CARD_THEMES.length];
+            // A lone last card (odd count) spans the full row instead of half.
+            const isLoneLast =
+              i === categories.length - 1 && categories.length % 2 === 1;
             return (
               <div
-                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${theme.bg} p-5 pl-7`}
+                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${theme.bg} p-5 pl-7 ${
+                  isLoneLast ? "col-span-2" : ""
+                }`}
                 key={cat.label}
               >
                 <span
@@ -102,7 +107,7 @@ export default function CategoryLogoPage({
                 <div
                   className={`mt-2 mb-4 border-b border-dashed ${theme.rule}`}
                 />
-                <div className="flex flex-wrap gap-x-6 gap-y-3">
+                <div className="flex flex-wrap gap-x-5 gap-y-4">
                   {cat.items.map((item) => (
                     <InlineLogo
                       key={item.name}
