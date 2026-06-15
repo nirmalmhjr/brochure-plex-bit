@@ -13,6 +13,7 @@ import OfficesPage from "./components/templates/offices-page";
 import ProjectHighlightPage from "./components/templates/project-highlight-page";
 import ProjectPairPage from "./components/templates/project-pair-page";
 import RecognitionPage from "./components/templates/recognition-page";
+import ServicesDetailPage from "./components/templates/services-detail-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
 import SolutionsPage from "./components/templates/solutions-page";
 import StatsPage from "./components/templates/stats-page";
@@ -34,6 +35,7 @@ import {
   industries,
   projectPages,
   recognition,
+  serviceDetails,
   services,
   solutions,
   stats,
@@ -103,6 +105,13 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     key="services"
     subtitle="Empowering your business with innovative solutions. At Plex Bit Infosystems, we specialize in delivering cutting-edge IT solutions tailored to meet the unique needs of various industries."
     title="Our"
+  />,
+
+  <ServicesDetailPage
+    categories={serviceDetails.categories}
+    highlight={serviceDetails.highlight}
+    key="services-detail"
+    title={serviceDetails.title}
   />,
 
   <TimelinePage

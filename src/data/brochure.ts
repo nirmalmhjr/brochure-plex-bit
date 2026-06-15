@@ -29,7 +29,7 @@ export const company = {
   since: "2019",
 };
 
-/* ------------------------------- About ------------------------------- */
+// About
 
 export const welcome = {
   kicker: "Since 2019",
@@ -70,7 +70,7 @@ export const visionMission = [
   },
 ];
 
-/* ------------------------------- People ------------------------------- */
+// People
 
 export const coreTeam = {
   subtitle:
@@ -121,7 +121,7 @@ export const representatives = {
   ],
 };
 
-/* ----------------------------- Why / Services ----------------------------- */
+// Why / Services
 
 export const whyChooseUs = [
   {
@@ -179,6 +179,68 @@ export const services = [
   // },
 ];
 
+export const serviceDetails = {
+  title: "Services we",
+  highlight: "provide",
+  categories: [
+    {
+      title: "AI Development",
+      items: [
+        "Advanced Machine Learning Solution",
+        "Computer Vision and Image Processing",
+        "Generative AI and NLP Solutions",
+        "Virtual Assistant Development",
+        "Data Analytics and Visualization",
+        "AI Driven Automation and Integration",
+      ],
+    },
+    {
+      title: "Technology & Consulting",
+      items: [
+        "Python Development",
+        "Java Development",
+        "Quality Assurance",
+        "Web App Development",
+        "Product Design & Development",
+        "Mobile Development",
+        "eCommerce Website Development",
+        "MVP",
+      ],
+    },
+    {
+      title: "Staff Augmentation",
+      items: [
+        "React.js",
+        "Node.js",
+        "DevOps",
+        "Prompt Engineer",
+        "QA Engineer",
+        "Mobile Developer",
+        "Machine Learning",
+        "Python",
+        "Java",
+        "Conversational AI",
+        "AI Engineer",
+        ".Net",
+      ],
+    },
+    {
+      title: "Data",
+      items: ["Data Engineering", "Data Lakehouse Development"],
+    },
+    {
+      title: "AWS Cloud Solutions",
+      items: [
+        "AI Infrastructure on Cloud",
+        "Cloud Migration & Modernization",
+        "Cloud Economics Consulting",
+        "AWS Cloud AI Services",
+        "Compliance & Security",
+      ],
+    },
+  ],
+};
+
 export const industries = [
   { icon: Landmark, title: "Fintech", meta: "+5 successful Fintech products" },
   {
@@ -211,7 +273,7 @@ export const industries = [
   { icon: LayoutGrid, title: "ERP", meta: "+10 successful ERP products" },
 ];
 
-/* ------------------------------ Workflow ------------------------------ */
+// Workflow
 
 export const workflow = {
   subtitle:
@@ -240,7 +302,7 @@ export const workflow = {
   ],
 };
 
-/* ------------------------- Clients / Tech / Logos ------------------------- */
+// Clients / Tech / Logos
 
 export const clients = {
   subtitle:
@@ -585,7 +647,7 @@ export const capabilities = {
   ],
 };
 
-/* -------------------------------- Stats -------------------------------- */
+  // Stats
 
 export const stats = {
   subtitle:
@@ -599,7 +661,7 @@ export const stats = {
   note: "We are a diverse team of 35 professionals from different countries, collaborating seamlessly to deliver exceptional solutions.",
 };
 
-/* ------------------------------- Projects ------------------------------- */
+// Projects
 
 export interface Project {
   desc: string;
@@ -784,7 +846,7 @@ export const projectPages: {
   },
 ];
 
-/* ------------------------------ Case studies ------------------------------ */
+// Case studies
 
 export interface CaseStudy {
   desc: string;
@@ -848,7 +910,7 @@ export const caseStudies: CaseStudy[] = [
   },
 ];
 
-/* -------------------------------- Offices -------------------------------- */
+// Offices
 
 export const devOffices = {
   title: "Our Head Office &",
