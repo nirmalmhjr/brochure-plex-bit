@@ -119,7 +119,7 @@ export default function CaseStudyDetailPage({
                 src={study.brandLogo}
               />
             ) : (
-              <p className="font-extrabold text-2xl text-ink  tracking-tight capitalize">
+              <p className="font-extrabold text-2xl text-ink capitalize tracking-tight">
                 {study.name}
               </p>
             )}

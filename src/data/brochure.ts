@@ -6,15 +6,15 @@
  */
 
 import {
-  Building2,
+  Factory,
+  Globe,
   GraduationCap,
   HeartPulse,
+  Hotel,
   Landmark,
-  LayoutGrid,
-  MapPin,
-  ShoppingBag,
+  Share2,
+  ShoppingCart,
   Truck,
-  Users,
 } from "lucide-react";
 
 export const company = {
@@ -242,35 +242,15 @@ export const serviceDetails = {
 };
 
 export const industries = [
-  { icon: Landmark, title: "Fintech", meta: "+5 successful Fintech products" },
-  {
-    icon: HeartPulse,
-    title: "Healthcare",
-    meta: "+10 successful Healthtech products",
-  },
-  {
-    icon: Building2,
-    title: "Proptech",
-    meta: "+3 successful Proptech products",
-  },
-  {
-    icon: GraduationCap,
-    title: "Education",
-    meta: "+20 successful Edtech products",
-  },
-  { icon: Users, title: "Social", meta: "+15 successful social products" },
-  {
-    icon: Truck,
-    title: "Logistics",
-    meta: "+10 successful logistics products",
-  },
-  {
-    icon: ShoppingBag,
-    title: "Marketplace",
-    meta: "+20 successful marketplaces",
-  },
-  { icon: MapPin, title: "Geotech", meta: "+5 successful Geotech products" },
-  { icon: LayoutGrid, title: "ERP", meta: "+10 successful ERP products" },
+  { icon: HeartPulse, title: "Healthcare" },
+  { icon: Landmark, title: "Fintech" },
+  { icon: Factory, title: "Manufacturing" },
+  { icon: GraduationCap, title: "Education" },
+  { icon: Truck, title: "Logistics" },
+  { icon: ShoppingCart, title: "Ecommerce" },
+  { icon: Hotel, title: "Hospitality" },
+  { icon: Share2, title: "Social" },
+  { icon: Globe, title: "Geotech" },
 ];
 
 // Workflow
@@ -505,7 +485,10 @@ export const techStack = {
           name: "Amazon SageMaker",
           src: "/images/technology-stack/backend/Amazon-SageMaker.png",
         },
-        { name: "Apache Spark", src: "/images/technology-stack/ai/spartkIt.png" },
+        {
+          name: "Apache Spark",
+          src: "/images/technology-stack/ai/spartkIt.png",
+        },
         { name: "PowerAI", src: "/images/technology-stack/ai/power ai.png" },
         { name: "Kafka", src: "/images/technology-stack/ai/Kafka.png" },
         {
