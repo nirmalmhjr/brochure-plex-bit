@@ -6,15 +6,15 @@
  */
 
 import {
-  Landmark,
-  HeartPulse,
   Building2,
   GraduationCap,
-  Users,
-  Truck,
-  ShoppingBag,
-  MapPin,
+  HeartPulse,
+  Landmark,
   LayoutGrid,
+  MapPin,
+  ShoppingBag,
+  Truck,
+  Users,
 } from "lucide-react";
 
 export const company = {
@@ -76,9 +76,21 @@ export const coreTeam = {
   subtitle:
     "Our team comprises skilled professionals dedicated to driving innovation and excellence. With expertise across various domains, we collaborate to deliver impactful solutions. Together, we strive to achieve exceptional results for our clients.",
   people: [
-    { name: "James Adamson", role: "CEO", image: "/images/team/james-adamson.jpg" },
-    { name: "Prakash Bhandari", role: "Co-Founder", image: "/images/team/prakash-bhandari.jpg" },
-    { name: "Dipendra Neupane", role: "Co-Founder", image: "/images/team/dipendra-neupane.jpg" },
+    {
+      name: "James Adamson",
+      role: "CEO",
+      image: "/images/team/james-adamson.jpg",
+    },
+    {
+      name: "Prakash Bhandari",
+      role: "Co-Founder",
+      image: "/images/team/prakash-bhandari.jpg",
+    },
+    {
+      name: "Dipendra Neupane",
+      role: "Co-Founder",
+      image: "/images/team/dipendra-neupane.jpg",
+    },
   ],
 };
 
@@ -168,15 +180,35 @@ export const services = [
 ];
 
 export const industries = [
-  { icon: Landmark,       title: "Fintech",      meta: "+5 successful Fintech products" },
-  { icon: HeartPulse,     title: "Healthcare",   meta: "+10 successful Healthtech products" },
-  { icon: Building2,      title: "Proptech",     meta: "+3 successful Proptech products" },
-  { icon: GraduationCap,  title: "Education",    meta: "+20 successful Edtech products" },
-  { icon: Users,          title: "Social",       meta: "+15 successful social products" },
-  { icon: Truck,          title: "Logistics",    meta: "+10 successful logistics products" },
-  { icon: ShoppingBag,    title: "Marketplace",  meta: "+20 successful marketplaces" },
-  { icon: MapPin,         title: "Geotech",      meta: "+5 successful Geotech products" },
-  { icon: LayoutGrid,     title: "ERP",          meta: "+10 successful ERP products" },
+  { icon: Landmark, title: "Fintech", meta: "+5 successful Fintech products" },
+  {
+    icon: HeartPulse,
+    title: "Healthcare",
+    meta: "+10 successful Healthtech products",
+  },
+  {
+    icon: Building2,
+    title: "Proptech",
+    meta: "+3 successful Proptech products",
+  },
+  {
+    icon: GraduationCap,
+    title: "Education",
+    meta: "+20 successful Edtech products",
+  },
+  { icon: Users, title: "Social", meta: "+15 successful social products" },
+  {
+    icon: Truck,
+    title: "Logistics",
+    meta: "+10 successful logistics products",
+  },
+  {
+    icon: ShoppingBag,
+    title: "Marketplace",
+    meta: "+20 successful marketplaces",
+  },
+  { icon: MapPin, title: "Geotech", meta: "+5 successful Geotech products" },
+  { icon: LayoutGrid, title: "ERP", meta: "+10 successful ERP products" },
 ];
 
 /* ------------------------------ Workflow ------------------------------ */
@@ -214,24 +246,24 @@ export const clients = {
   subtitle:
     "We are proud to serve a diverse range of clients across various industries, delivering tailored solutions to meet their unique needs and goals.",
   logos: [
-    { name: "KitchenDev",      src: "/images/clients/kitchen-dev.png" },
-    { name: "Airtel",          src: "/images/clients/airtel.png" },
-    { name: "Amchara",         src: "/images/clients/amchara.png" },
-    { name: "BusyKid",         src: "/images/clients/busy-kid.png" },
-    { name: "Palm Mind" , src: "/images/clients/palm-mind.png" },
-    { name: "NexMuv",          src: "/images/clients/next-muv.png" },
-    { name: "JFDS",            src: "/images/clients/jfds.png" },
-    { name: "Proline",         src: "/images/clients/proline.png" },
-    { name: "Jazp.com",        src: "/images/clients/jazp.png" },
+    { name: "KitchenDev", src: "/images/clients/kitchen-dev.png" },
+    { name: "Airtel", src: "/images/clients/airtel.png" },
+    { name: "Amchara", src: "/images/clients/amchara.png" },
+    { name: "BusyKid", src: "/images/clients/busy-kid.png" },
+    { name: "Palm Mind", src: "/images/clients/palm-mind.png" },
+    { name: "NexMuv", src: "/images/clients/next-muv.png" },
+    { name: "JFDS", src: "/images/clients/jfds.png" },
+    { name: "Proline", src: "/images/clients/proline.png" },
+    { name: "Jazp.com", src: "/images/clients/jazp.png" },
     { name: "Johnson Outdoors", src: "/images/clients/johnson.png" },
-    { name: "SecondNature",    src: "/images/clients/second-nature.png" },
-    { name: "CG Digital",      src: "/images/clients/cg-digital.png" },
-    { name: "Ted Baker",       src: "/images/clients/ted-baker.png" },
-    { name: "General Bytes",   src: "/images/clients/general-bytes.png" },
-    { name: "SAM Learning",    src: "/images/clients/sam-learning.png" },
-    { name: "Smart Clerk",     src: "/images/clients/smart-clerk.png" },
-    { name: "Bluestone",       src: "/images/clients/blue-stone.png" },
-    { name: "AIO Tests",       src: "/images/clients/aio-tests.png" },
+    { name: "SecondNature", src: "/images/clients/second-nature.png" },
+    { name: "CG Digital", src: "/images/clients/cg-digital.png" },
+    { name: "Ted Baker", src: "/images/clients/ted-baker.png" },
+    { name: "General Bytes", src: "/images/clients/general-bytes.png" },
+    { name: "SAM Learning", src: "/images/clients/sam-learning.png" },
+    { name: "Smart Clerk", src: "/images/clients/smart-clerk.png" },
+    { name: "Bluestone", src: "/images/clients/blue-stone.png" },
+    { name: "AIO Tests", src: "/images/clients/aio-tests.png" },
   ],
 };
 
@@ -242,44 +274,68 @@ export const techStack = {
     {
       label: "Front-End",
       items: [
-        { name: "Vue.js",   src: "/images/technology-stack/frontend/vuejs.png" },
-        { name: "React",    src: "/images/technology-stack/frontend/reactjs.png" },
-        { name: "SolidJS",  src: "/images/technology-stack/frontend/solidjs.png" },
-        { name: "Svelte",   src: "/images/technology-stack/frontend/svelte.png" },
-        { name: "Next.js",  src: "/images/technology-stack/frontend/nextjs.svg" },
+        { name: "Vue.js", src: "/images/technology-stack/frontend/vuejs.png" },
+        { name: "React", src: "/images/technology-stack/frontend/reactjs.png" },
+        {
+          name: "SolidJS",
+          src: "/images/technology-stack/frontend/solidjs.png",
+        },
+        { name: "Svelte", src: "/images/technology-stack/frontend/svelte.png" },
+        {
+          name: "Next.js",
+          src: "/images/technology-stack/frontend/nextjs.svg",
+        },
       ],
     },
     {
       label: "Back-End",
       items: [
-        { name: "Node.js",  src: "/images/technology-stack/backend/nodejs.png" },
-        { name: "Python",   src: "/images/technology-stack/backend/python.png" },
-        { name: "Flask",    src: "/images/technology-stack/backend/flask.png" },
-        { name: "Django",   src: "/images/technology-stack/backend/django.png" },
-        { name: "Laravel",  src: "/images/technology-stack/backend/laravel.png" },
-        { name: "Rails",    src: "/images/technology-stack/backend/rails.png" },
-        { name: "Go",       src: "/images/technology-stack/backend/go.png" },
+        { name: "Node.js", src: "/images/technology-stack/backend/nodejs.png" },
+        { name: "Python", src: "/images/technology-stack/backend/python.png" },
+        { name: "Flask", src: "/images/technology-stack/backend/flask.png" },
+        { name: "Django", src: "/images/technology-stack/backend/django.png" },
+        {
+          name: "Laravel",
+          src: "/images/technology-stack/backend/laravel.png",
+        },
+        { name: "Rails", src: "/images/technology-stack/backend/rails.png" },
+        { name: "Go", src: "/images/technology-stack/backend/go.png" },
       ],
     },
     {
       label: "Blockchain",
       items: [
-        { name: "Bitcoin",  src: "/images/technology-stack/blockchain/bitcoin.svg" },
-        { name: "Solana",   src: "/images/technology-stack/blockchain/solana.png" },
-        { name: "Polkadot", src: "/images/technology-stack/blockchain/polkadot.png" },
-        { name: "Ethereum", src: "/images/technology-stack/blockchain/ethereum.png" },
-        { name: "Skale",    src: "/images/technology-stack/blockchain/skale.png" },
-        { name: "Polygon",  src: "/images/technology-stack/blockchain/polygon.png" },
+        {
+          name: "Bitcoin",
+          src: "/images/technology-stack/blockchain/bitcoin.svg",
+        },
+        {
+          name: "Solana",
+          src: "/images/technology-stack/blockchain/solana.png",
+        },
+        {
+          name: "Polkadot",
+          src: "/images/technology-stack/blockchain/polkadot.png",
+        },
+        {
+          name: "Ethereum",
+          src: "/images/technology-stack/blockchain/ethereum.png",
+        },
+        { name: "Skale", src: "/images/technology-stack/blockchain/skale.png" },
+        {
+          name: "Polygon",
+          src: "/images/technology-stack/blockchain/polygon.png",
+        },
       ],
     },
     {
       label: "Desktop",
       items: [
-        { name: "C++",    src: "/images/technology-stack/desktop/c.png" },
-        { name: "Swift",  src: "/images/technology-stack/desktop/swift.png" },
-        { name: "Go",     src: "/images/technology-stack/desktop/go.png" },
+        { name: "C++", src: "/images/technology-stack/desktop/c.png" },
+        { name: "Swift", src: "/images/technology-stack/desktop/swift.png" },
+        { name: "Go", src: "/images/technology-stack/desktop/go.png" },
         { name: "Python", src: "/images/technology-stack/desktop/python.png" },
-        { name: "C#",     src: "/images/technology-stack/desktop/csharp.png" },
+        { name: "C#", src: "/images/technology-stack/desktop/csharp.png" },
       ],
     },
   ],
@@ -289,14 +345,14 @@ export const databases = {
   subtitle:
     "We leverage modern, battle-tested database technologies and cloud platforms to deliver reliable and scalable solutions.",
   items: [
-    { name: "Amazon RDS",   src: "/images/databases/amazon-rds.png"   },
-    { name: "MySQL",        src: "/images/databases/mysql.png"         },
-    { name: "SQL Server",   src: "/images/databases/sql-server.png"   },
-    { name: "PostgreSQL",   src: "/images/databases/postgreSql.png"   },
+    { name: "Amazon RDS", src: "/images/databases/amazon-rds.png" },
+    { name: "MySQL", src: "/images/databases/mysql.png" },
+    { name: "SQL Server", src: "/images/databases/sql-server.png" },
+    { name: "PostgreSQL", src: "/images/databases/postgreSql.png" },
     { name: "Google Cloud", src: "/images/databases/google-cloud.png" },
-    { name: "Amazon S3",    src: "/images/databases/amazon-s3.png"    },
-    { name: "Oracle",       src: "/images/databases/oracle.png"       },
-    { name: "MongoDB",      src: "/images/databases/mongodb.svg"      },
+    { name: "Amazon S3", src: "/images/databases/amazon-s3.png" },
+    { name: "Oracle", src: "/images/databases/oracle.png" },
+    { name: "MongoDB", src: "/images/databases/mongodb.svg" },
   ],
 };
 
@@ -307,42 +363,105 @@ export const apiIntegrations = {
     {
       label: "Payment Integrations",
       items: [
-        { name: "Stripe",      src: "/images/api-integration/payment-integrations/stripe.png" },
-        { name: "PayPal",      src: "/images/api-integration/payment-integrations/paypal.png" },
-        { name: "Wise",        src: "/images/api-integration/payment-integrations/wise.png" },
-        { name: "Mollie",      src: "/images/api-integration/payment-integrations/mollie.png" },
-        { name: "Swish",       src: "/images/api-integration/payment-integrations/swish.png" },
-        { name: "iDEAL",       src: "/images/api-integration/payment-integrations/i-deal.png" },
+        {
+          name: "Stripe",
+          src: "/images/api-integration/payment-integrations/stripe.png",
+        },
+        {
+          name: "PayPal",
+          src: "/images/api-integration/payment-integrations/paypal.png",
+        },
+        {
+          name: "Wise",
+          src: "/images/api-integration/payment-integrations/wise.png",
+        },
+        {
+          name: "Mollie",
+          src: "/images/api-integration/payment-integrations/mollie.png",
+        },
+        {
+          name: "Swish",
+          src: "/images/api-integration/payment-integrations/swish.png",
+        },
+        {
+          name: "iDEAL",
+          src: "/images/api-integration/payment-integrations/i-deal.png",
+        },
       ],
     },
     {
       label: "Shipping Integrations",
       items: [
-        { name: "PostNL", src: "/images/api-integration/shipping-integrations/postnl.png" },
-        { name: "DPD",    src: "/images/api-integration/shipping-integrations/dpd.png" },
-        { name: "DHL",    src: "/images/api-integration/shipping-integrations/dhl.png" },
-        { name: "FedEx",  src: "/images/api-integration/shipping-integrations/fedEx.png" },
+        {
+          name: "PostNL",
+          src: "/images/api-integration/shipping-integrations/postnl.png",
+        },
+        {
+          name: "DPD",
+          src: "/images/api-integration/shipping-integrations/dpd.png",
+        },
+        {
+          name: "DHL",
+          src: "/images/api-integration/shipping-integrations/dhl.png",
+        },
+        {
+          name: "FedEx",
+          src: "/images/api-integration/shipping-integrations/fedEx.png",
+        },
       ],
     },
     {
       label: "CRM & IRM Integrations",
       items: [
-        { name: "Zendesk",     src: "/images/api-integration/crm-irm-integrations/zendesk.png" },
-        { name: "MS Dynamics", src: "/images/api-integration/crm-irm-integrations/microsoft-dynamics.png" },
-        { name: "Salesforce",  src: "/images/api-integration/crm-irm-integrations/salesforce.png" },
-        { name: "HubSpot",     src: "/images/api-integration/crm-irm-integrations/hubspot.png" },
-        { name: "Odoo",        src: "/images/api-integration/crm-irm-integrations/odoo.png" },
-        { name: "Oracle",      src: "/images/api-integration/crm-irm-integrations/oracle.png" },
-        { name: "Zoho",        src: "/images/api-integration/crm-irm-integrations/zoho.png" },
+        {
+          name: "Zendesk",
+          src: "/images/api-integration/crm-irm-integrations/zendesk.png",
+        },
+        {
+          name: "MS Dynamics",
+          src: "/images/api-integration/crm-irm-integrations/microsoft-dynamics.png",
+        },
+        {
+          name: "Salesforce",
+          src: "/images/api-integration/crm-irm-integrations/salesforce.png",
+        },
+        {
+          name: "HubSpot",
+          src: "/images/api-integration/crm-irm-integrations/hubspot.png",
+        },
+        {
+          name: "Odoo",
+          src: "/images/api-integration/crm-irm-integrations/odoo.png",
+        },
+        {
+          name: "Oracle",
+          src: "/images/api-integration/crm-irm-integrations/oracle.png",
+        },
+        {
+          name: "Zoho",
+          src: "/images/api-integration/crm-irm-integrations/zoho.png",
+        },
       ],
     },
     {
       label: "Accounting / Booking",
       items: [
-        { name: "Zapier",     src: "/images/api-integration/accounting-booking-integrations/zapier.png" },
-        { name: "Xero",       src: "/images/api-integration/accounting-booking-integrations/xero.png" },
-        { name: "QuickBooks", src: "/images/api-integration/accounting-booking-integrations/quickbooks.png" },
-        { name: "FreshBooks", src: "/images/api-integration/accounting-booking-integrations/freshBooks.png" },
+        {
+          name: "Zapier",
+          src: "/images/api-integration/accounting-booking-integrations/zapier.png",
+        },
+        {
+          name: "Xero",
+          src: "/images/api-integration/accounting-booking-integrations/xero.png",
+        },
+        {
+          name: "QuickBooks",
+          src: "/images/api-integration/accounting-booking-integrations/quickbooks.png",
+        },
+        {
+          name: "FreshBooks",
+          src: "/images/api-integration/accounting-booking-integrations/freshBooks.png",
+        },
       ],
     },
   ],
@@ -352,13 +471,21 @@ export const certifications = {
   subtitle:
     "Our team is equipped with industry-recognized certifications, ensuring top-quality services and cutting-edge expertise. From advanced technical skills to specialized domains, our certifications reflect our commitment to excellence and continuous growth.",
   logos: [
-     { name: "aws-certified",      src: "/images/certifications/aws-certified.png" },
-     { name: "blockchains",      src: "/images/certifications/blockchains.png" },
-     { name: "google-cloud-certifications",      src: "/images/certifications/google-cloud-certified.png" },
-     { name: "istqb",      src: "/images/certifications/ISTQB-International_original.png" },
-     { name: "magneto",      src: "/images/certifications/magneto.png" },
-     { name: "professional-scrum-master",      src: "/images/certifications/professional-scrum-master.png" },
-     
+    { name: "aws-certified", src: "/images/certifications/aws-certified.png" },
+    { name: "blockchains", src: "/images/certifications/blockchains.png" },
+    {
+      name: "google-cloud-certifications",
+      src: "/images/certifications/google-cloud-certified.png",
+    },
+    {
+      name: "istqb",
+      src: "/images/certifications/ISTQB-International_original.png",
+    },
+    { name: "magneto", src: "/images/certifications/magneto.png" },
+    {
+      name: "professional-scrum-master",
+      src: "/images/certifications/professional-scrum-master.png",
+    },
   ],
 };
 
@@ -366,9 +493,12 @@ export const recognition = {
   subtitle:
     "Over the years of our activity, we have earned several awards and honors for our custom web development services.",
   logos: [
-    { name: "Top Rated — Upwork",       src: "/images/recognition/upwork.png" },
-    { name: "Trusted on TechBehemoths", src: "/images/recognition/behemoths.png" },
-    { name: "5.0 Rating — Clutch",      src: "/images/recognition/clutch.png" },
+    { name: "Top Rated — Upwork", src: "/images/recognition/upwork.png" },
+    {
+      name: "Trusted on TechBehemoths",
+      src: "/images/recognition/behemoths.png",
+    },
+    { name: "5.0 Rating — Clutch", src: "/images/recognition/clutch.png" },
   ],
 };
 
@@ -380,12 +510,30 @@ export const hourlyModel = {
   intro:
     "Our hourly-based model offers flexible and efficient team services tailored to your needs, starting at just $12 per hour.",
   items: [
-    { title: "Customizable Hours", desc: "Our resources work according to the required hours you specify." },
-    { title: "Dedicated Account Manager", desc: "We provide an account manager at no additional cost to ensure a smooth transition and effective communication." },
-    { title: "Free 5-Day Trial", desc: "Try our services for five working days, absolutely free." },
-    { title: "Flexibility for Evolving Projects", desc: "Perfect for projects with changing requirements, allowing you to modify project resources as your needs evolve." },
-    { title: "Experimentation-Friendly", desc: "Ideal for exploring new activities or adapting to dynamic project demands." },
-    { title: "Flexible Payment Options", desc: "Choose from weekly or monthly payment plans to suit your convenience." },
+    {
+      title: "Customizable Hours",
+      desc: "Our resources work according to the required hours you specify.",
+    },
+    {
+      title: "Dedicated Account Manager",
+      desc: "We provide an account manager at no additional cost to ensure a smooth transition and effective communication.",
+    },
+    {
+      title: "Free 5-Day Trial",
+      desc: "Try our services for five working days, absolutely free.",
+    },
+    {
+      title: "Flexibility for Evolving Projects",
+      desc: "Perfect for projects with changing requirements, allowing you to modify project resources as your needs evolve.",
+    },
+    {
+      title: "Experimentation-Friendly",
+      desc: "Ideal for exploring new activities or adapting to dynamic project demands.",
+    },
+    {
+      title: "Flexible Payment Options",
+      desc: "Choose from weekly or monthly payment plans to suit your convenience.",
+    },
   ],
 };
 
@@ -395,20 +543,37 @@ export const dedicatedModel = {
   intro:
     "Hire dedicated team resources on a monthly basis to meet your specific project needs. Choose an individual expert or build a custom team tailored to your requirements.",
   items: [
-    { title: "Cost-Efficient", desc: "Save up to 70% compared to hiring in-house." },
-    { title: "Direct Communication", desc: "No delays, ensuring smooth project execution." },
-    { title: "Secure & Reliable", desc: "Guaranteed data security and confidentiality." },
-    { title: "Flexible", desc: "Seamlessly switch between projects or tasks as needed." },
-    { title: "Timely Delivery", desc: "Receive daily updates with on-schedule results." },
-    { title: "Availability", desc: "Resources work according to your project demands." },
+    {
+      title: "Cost-Efficient",
+      desc: "Save up to 70% compared to hiring in-house.",
+    },
+    {
+      title: "Direct Communication",
+      desc: "No delays, ensuring smooth project execution.",
+    },
+    {
+      title: "Secure & Reliable",
+      desc: "Guaranteed data security and confidentiality.",
+    },
+    {
+      title: "Flexible",
+      desc: "Seamlessly switch between projects or tasks as needed.",
+    },
+    {
+      title: "Timely Delivery",
+      desc: "Receive daily updates with on-schedule results.",
+    },
+    {
+      title: "Availability",
+      desc: "Resources work according to your project demands.",
+    },
   ],
 };
 
 export const capabilities = {
   title: "Our",
   highlight: "Capabilities",
-  intro:
-    "End-to-end engineering and consulting capabilities under one roof.",
+  intro: "End-to-end engineering and consulting capabilities under one roof.",
   items: [
     { title: "Customized Software Development" },
     { title: "E-Commerce Platform Development" },
@@ -437,12 +602,16 @@ export const stats = {
 /* ------------------------------- Projects ------------------------------- */
 
 export interface Project {
-  name: string;
   desc: string;
   image?: string;
+  name: string;
 }
 
-export const projectPages: { title: string; highlight: string; projects: Project[] }[] = [
+export const projectPages: {
+  title: string;
+  highlight: string;
+  projects: Project[];
+}[] = [
   {
     title: "Our",
     highlight: "Projects",
@@ -618,15 +787,15 @@ export const projectPages: { title: string; highlight: string; projects: Project
 /* ------------------------------ Case studies ------------------------------ */
 
 export interface CaseStudy {
-  name: string;
-  teamSize: string;
-  timeFrame: string;
-  serviceArea: string;
   desc: string;
-  tech: string[];
+  image?: string;
+  name: string;
+  serviceArea: string;
   servicesSupplied: string[];
   solutions: string[];
-  image?: string;
+  teamSize: string;
+  tech: string[];
+  timeFrame: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -637,7 +806,15 @@ export const caseStudies: CaseStudy[] = [
     serviceArea: "Data & AI/ML",
     image: "/images/projects/magnifi.png",
     desc: "Magnifi by TIFIN is an AI-powered investing assistant designed to simplify and personalize investment decisions for individual investors. It enables users to link multiple brokerage accounts, providing a comprehensive view of their portfolios and offering real-time insights, risk assessments, and personalized recommendations.",
-    tech: ["Flask", "Node.js", "FastAPI", "Pinecone", "OpenAI", "MongoDB", "AWS"],
+    tech: [
+      "Flask",
+      "Node.js",
+      "FastAPI",
+      "Pinecone",
+      "OpenAI",
+      "MongoDB",
+      "AWS",
+    ],
     servicesSupplied: ["Development", "Support", "Maintenance"],
     solutions: [
       "Built smart algorithms for tailored advice and real-time investment insights.",
@@ -653,7 +830,14 @@ export const caseStudies: CaseStudy[] = [
     serviceArea: "Business Analysis, Design, Development & Data Analytics",
     image: "/images/projects/tawuniya.png",
     desc: "Tawuniya, established in 1986, was the first national insurance company in Saudi Arabia to operate under the cooperative insurance model. It provides a wide range of insurance services, including health, motor, and property, and is regulated by the Saudi Central Bank (SAMA).",
-    tech: ["React", "Flutter", "SharePoint", "Oracle PL/SQL", "webMethods", "UiPath"],
+    tech: [
+      "React",
+      "Flutter",
+      "SharePoint",
+      "Oracle PL/SQL",
+      "webMethods",
+      "UiPath",
+    ],
     servicesSupplied: ["Design", "Development", "Support", "Maintenance"],
     solutions: [
       "Developed claims automation system with RPA, streamlining workflows and enhancing accuracy.",
@@ -682,7 +866,8 @@ export const devOffices = {
     },
     {
       name: "India Development Office",
-      address: "Commercial Complex Tower - C, Central Business District, Sector-21, New Raipur Atal Nagar",
+      address:
+        "Commercial Complex Tower - C, Central Business District, Sector-21, New Raipur Atal Nagar",
       image: "/images/offices/raipur.png",
     },
   ],

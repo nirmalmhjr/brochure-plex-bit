@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "linter": {
+    "rules": {
+      "correctness": {
+        // Sizing is handled via Tailwind classes on <img>, not width/height attrs.
+        "useImageSize": "off"
+      }
+    }
+  }
+}

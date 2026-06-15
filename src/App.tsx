@@ -1,47 +1,46 @@
 import { cloneElement, type ReactElement } from "react";
-import CoverPage from "./components/templates/CoverPage";
-import IntroPage from "./components/templates/IntroPage";
-import IconCardGridPage from "./components/templates/IconCardGridPage";
-import TimelinePage from "./components/templates/TimelinePage";
-import LogoGridPage from "./components/templates/LogoGridPage";
-import DatabasesPage from "./components/templates/DatabasesPage";
-import CertificationsPage from "./components/templates/CertificationsPage";
-import RecognitionPage from "./components/templates/RecognitionPage";
-import CategoryLogoPage from "./components/templates/CategoryLogoPage";
-import HourlyModelPage from "./components/templates/HourlyModelPage";
-import DedicatedModelPage from "./components/templates/DedicatedModelPage";
-import StatsPage from "./components/templates/StatsPage";
-import ProjectHighlightPage from "./components/templates/ProjectHighlightPage";
-import ProjectPairPage from "./components/templates/ProjectPairPage";
-import OfficesPage from "./components/templates/OfficesPage";
-import WorldMapPage from "./components/templates/WorldMapPage";
-import ContactPage from "./components/templates/ContactPage";
+import CategoryLogoPage from "./components/templates/category-logo-page";
+import CertificationsPage from "./components/templates/certifications-page";
+import ContactPage from "./components/templates/contact-page";
+import CoverPage from "./components/templates/cover-page";
+import DatabasesPage from "./components/templates/databases-page";
+import DedicatedModelPage from "./components/templates/dedicated-model-page";
+import HourlyModelPage from "./components/templates/hourly-model-page";
+import IconCardGridPage from "./components/templates/icon-card-grid-page";
+import IntroPage from "./components/templates/intro-page";
+import LogoGridPage from "./components/templates/logo-grid-page";
+import OfficesPage from "./components/templates/offices-page";
+import ProjectHighlightPage from "./components/templates/project-highlight-page";
+import ProjectPairPage from "./components/templates/project-pair-page";
+import RecognitionPage from "./components/templates/recognition-page";
+import ServicesHubPage from "./components/templates/services-hub-page";
+import StatsPage from "./components/templates/stats-page";
+import TimelinePage from "./components/templates/timeline-page";
 
-import VisionMissionPage from "./components/templates/VisionMissionPage";
-import WhyChooseUsPage from "./components/templates/WhyChooseUsPage";
-import ServicesHubPage from "./components/templates/ServicesHubPage";
+import VisionMissionPage from "./components/templates/vision-mission-page";
+import WhyChooseUsPage from "./components/templates/why-choose-us-page";
+import WorldMapPage from "./components/templates/world-map-page";
 
 import {
-  welcome,
-  solutions,
-  visionMission,
-
-  whyChooseUs,
-  services,
-  industries,
-  workflow,
-  clients,
-  techStack,
-  databases,
   apiIntegrations,
   certifications,
-  recognition,
-  hourlyModel,
-  dedicatedModel,
-  stats,
-  projectPages,
-  devOffices,
+  clients,
   company,
+  databases,
+  dedicatedModel,
+  devOffices,
+  hourlyModel,
+  industries,
+  projectPages,
+  recognition,
+  services,
+  solutions,
+  stats,
+  techStack,
+  visionMission,
+  welcome,
+  whyChooseUs,
+  workflow,
 } from "./data/brochure";
 
 /**
@@ -51,14 +50,19 @@ import {
 const pages: ReactElement<{ pageNumber?: number }>[] = [
   <CoverPage key="cover" />,
 
-  <IntroPage key="welcome" {...welcome} stamp={`Since ${company.since}`} image="/images/company-pictures/welcome-to-our-company.png" />,
+  <IntroPage
+    key="welcome"
+    {...welcome}
+    image="/images/company-pictures/welcome-to-our-company.png"
+    stamp={`Since ${company.since}`}
+  />,
 
   <VisionMissionPage
+    highlight="& Mission"
+    image="/images/company-pictures/image.png"
+    items={visionMission}
     key="vision-mission"
     title="Company Vision"
-    highlight="& Mission"
-    items={visionMission}
-    image="/images/company-pictures/image.png"
   />,
 
   // <PeopleGridPage
@@ -77,93 +81,97 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   //   people={representatives.people}
   // />,
 
-  <IntroPage key="solutions" {...solutions} image="/images/company-pictures/provide-solutions.png" />,
+  <IntroPage
+    key="solutions"
+    {...solutions}
+    image="/images/company-pictures/provide-solutions.png"
+  />,
 
   <WhyChooseUsPage
+    highlight="Choose Us?"
+    image="/images/company-pictures/company-profile.png"
+    items={whyChooseUs}
     key="why-choose-us"
     title="Why You Should"
-    highlight="Choose Us?"
-    items={whyChooseUs}
-    image="/images/company-pictures/company-profile.png"
   />,
 
   <ServicesHubPage
-    key="services"
-    title="Our"
     highlight="Services"
-    subtitle="Empowering your business with innovative solutions. At Plex Bit Infosystems, we specialize in delivering cutting-edge IT solutions tailored to meet the unique needs of various industries."
     items={services}
+    key="services"
+    subtitle="Empowering your business with innovative solutions. At Plex Bit Infosystems, we specialize in delivering cutting-edge IT solutions tailored to meet the unique needs of various industries."
+    title="Our"
   />,
 
   <TimelinePage
-    key="workflow"
-    title="Our"
     highlight="Work-Flow"
-    subtitle={workflow.subtitle}
+    key="workflow"
     steps={workflow.steps}
+    subtitle={workflow.subtitle}
+    title="Our"
   />,
 
   <IconCardGridPage
-    key="industries"
-    title="Industries We Have"
-    highlight="Expertise In"
-    subtitle="We always focus on getting industry expertise along with tech, as we believe technology is just a tool to support the innovative business."
-    items={industries}
     columns={3}
+    highlight="Expertise In"
+    items={industries}
+    key="industries"
+    subtitle="We always focus on getting industry expertise along with tech, as we believe technology is just a tool to support the innovative business."
+    title="Industries We Have"
     variant="tile"
   />,
 
   <LogoGridPage
-    key="clients"
-    title="Our"
-    highlight="Clients"
-    subtitle={clients.subtitle}
-    logos={clients.logos}
     columns={5}
+    highlight="Clients"
+    key="clients"
+    logos={clients.logos}
+    subtitle={clients.subtitle}
+    title="Our"
   />,
 
   <CategoryLogoPage
-    key="tech-stack"
-    title="Our Technology"
-    highlight="Stack"
-    subtitle={techStack.subtitle}
     categories={techStack.categories}
+    highlight="Stack"
+    key="tech-stack"
     layout="rows"
+    subtitle={techStack.subtitle}
+    title="Our Technology"
   />,
 
   <DatabasesPage
-    key="databases"
-    title="Database That"
     highlight="We Use"
-    subtitle={databases.subtitle}
     items={databases.items}
+    key="databases"
+    subtitle={databases.subtitle}
+    title="Database That"
   />,
 
   <CategoryLogoPage
-    key="api-integrations"
-    title="Major API"
-    highlight="Integrations"
-    subtitle={apiIntegrations.subtitle}
     categories={apiIntegrations.categories}
+    highlight="Integrations"
+    key="api-integrations"
     layout="columns"
+    subtitle={apiIntegrations.subtitle}
+    title="Major API"
   />,
 
   <CertificationsPage
-    key="certifications"
-    title="Our Team"
-    highlight="Certifications"
-    subtitle={certifications.subtitle}
     certifications={certifications.logos}
     columns={3}
+    highlight="Certifications"
+    key="certifications"
+    subtitle={certifications.subtitle}
+    title="Our Team"
   />,
 
   <RecognitionPage
-    key="recognition"
-    title="Our"
-    highlight="Recognition"
-    subtitle={recognition.subtitle}
-    logos={recognition.logos}
     columns={3}
+    highlight="Recognition"
+    key="recognition"
+    logos={recognition.logos}
+    subtitle={recognition.subtitle}
+    title="Our"
   />,
 
   // <ChecklistPage
@@ -176,30 +184,28 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   // />,
 
   <HourlyModelPage
-    key="hourly-model"
-    title={hourlyModel.title}
     highlight={hourlyModel.highlight}
     intro={hourlyModel.intro}
     items={hourlyModel.items}
+    key="hourly-model"
+    title={hourlyModel.title}
   />,
 
   <DedicatedModelPage
-    key="dedicated-model"
-    title={dedicatedModel.title}
     highlight={dedicatedModel.highlight}
     intro={dedicatedModel.intro}
     items={dedicatedModel.items}
+    key="dedicated-model"
+    title={dedicatedModel.title}
   />,
-
- 
 
   // "Our Projects" — one hero page per project
   ...projectPages[0].projects.map((project, qi) => (
     <ProjectHighlightPage
+      index={qi + 1}
       key={`project-${project.name}`}
       project={project}
       sectionLabel={`${projectPages[0].title} ${projectPages[0].highlight}`}
-      index={qi + 1}
     />
   )),
 
@@ -209,9 +215,9 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     for (let i = 0; i < page.projects.length; i += 2) {
       pairs.push(page.projects.slice(i, i + 2));
     }
-    return pairs.map((pair, pi) => (
+    return pairs.map((pair) => (
       <ProjectPairPage
-        key={`${page.title}-pair-${pi}`}
+        key={pair.map((project) => project.name).join("-")}
         projects={pair}
         sectionLabel={`${page.title} ${page.highlight}`}
       />
@@ -223,13 +229,13 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   // )),
 
   // why choose us
- <StatsPage
-    key="stats"
-    title="Why"
+  <StatsPage
     highlight="Choose Us?"
-    subtitle={stats.subtitle}
-    stats={stats.items}
+    key="stats"
     note={stats.note}
+    stats={stats.items}
+    subtitle={stats.subtitle}
+    title="Why"
   />,
   <OfficesPage key="dev-offices" {...devOffices} />,
   <WorldMapPage key="world-map" />,
@@ -245,9 +251,9 @@ export default function App() {
       {pages.map((page, i) => cloneElement(page, { pageNumber: i }))}
 
       <button
-        type="button"
+        className="no-print fixed right-6 bottom-6 z-50 rounded-full bg-brand px-6 py-3 font-bold text-sm text-white shadow-xl transition hover:bg-brand-dark"
         onClick={() => window.print()}
-        className="no-print fixed bottom-6 right-6 z-50 rounded-full bg-brand px-6 py-3 text-sm font-bold text-white shadow-xl transition hover:bg-brand-dark"
+        type="button"
       >
         🖨️ Print / Save as PDF
       </button>

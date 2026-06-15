@@ -24,23 +24,23 @@
 
 html,
 body {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 body {
   font-family: var(--font-sans);
-  background: #d7d9de;
   -webkit-font-smoothing: antialiased;
+  background: #d7d9de;
 }
 
 .page {
+  position: relative;
+  flex-shrink: 0;
   width: var(--page-w);
   height: var(--page-h);
-  background: #fff;
-  position: relative;
   overflow: hidden;
-  flex-shrink: 0;
+  background: #fff;
 }
 
 /* Screen preview: stacked, centered pages with shadows */
@@ -48,8 +48,8 @@ body {
   #root {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 28px;
+    align-items: center;
     padding: 28px 0;
   }
   .page {
