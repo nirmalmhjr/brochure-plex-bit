@@ -14,6 +14,7 @@ import ProjectHighlightPage from "./components/templates/project-highlight-page"
 import ProjectPairPage from "./components/templates/project-pair-page";
 import RecognitionPage from "./components/templates/recognition-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
+import SolutionsPage from "./components/templates/solutions-page";
 import StatsPage from "./components/templates/stats-page";
 import TimelinePage from "./components/templates/timeline-page";
 
@@ -81,10 +82,11 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   //   people={representatives.people}
   // />,
 
-  <IntroPage
+  <SolutionsPage
     key="solutions"
     {...solutions}
     image="/images/company-pictures/provide-solutions.png"
+    recognitionLogos={recognition.logos}
   />,
 
   <WhyChooseUsPage

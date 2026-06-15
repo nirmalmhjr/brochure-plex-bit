@@ -95,7 +95,7 @@ export default function ContactPage() {
             /> */}
             <img
               alt="Map pin"
-              className="top-10 w-6 h-8 -translate-x-20 fill-brand text-white drop-shadow-md"
+              className="top-10 h-8 w-6 -translate-x-20 fill-brand text-white drop-shadow-md"
               src="/images/map/map-pin.png"
             />
           </div>
