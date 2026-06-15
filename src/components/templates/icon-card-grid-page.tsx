@@ -51,25 +51,27 @@ export default function IconCardGridPage({
             const Icon = item.icon;
             return (
               <div
-                className="rounded-2xl border border-zinc-100 bg-white p-5 text-center shadow-md"
+                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-zinc-200/70 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-purple-200 hover:shadow-xl"
                 key={item.title}
               >
-                <div className="mx-auto flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand to-fuchsia-500 shadow-sm">
-                  <Icon className="text-white" size={26} strokeWidth={1.75} />
-                </div>
-                <h3 className="mt-3 font-bold text-base text-brand-dark">
+                {/* oversized ghost icon for depth */}
+                <Icon
+                  aria-hidden
+                  className="pointer-events-none absolute -right-3 -bottom-3 size-24 text-purple-100/70 transition-colors group-hover:text-purple-200/70"
+                  strokeWidth={1.25}
+                />
+                <span className="relative flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-800 via-purple-700 to-fuchsia-500 text-white shadow-lg shadow-purple-700/25 transition-transform group-hover:scale-105">
+                  <Icon size={26} strokeWidth={1.75} />
+                </span>
+                <h3 className="relative mt-4 font-bold text-base text-zinc-900 tracking-tight">
                   {item.title}
                 </h3>
-                {item.meta && (
-                  <span className="mt-2 inline-block rounded-full bg-brand-soft px-4 py-1 font-semibold text-brand text-xs">
-                    {item.meta}
-                  </span>
-                )}
                 {item.desc && (
-                  <p className="mt-2 text-xs text-zinc-500 leading-relaxed">
+                  <p className="relative mt-1 text-xs text-zinc-500 leading-snug">
                     {item.desc}
                   </p>
                 )}
+                <span className="relative mt-3 h-1 w-8 rounded-full bg-gradient-to-r from-purple-700 to-fuchsia-400 transition-all group-hover:w-14" />
               </div>
             );
           })}
