@@ -529,6 +529,8 @@ export const databases = {
     { name: "Amazon S3", src: "/images/databases/amazon-s3.png" },
     { name: "Oracle", src: "/images/databases/oracle.png" },
     { name: "MongoDB", src: "/images/databases/mongodb.svg" },
+    { name: "Redis", src: "/images/databases/redis.webp" },
+    { name: "Pinecone", src: "/images/databases/pinecone.svg" },
   ],
 };
 
