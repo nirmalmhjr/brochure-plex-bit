@@ -1,4 +1,5 @@
 import { cloneElement, type ReactElement } from "react";
+import CaseStudyDetailPage from "./components/templates/case-study-detail-page";
 import CategoryLogoPage from "./components/templates/category-logo-page";
 import CertificationsPage from "./components/templates/certifications-page";
 import ContactPage from "./components/templates/contact-page";
@@ -12,7 +13,6 @@ import LogoGridPage from "./components/templates/logo-grid-page";
 import OfficesPage from "./components/templates/offices-page";
 import ProjectHighlightPage from "./components/templates/project-highlight-page";
 import ProjectPairPage from "./components/templates/project-pair-page";
-import RecognitionPage from "./components/templates/recognition-page";
 import ServicesDetailPage from "./components/templates/services-detail-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
 import SolutionsPage from "./components/templates/solutions-page";
@@ -25,6 +25,7 @@ import WorldMapPage from "./components/templates/world-map-page";
 
 import {
   apiIntegrations,
+  caseStudies,
   certifications,
   clients,
   company,
@@ -176,14 +177,14 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     title="Our Team"
   />,
 
-  <RecognitionPage
-    columns={3}
-    highlight="Recognition"
-    key="recognition"
-    logos={recognition.logos}
-    subtitle={recognition.subtitle}
-    title="Our"
-  />,
+  // <RecognitionPage
+  //   columns={3}
+  //   highlight="Recognition"
+  //   key="recognition"
+  //   logos={recognition.logos}
+  //   subtitle={recognition.subtitle}
+  //   title="Our"
+  // />,
 
   // <ChecklistPage
   //   key="capabilities"
@@ -209,6 +210,15 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     key="dedicated-model"
     title={dedicatedModel.title}
   />,
+
+  // Detailed portfolio case studies — one page per study (add more in `caseStudies`)
+  ...caseStudies.map((study, ci) => (
+    <CaseStudyDetailPage
+      index={ci + 1}
+      key={`case-study-${study.name}`}
+      study={study}
+    />
+  )),
 
   // "Our Projects" — one hero page per project
   ...projectPages[0].projects.map((project, qi) => (

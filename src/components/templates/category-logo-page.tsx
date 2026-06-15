@@ -10,10 +10,26 @@ export interface LogoItem {
 
 // Soft pastel card themes cycled across the category grid.
 const CARD_THEMES = [
-  { bg: "from-amber-50/80 to-white", accent: "bg-amber-300", rule: "border-amber-200" },
-  { bg: "from-rose-50/80 to-white", accent: "bg-rose-300", rule: "border-rose-200" },
-  { bg: "from-emerald-50/80 to-white", accent: "bg-emerald-300", rule: "border-emerald-200" },
-  { bg: "from-violet-50/80 to-white", accent: "bg-violet-300", rule: "border-violet-200" },
+  {
+    bg: "from-amber-50/80 to-white",
+    accent: "bg-amber-300",
+    rule: "border-amber-200",
+  },
+  {
+    bg: "from-rose-50/80 to-white",
+    accent: "bg-rose-300",
+    rule: "border-rose-200",
+  },
+  {
+    bg: "from-emerald-50/80 to-white",
+    accent: "bg-emerald-300",
+    rule: "border-emerald-200",
+  },
+  {
+    bg: "from-violet-50/80 to-white",
+    accent: "bg-violet-300",
+    rule: "border-violet-200",
+  },
 ] as const;
 
 //  A single logo + name item shown inline (icon beside its label).
@@ -83,10 +99,16 @@ export default function CategoryLogoPage({
                 <p className="font-semibold text-[16px] text-zinc-800">
                   {cat.label}
                 </p>
-                <div className={`mt-2 mb-4 border-b border-dashed ${theme.rule}`} />
+                <div
+                  className={`mt-2 mb-4 border-b border-dashed ${theme.rule}`}
+                />
                 <div className="flex flex-wrap gap-x-6 gap-y-3">
                   {cat.items.map((item) => (
-                    <InlineLogo key={item.name} name={item.name} src={item.src} />
+                    <InlineLogo
+                      key={item.name}
+                      name={item.name}
+                      src={item.src}
+                    />
                   ))}
                 </div>
               </div>
