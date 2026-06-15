@@ -19,6 +19,8 @@ const HUB_X = 820;
 const HUB_Y = 320;
 const HUB_R = 50;
 const SPOKE_R = 228;
+// Max services rendered around the hub (must be ≤ colors/icon paths available)
+const MAX_SPOKES = 5;
 const TICK_DEGREES = [
   0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330,
 ] as const;
@@ -32,20 +34,18 @@ const SERVICE_COLORS = [
   { from: "#be123c", to: "#f43f5e", glow: "rgba(190,18,60,0.35)" },
 ];
 
-// Material Design icon paths (24×24 viewBox)
+// Material Design icon paths (24×24 viewBox) — order matches `services` data
 const SERVICE_ICON_PATHS = [
-  // Staff Augmentation – group
-  "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z",
-  // Web Development – code brackets
-  "M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z",
-  // E-commerce – shopping cart
-  "M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96C5 16.1 6.1 17 7 17h11v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63H19c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z",
-  // MVP Development – rocket
-  "M9.19 6.35c-2.04 2.29-3.44 5.58-3.57 5.89L2 10l4-4 3.19.35zM14 5l-2-2-5.5 5.5 1.5 1.5L14 5zm-5 9l-2-2-2 2 2 2 2-2zm5.81 3.65L12 21l-2-3.65c.31-.13 3.6-1.53 5.89-3.57l.92 3.87zM22 2s-7 0-12 5l2 2 3-3 3 3 2-2 2-5z",
-  // Mobile App – smartphone
-  "M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z",
   // AI Development – memory chip
   "M9 9h6v6H9zm7-7H8C6.9 2 6 2.9 6 4v1H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h2v1c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-1h2c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2h-2V4c0-1.1-.9-2-2-2zm-1 14H8V8h8v8zm3 1h-2v-1c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v1H5V7h2V6c0-1.1.9-2 2-2h6c1.1 0 2 .9 2 2v1h2v10z",
+  // Technology & Consulting – lightbulb
+  "M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7z",
+  // Staff Augmentation – group
+  "M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z",
+  // Data – storage
+  "M2 20h20v-4H2v4zm2-3h2v2H4v-2zM2 4v4h20V4H2zm4 3H4V5h2v2zm-4 7h20v-4H2v4zm2-3h2v2H4v-2z",
+  // AWS Cloud Solutions – cloud
+  "M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z",
 ];
 
 // const HUB_GEAR_PATH =
@@ -58,8 +58,10 @@ export default function ServicesHubPage({
   subtitle,
   items,
 }: ServicesHubPageProps) {
-  const spokes = items.slice(0, 6).map((item, i) => {
-    const rad = ((i * 60 - 90) * Math.PI) / 180;
+  const visible = items.slice(0, MAX_SPOKES);
+  const step = 360 / visible.length;
+  const spokes = visible.map((item, i) => {
+    const rad = ((i * step - 90) * Math.PI) / 180;
     return {
       ...item,
       x: Math.round(HUB_X + SPOKE_R * Math.cos(rad)),
@@ -138,10 +140,10 @@ export default function ServicesHubPage({
             </radialGradient>
 
             {/* Per-spoke color gradient from hub to tip */}
-            {spokes.map((s) => (
+            {spokes.map((s, i) => (
               <linearGradient
                 gradientUnits="userSpaceOnUse"
-                id={`spokeGrad-${s.title}`}
+                id={`spokeGrad-${i}`}
                 key={`lg-${s.title}`}
                 x1={HUB_X}
                 x2={s.x}

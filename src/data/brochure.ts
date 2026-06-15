@@ -148,35 +148,35 @@ export const whyChooseUs = [
 
 export const services = [
   {
+    icon: "🤖",
+    title: "AI Development",
+    desc: "Custom AI solutions that automate processes and unlock business value.",
+  },
+  {
+    icon: "👥",
+    title: "Technology & Consulting",
+    desc: "Expert technology consulting to optimize operations and drive innovation.",
+  },
+  {
     icon: "👥",
     title: "Staff Augmentation",
     desc: "Boost your team with skilled professionals for seamless project execution.",
   },
   {
-    icon: "💻",
-    title: "Web Development",
-    desc: "We create responsive, user-friendly, and visually appealing websites tailored to perfectly meet your business needs and goals.",
-  },
-  {
     icon: "🛒",
-    title: "E-commerce Development",
-    desc: "Build engaging, secure e-commerce platforms to drive sales and growth.",
+    title: "Data",
+    desc: "Transform data into actionable insights for smarter business decisions.",
   },
   {
     icon: "🚀",
-    title: "MVP Development",
-    desc: "We offer MVP development to quickly launch your product with core features, ensuring faster market validation.",
+    title: "AWS Cloud Solutions",
+    desc: "Scalable, secure cloud solutions to accelerate growth and innovation.",
   },
-  {
-    icon: "📱",
-    title: "Mobile App Development",
-    desc: "We create intuitive, scalable apps tailored for Android and iOS platforms.",
-  },
-  {
-    icon: "🤖",
-    title: "AI Development",
-    desc: "We implement cutting-edge AI and ML solutions to streamline processes, automate tasks, and empower smarter decision-making for your business.",
-  },
+  //   {
+  //   icon: "💻",
+  //   title: "Web Development",
+  //   desc: "We create responsive, user-friendly, and visually appealing websites tailored to perfectly meet your business needs and goals.",
+  // },
 ];
 
 export const industries = [
