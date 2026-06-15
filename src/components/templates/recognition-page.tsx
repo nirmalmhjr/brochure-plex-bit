@@ -29,7 +29,7 @@ function RecognitionBadge({ name, src }: RecognitionItem) {
       {src && !failed ? (
         <img
           alt={name}
-          className="h-36 w-36 max-w-full object-contain"
+          className="size-64 max-w-full object-contain"
           ref={ref}
           src={src}
         />

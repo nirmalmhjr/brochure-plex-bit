@@ -29,7 +29,7 @@ function CertificationBadge({ name, src }: CertificationItem) {
       {src && !failed ? (
         <img
           alt={name}
-          className="h-36 w-36 max-w-full object-contain"
+          className="size-50 max-w-full object-contain"
           ref={ref}
           src={src}
         />
