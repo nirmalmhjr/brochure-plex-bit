@@ -29,7 +29,7 @@ function RecognitionBadge({ name, src }: RecognitionItem) {
       {src && !failed ? (
         <img
           alt={name}
-          className="size-64 max-w-full object-contain"
+          className="size-60 max-w-full object-contain"
           ref={ref}
           src={src}
         />
@@ -56,8 +56,8 @@ export default function RecognitionPage({
     <Page pageNumber={pageNumber}>
       <PageHeader highlight={highlight} subtitle={subtitle} title={title} />
 
-      <div className="px-14 pt-24">
-        <div className={`grid ${colClass[columns]} gap-6`}>
+      <div className="px-14 pt-0">
+        <div className={`grid ${colClass[columns]} gap-4`}>
           {logos.map((item) => (
             <RecognitionBadge key={item.name} name={item.name} src={item.src} />
           ))}

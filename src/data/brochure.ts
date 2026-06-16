@@ -305,8 +305,14 @@ export const clients = {
     { name: "Prabhu Bank", src: "/images/clients/Prabhu-Bank.png" },
     { name: "Everest Bank", src: "/images/clients/everest-bank.png" },
     { name: "Global IME Bank", src: "/images/clients/global-ime-bank.webp" },
-    { name: "Laxmi Sunrise Bank", src: "/images/clients/laxmi-sunrise-bank.png" },
-    { name: "Machhapuchhre Bank", src: "/images/clients/machhapuchhre-bank.png" },
+    {
+      name: "Laxmi Sunrise Bank",
+      src: "/images/clients/laxmi-sunrise-bank.png",
+    },
+    {
+      name: "Machhapuchhre Bank",
+      src: "/images/clients/machhapuchhre-bank.png",
+    },
     { name: "Cult.fit", src: "/images/clients/cultfit.svg" },
     { name: "CoachHQ", src: "/images/clients/coachHq.png" },
     { name: "FD Comsol", src: "/images/clients/fd-comsol.png" },
@@ -705,6 +711,12 @@ export const recognition = {
       src: "/images/recognition/behemoths.png",
     },
     { name: "5.0 Rating — Clutch", src: "/images/recognition/clutch.png" },
+    { name: "AppFutura", src: "/images/recognition/appfutura.avif" },
+    {
+      name: "Top Mobile App Developer 2021",
+      src: "/images/recognition/top-mobile-app-developer-2021.png",
+    },
+    { name: "Trustpilot", src: "/images/recognition/trust-pilot.png" },
   ],
 };
 

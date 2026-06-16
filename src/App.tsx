@@ -13,16 +13,15 @@ import LogoGridPage from "./components/templates/logo-grid-page";
 import OfficesPage from "./components/templates/offices-page";
 import ProjectHighlightPage from "./components/templates/project-highlight-page";
 import ProjectPairPage from "./components/templates/project-pair-page";
+import RecognitionPage from "./components/templates/recognition-page";
 import ServicesDetailPage from "./components/templates/services-detail-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
 import SolutionsPage from "./components/templates/solutions-page";
 import StatsPage from "./components/templates/stats-page";
 import TimelinePage from "./components/templates/timeline-page";
-
 import VisionMissionPage from "./components/templates/vision-mission-page";
 import WhyChooseUsPage from "./components/templates/why-choose-us-page";
 import WorldMapPage from "./components/templates/world-map-page";
-
 import {
   apiIntegrations,
   caseStudies,
@@ -185,14 +184,14 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     title="Our Team"
   />,
 
-  // <RecognitionPage
-  //   columns={3}
-  //   highlight="Recognition"
-  //   key="recognition"
-  //   logos={recognition.logos}
-  //   subtitle={recognition.subtitle}
-  //   title="Our"
-  // />,
+  <RecognitionPage
+    columns={3}
+    highlight="Recognition"
+    key="recognition"
+    logos={recognition.logos}
+    subtitle={recognition.subtitle}
+    title="Our"
+  />,
 
   // <ChecklistPage
   //   key="capabilities"
