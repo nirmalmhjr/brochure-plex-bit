@@ -37,13 +37,13 @@ export default function LogoGridPage({
     <Page pageNumber={pageNumber}>
       <PageHeader highlight={highlight} subtitle={subtitle} title={title} />
 
-      <div className="px-14 pt-8">
+      <div className="px-14 pt-4">
         <div
           className={`grid ${colClass[columns]} gap-4 rounded-2xl border border-brand/25 bg-zinc-50/60 p-6`}
         >
           {logos.map((logo) => (
             <LogoTile
-              className={tall ? "h-28" : "h-20"}
+              className={tall ? "h-28" : "h-16"}
               key={logo.name}
               name={logo.name}
               src={logo.src}
