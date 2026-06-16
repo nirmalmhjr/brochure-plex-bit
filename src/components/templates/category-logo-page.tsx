@@ -40,7 +40,7 @@ function InlineLogo({ name, src }: LogoItem) {
       {src && !failed ? (
         <img
           alt={name}
-          className="size-22 shrink-0 object-contain"
+          className="size-22 max-h-16 shrink-0 object-contain"
           ref={ref}
           src={src}
         />
@@ -92,7 +92,7 @@ export default function CategoryLogoPage({
               i === categories.length - 1 && categories.length % 2 === 1;
             return (
               <div
-                className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${theme.bg} p-5 pl-7 ${
+                className={`relative overflow-hidden rounded-2xl bg-linear-to-br ${theme.bg} p-5 pl-7 ${
                   isLoneLast ? "col-span-2" : ""
                 }`}
                 key={cat.label}
@@ -127,7 +127,7 @@ export default function CategoryLogoPage({
               className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm"
               key={cat.label}
             >
-              <div className="bg-gradient-to-r from-brand to-brand-dark px-5 py-2.5">
+              <div className="bg-linear-to-r from-brand to-brand-dark px-5 py-2.5">
                 <p className="text-center font-bold text-[14px] text-white tracking-wide">
                   {cat.label}
                 </p>

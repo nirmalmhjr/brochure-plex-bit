@@ -68,7 +68,7 @@ function InfoCard({ title, children }: { title: string; children: ReactNode }) {
     <div className="relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm">
       <span
         aria-hidden
-        className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand to-fuchsia-400"
+        className="absolute inset-y-0 left-0 w-1 bg-linear-to-b from-brand to-fuchsia-400"
       />
       <h3 className="font-bold text-brand-dark text-sm tracking-tight">
         {title}
@@ -90,7 +90,7 @@ export default function CaseStudyDetailPage({
     <Page pageNumber={pageNumber}>
       <div className="flex h-full gap-7 px-12 py-10">
         {/* ── Left — branded device showcase ─────────────────────────── */}
-        <aside className="relative flex w-2/5 shrink-0 flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-b from-white to-slate-50 shadow-lg">
+        <aside className="relative flex w-2/5 shrink-0 flex-col overflow-hidden rounded-3xl border border-zinc-200 bg-linear-to-b from-white to-slate-50 shadow-lg">
           {/* Brand lockup */}
           <div className="px-7 pt-7 text-center">
             {study.brandLogo ? (
@@ -132,7 +132,7 @@ export default function CaseStudyDetailPage({
           )}
 
           {/* Footer: website + optional store badges + caption */}
-          <div className="mt-4 bg-gradient-to-r from-brand-deep via-brand-dark to-brand px-5 py-3.5">
+          <div className="mt-4 bg-linear-to-r from-brand-deep via-brand-dark to-brand px-5 py-3.5">
             <div className="flex flex-wrap items-center gap-2">
               {study.website && (
                 <a
@@ -180,13 +180,13 @@ export default function CaseStudyDetailPage({
 
           {/* Pills: team size + time frame */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-brand to-brand-dark px-4 py-2.5 text-white shadow-sm">
+            <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand to-brand-dark px-4 py-2.5 text-white shadow-sm">
               <PeopleIcon className="size-4" />
               <span className="font-bold text-xs">
                 Team Size: {study.teamSize}
               </span>
             </div>
-            <div className="flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-brand-dark to-brand-deep px-4 py-2.5 text-white shadow-sm">
+            <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand-dark to-brand-deep px-4 py-2.5 text-white shadow-sm">
               <ClockIcon className="size-4" />
               <span className="font-bold text-xs">Time Frame:</span>
               <span className="font-bold text-xs">{study.timeFrame}</span>
@@ -246,7 +246,7 @@ export default function CaseStudyDetailPage({
                     className="flex gap-2 text-xs text-zinc-600 leading-relaxed"
                     key={solution.slice(0, 28)}
                   >
-                    <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-gradient-to-r from-brand to-fuchsia-400" />
+                    <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-linear-to-r from-brand to-fuchsia-400" />
                     {solution}
                   </li>
                 ))}

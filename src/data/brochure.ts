@@ -25,7 +25,7 @@ export const company = {
   website: "www.pbinfosystems.com",
   email: "info@pbinfosystems.com",
   phone: "+977 9867062429",
-  address: "Gairidhara, 44600, Kathmandu, Nepal",
+  address: "Bafal Sal Phat Marg, Kathmandu 44600, Nepal ",
   since: "2019",
 };
 
@@ -363,7 +363,7 @@ export const techStack = {
           name: "JavaScript",
           src: "/images/technology-stack/frontend/javascript.png",
         },
-        { name: "HTML5", src: "/images/technology-stack/frontend/html.png" },
+        { name: "HTML5", src: "/images/technology-stack/frontend/html.webp" },
         {
           name: "Tailwind CSS",
           src: "/images/technology-stack/frontend/tailwindcss.webp",
@@ -372,7 +372,7 @@ export const techStack = {
           name: "Material UI",
           src: "/images/technology-stack/frontend/material-ui.png",
         },
-        { name: "Vite", src: "/images/technology-stack/frontend/vite.jpeg" },
+        { name: "Vite", src: "/images/technology-stack/frontend/vite.svg" },
         {
           name: "Webpack",
           src: "/images/technology-stack/frontend/webpack.png",
@@ -453,7 +453,7 @@ export const techStack = {
           name: "Salesforce",
           src: "/images/technology-stack/cloud/salesforce.svg",
         },
-        { name: "Redis", src: "/images/technology-stack/cloud/redis.webp" },
+        { name: "Redis", src: "/images/technology-stack/cloud/redis.png" },
         {
           name: "Pinecone",
           src: "/images/technology-stack/cloud/pinecone.svg",
@@ -532,7 +532,7 @@ export const databases = {
     { name: "Amazon S3", src: "/images/databases/amazon-s3.png" },
     { name: "Oracle", src: "/images/databases/oracle.png" },
     { name: "MongoDB", src: "/images/databases/mongodb.svg" },
-    { name: "Redis", src: "/images/databases/redis.webp" },
+    { name: "Redis", src: "/images/databases/redis.png" },
     { name: "Pinecone", src: "/images/databases/pinecone.svg" },
   ],
 };
@@ -578,7 +578,7 @@ export const apiIntegrations = {
         },
         {
           name: "PayU",
-          src: "/images/api-integration/payment-integrations/payu.jpg",
+          src: "/images/api-integration/payment-integrations/payu.png",
         },
         {
           name: "WeChat Pay",
@@ -1213,7 +1213,7 @@ export const caseStudies: CaseStudy[] = [
     tech: [
       "/images/technology-stack/frontend/reactjs.png",
       "/images/case-studies/tech-stack-icons/postgreSql.png",
-      "/images/databases/redis.webp",
+      "/images/databases/redis.png",
       "/images/case-studies/tech-stack-icons/python.png",
       "/images/case-studies/tech-stack-icons/open-ai.png",
       "/images/case-studies/tech-stack-icons/zapier.png",
@@ -1319,7 +1319,7 @@ export const caseStudies: CaseStudy[] = [
       "/images/case-studies/tech-stack-icons/aws.webp",
       "/images/case-studies/tech-stack-icons/mongo-db.png",
       "/images/case-studies/tech-stack-icons/open-ai.png",
-      "/images/databases/redis.webp",
+      "/images/databases/redis.png",
     ],
     servicesSupplied: ["Design", "Development", "Support", "Maintenance"],
     solutions: [
@@ -1362,7 +1362,7 @@ export const devOffices = {
     },
     {
       name: "Nepal Development Office",
-      address: "Gairidhara, 44600, Kathmandu, Nepal",
+      address: "Bafal Sal Phat Marg, Kathmandu 44600",
       image: "/images/offices/kathmandu.png",
     },
     {

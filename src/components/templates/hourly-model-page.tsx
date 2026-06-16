@@ -26,7 +26,7 @@ export default function HourlyModelPage({
         {/* ── Left panel — diagonal cut ──
             box-shadow is clipped by clip-path, so use filter:drop-shadow on wrapper */}
         <div
-          className="z-10 flex-shrink-0"
+          className="z-10 shrink-0"
           style={{
             width: "44%",
             filter: "drop-shadow(6px 0 18px rgba(59,7,100,0.4))",
@@ -47,7 +47,7 @@ export default function HourlyModelPage({
               <h1 className="font-black text-3xl text-white leading-tight">
                 {title}
                 <br />
-                <span className="bg-gradient-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent">
                   {highlight}
                 </span>
               </h1>
@@ -84,7 +84,7 @@ export default function HourlyModelPage({
         </div>
 
         {/* ── Right panel — numbered horizontal rows ── */}
-        <div className="relative flex flex-1 flex-col justify-center bg-gradient-to-br from-white to-brand-soft/30 py-10 pr-10 pl-8">
+        <div className="relative flex flex-1 flex-col justify-center bg-linear-to-br from-white to-brand-soft/30 py-10 pr-10 pl-8">
           <div className="pointer-events-none absolute -right-16 -bottom-16 size-64 rounded-full bg-brand/5" />
 
           <div className="flex gap-6">
@@ -113,7 +113,7 @@ export default function HourlyModelPage({
             </div>
 
             {/* Center divider */}
-            <div className="w-px self-stretch bg-gradient-to-b from-transparent via-brand/30 to-transparent" />
+            <div className="w-px self-stretch bg-linear-to-b from-transparent via-brand/30 to-transparent" />
 
             {/* Right column */}
             <div className="flex flex-1 flex-col divide-y divide-zinc-100">

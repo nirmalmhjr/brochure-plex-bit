@@ -14,10 +14,6 @@ const rows = [
   { icon: Globe, label: "Website", value: company.website },
 ];
 
-/**
- * Closing / contact page. Accepts (and ignores) pageNumber so it can sit
- * in the auto-numbered deck without showing a number.
- */
 export default function ContactPage() {
   return (
     <Page showAccent={false} showFooter={false}>
@@ -28,7 +24,7 @@ export default function ContactPage() {
           <h2 className="font-extrabold text-5xl text-ink leading-tight tracking-tight">
             Get In Touch
             <br />
-            <span className="bg-gradient-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
               With Us
             </span>
           </h2>
@@ -49,7 +45,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-9 inline-flex w-fit rounded-2xl bg-gradient-to-br from-brand-deep/80 via-brand/90 to-fuchsia-500 px-8 py-4">
+          <div className="mt-9 inline-flex w-fit rounded-2xl bg-linear-to-br from-brand-deep/80 via-brand/90 to-fuchsia-500 px-8 py-4">
             <p className="font-semibold text-white text-xl italic">
               “{company.tagline}”
             </p>
