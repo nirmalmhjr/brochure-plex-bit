@@ -720,7 +720,7 @@ export const recognition = {
   ],
 };
 
-/* ----------------------------- Working models ----------------------------- */
+// Working models
 
 export const hourlyModel = {
   title: "Working Model —",
@@ -819,20 +819,42 @@ export const stats = {
 
 // Projects
 
+// Availability badge shown under a project (matches the brochure design).
+export type ProjectBadge = "case-study" | "app-store" | "google-play" | "web";
+
 export interface Project {
+  // Link / availability badges rendered under the project card.
+  badges?: ProjectBadge[];
   desc: string;
   image?: string;
   name: string;
+  // Live site URL, shown on the "Visit on Web" badge.
+  url?: string;
 }
 
 export const projectPages: {
   title: string;
   highlight: string;
+  // Category blurb shown on the left panel of the showcase page.
+  subtitle?: string;
+  // Capability chips shown on the left panel of the showcase page.
+  tags?: string[];
   projects: Project[];
 }[] = [
   {
     title: "Our",
     highlight: "Projects",
+    subtitle:
+      "We build innovative mobile and digital products that delight users and deliver real business value across platforms.",
+    tags: [
+      "iOS Apps",
+      "Android Apps",
+      "Cross-Platform",
+      "Fintech",
+      "Health & Fitness",
+      "Messaging",
+      "EdTech",
+    ],
     projects: [
       {
         name: "BusyKid",
@@ -869,6 +891,17 @@ export const projectPages: {
   {
     title: "Web Development",
     highlight: "Highlights",
+    subtitle:
+      "We craft scalable, high-performance web applications and platforms that streamline operations, automate workflows, and grow with your business.",
+    tags: [
+      "Custom Web Apps",
+      "SaaS Platforms",
+      "Admin Dashboards",
+      "API Integration",
+      "Workflow Automation",
+      "Cloud Deployment",
+      "Progressive Web Apps",
+    ],
     projects: [
       {
         name: "Fergus",
@@ -905,6 +938,17 @@ export const projectPages: {
   {
     title: "E-Commerce",
     highlight: "Highlights",
+    subtitle:
+      "We build seamless online shopping experiences that drive conversions, optimize operations, and scale effortlessly across markets and devices.",
+    tags: [
+      "Online Stores",
+      "Marketplaces",
+      "Payment Gateways",
+      "Inventory",
+      "Order Management",
+      "Multi-vendor",
+      "Cart & Checkout",
+    ],
     projects: [
       {
         name: "BlueStone",
@@ -941,6 +985,17 @@ export const projectPages: {
   {
     title: "AI Development",
     highlight: "Highlights",
+    subtitle:
+      "We engineer intelligent solutions powered by machine learning, data analytics, and automation to unlock smarter decisions and richer experiences.",
+    tags: [
+      "Machine Learning",
+      "Predictive Analytics",
+      "Recommendation Engines",
+      "NLP",
+      "Computer Vision",
+      "Data Pipelines",
+      "AI Automation",
+    ],
     projects: [
       {
         name: "SAM Learning",
@@ -967,6 +1022,17 @@ export const projectPages: {
   {
     title: "Website Design",
     highlight: "Highlights",
+    subtitle:
+      "We design pixel-perfect, conversion-focused websites that blend bold visuals with intuitive experiences to elevate your brand online.",
+    tags: [
+      "UI/UX Design",
+      "Responsive Design",
+      "Landing Pages",
+      "Brand Identity",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+    ],
     projects: [
       {
         name: "Birkdale",
@@ -1005,28 +1071,24 @@ export const projectPages: {
 // Case studies
 
 export interface CaseStudy {
-  /** App Store URL — renders a "Download on the App Store" badge when set. */
   appStore?: string;
-  /** Optional brand logo shown on the left showcase card. */
+
   brandLogo?: string;
-  /** Small label under the brand on the showcase card (e.g. "by TIFIN"). */
+
   brandSub?: string;
   desc: string;
-  /** Footer caption on the showcase card. */
+
   footnote?: string;
   image?: string;
   name: string;
-  /** Google Play URL — renders a "Get it on Google Play" badge when set. */
   playStore?: string;
   serviceArea: string;
   servicesSupplied: string[];
   solutions: string[];
-  /** Headline shown over the device mockup. */
   tagline?: string;
   teamSize: string;
   tech: string[];
   timeFrame: string;
-  /** Public website / case-study URL shown as a pill. */
   website?: string;
 }
 

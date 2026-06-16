@@ -11,8 +11,10 @@ import IconCardGridPage from "./components/templates/icon-card-grid-page";
 import IntroPage from "./components/templates/intro-page";
 import LogoGridPage from "./components/templates/logo-grid-page";
 import OfficesPage from "./components/templates/offices-page";
-import ProjectHighlightPage from "./components/templates/project-highlight-page";
-import ProjectPairPage from "./components/templates/project-pair-page";
+// Kept for later — old project layouts (see commented blocks below)
+// import ProjectHighlightPage from "./components/templates/project-highlight-page";
+// import ProjectPairPage from "./components/templates/project-pair-page";
+import ProjectShowcasePage from "./components/templates/project-showcase-page";
 import RecognitionPage from "./components/templates/recognition-page";
 import ServicesDetailPage from "./components/templates/services-detail-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
@@ -227,30 +229,48 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     />
   )),
 
-  // "Our Projects" — one hero page per project
-  ...projectPages[0].projects.map((project, qi) => (
-    <ProjectHighlightPage
-      index={qi + 1}
-      key={`project-${project.name}`}
-      project={project}
-      sectionLabel={`${projectPages[0].title} ${projectPages[0].highlight}`}
-    />
-  )),
+  // --- OLD design ("Our Projects" — one hero page per project) — kept for later ---
+  // ...projectPages[0].projects.map((project, qi) => (
+  //   <ProjectHighlightPage
+  //     index={qi + 1}
+  //     key={`project-${project.name}`}
+  //     project={project}
+  //     sectionLabel={`${projectPages[0].title} ${projectPages[0].highlight}`}
+  //   />
+  // )),
 
-  // All other groups — two projects per page
-  ...projectPages.slice(1).flatMap((page) => {
+  // All project groups — showcase layout: category panel on the left,
+  // two project cards stacked on the right (new design, see brochure ref).
+  ...projectPages.flatMap((page) => {
     const pairs: (typeof page.projects)[] = [];
     for (let i = 0; i < page.projects.length; i += 2) {
       pairs.push(page.projects.slice(i, i + 2));
     }
     return pairs.map((pair) => (
-      <ProjectPairPage
+      <ProjectShowcasePage
         key={pair.map((project) => project.name).join("-")}
         projects={pair}
-        sectionLabel={`${page.title} ${page.highlight}`}
+        subtitle={page.subtitle}
+        tags={page.tags}
+        title={`${page.title} ${page.highlight}`}
       />
     ));
   }),
+
+  // --- OLD design (two plain project cards per page) — kept for later ---
+  // ...projectPages.slice(1).flatMap((page) => {
+  //   const pairs: (typeof page.projects)[] = [];
+  //   for (let i = 0; i < page.projects.length; i += 2) {
+  //     pairs.push(page.projects.slice(i, i + 2));
+  //   }
+  //   return pairs.map((pair) => (
+  //     <ProjectPairPage
+  //       key={pair.map((project) => project.name).join("-")}
+  //       projects={pair}
+  //       sectionLabel={`${page.title} ${page.highlight}`}
+  //     />
+  //   ));
+  // }),
 
   // ...caseStudies.map((study) => (
   //   <CaseStudyPage key={`case-${study.name}`} study={study} />
