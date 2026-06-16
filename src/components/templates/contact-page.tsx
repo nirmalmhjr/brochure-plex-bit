@@ -1,8 +1,6 @@
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
 import { company } from "../../data/brochure";
 import Page, { type PageProps } from "../layout/page";
-// import BrandLogo from "../ui/brand-logo";
-// import SlashAccent from "../ui/slash-accent";
 import SmartImage from "../ui/smart-image";
 
 export type ContactPageProps = Pick<PageProps, "pageNumber">;
@@ -52,17 +50,6 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Right: brand panel */}
-        {/* <div className="relative flex w-1/2 flex-col items-center justify-center bg-gradient-to-br from-brand-deep via-brand-dark to-brand">
-          <SlashAccent className="absolute right-10 top-10" color="bg-white/60" />
-          <BrandLogo variant="light" />
-          <SmartImage
-            src="/images/company-pictures/contact-us.png"
-            label="Team Photo"
-            className="mt-10 h-72 w-4/5 rounded-tl-3xl rounded-br-3xl shadow-2xl"
-          />
-          <SlashAccent className="absolute bottom-10 left-10" color="bg-white/60" />
-        </div> */}
         {/* Right: Nepal map with location pin + callout */}
         <div className="relative h-full w-[60%]">
           <SmartImage
@@ -72,9 +59,7 @@ export default function ContactPage() {
             src="/images/map/nepal-map.png"
           />
 
-          {/* Pin + connector + callout, anchored over Kathmandu */}
           <div className="absolute top-[55%] left-[64%]">
-            {/* Address callout */}
             <div className="absolute -top-38 left-8 w-56 -translate-x-40 rounded-2xl bg-white px-5 py-3 text-center shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
               <p className="font-medium text-ink text-sm leading-snug">
                 {company.address}
@@ -85,10 +70,6 @@ export default function ContactPage() {
             <div className="absolute -top-22 -left-0.5 h-22 -translate-x-16 border-brand border-l-2 border-dotted" />
 
             {/* Location pin */}
-            {/* <MapPin
-              size={40}
-              className="-translate-x-1/2 top-10 size-8 fill-brand text-white drop-shadow-md"
-            /> */}
             <img
               alt="Map pin"
               className="top-10 h-8 w-6 -translate-x-20 fill-brand text-white drop-shadow-md"

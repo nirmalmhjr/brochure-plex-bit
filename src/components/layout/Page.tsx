@@ -40,7 +40,7 @@ export default function Page({
           />
           <div
             aria-hidden
-            className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-deep via-brand to-fuchsia-400"
+            className="absolute inset-x-0 top-0 h-1 bg-linear-to-r from-brand-deep via-brand to-fuchsia-400"
           />
         </>
       )}
