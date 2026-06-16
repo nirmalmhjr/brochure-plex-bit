@@ -11,20 +11,6 @@ export interface CaseStudyDetailPageProps
   study: CaseStudy;
 }
 
-/* ── Known tech-logo lookup (graceful: missing → clean text chip) ─────── */
-const TECH_LOGOS: Record<string, string> = {
-  flask: "/images/technology-stack/backend/flask.png",
-  node: "/images/technology-stack/backend/nodejs.png",
-  "node.js": "/images/technology-stack/backend/nodejs.png",
-  nodejs: "/images/technology-stack/backend/nodejs.png",
-  mongodb: "/images/databases/mongodb.svg",
-  react: "/images/technology-stack/frontend/reactjs.png",
-  python: "/images/technology-stack/backend/python.png",
-  postgresql: "/images/databases/postgreSql.png",
-  mysql: "/images/databases/mysql.png",
-  laravel: "/images/technology-stack/backend/laravel.svg",
-};
-
 /* ── Icon assets (kept as files in /public/images/icons, not inline) ──── */
 const WEBSITE_ICON = "/images/icons/globe.svg";
 const APP_STORE_ICON = "/images/icons/apple.svg";
@@ -63,20 +49,15 @@ function StoreBadge({
   );
 }
 
-// a single tech logo chip
-function TechChip({ name }: { name: string }) {
-  const src = TECH_LOGOS[name.toLowerCase()];
+// a single tech logo chip — `src` is an image path; hide if it fails to load
+function TechChip({ src }: { src: string }) {
   const { failed, ref } = useImageFallback(src);
+  if (failed) {
+    return null;
+  }
   return (
-    <span className="flex items-center gap-2 rounded-xl border border-zinc-200 bg-white px-3 py-2 shadow-sm">
-      {src && !failed ? (
-        <img alt={name} className="size-5 object-contain" ref={ref} src={src} />
-      ) : (
-        <span className="grid size-5 place-items-center rounded bg-brand-soft font-bold text-brand text-xs">
-          {name.slice(0, 2).toUpperCase()}
-        </span>
-      )}
-      <span className="font-semibold text-sm text-zinc-700">{name}</span>
+    <span className="flex h-14 w-20 items-center justify-center rounded-xl border border-zinc-200 bg-white p-1.5 shadow-sm">
+      <img alt="" className="size-full object-contain" ref={ref} src={src} />
     </span>
   );
 }
@@ -224,9 +205,9 @@ export default function CaseStudyDetailPage({
           {/* Tech ecosystem */}
           <div className="mt-3">
             <InfoCard title="Tech Ecosystem">
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-3">
                 {study.tech.map((tech) => (
-                  <TechChip key={tech} name={tech} />
+                  <TechChip key={tech} src={tech} />
                 ))}
               </div>
             </InfoCard>

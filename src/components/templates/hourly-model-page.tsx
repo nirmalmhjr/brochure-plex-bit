@@ -72,7 +72,7 @@ export default function HourlyModelPage({
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <span className="rounded-full bg-green-400/15 px-3 py-1 font-semibold text-green-300 text-xs ring-1 ring-green-400/30">
-                    ✓ Free 5-Day Trial
+                    ✓ Free 3 Days Trial
                   </span>
                   <span className="rounded-full bg-fuchsia-400/15 px-3 py-1 font-semibold text-fuchsia-300 text-xs ring-1 ring-fuchsia-400/30">
                     Weekly &amp; Monthly Plans
