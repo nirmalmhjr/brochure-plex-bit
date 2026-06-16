@@ -14,7 +14,7 @@ export default function StatRing({
   return (
     <div className="flex flex-col items-center">
       <div
-        className="grid place-items-center rounded-full p-[5px] shadow-[0_12px_40px_rgba(126,34,206,0.18)]"
+        className="grid place-items-center rounded-full p-1.5 shadow-2xl"
         style={{
           width: sizePx,
           height: sizePx,
@@ -31,7 +31,7 @@ export default function StatRing({
               {value}
             </p>
             <p
-              className="mx-auto mt-1.5 max-w-[7.5rem] font-semibold text-zinc-500 uppercase tracking-wide"
+              className="mx-auto mt-1.5 max-w-30 font-semibold text-zinc-500 uppercase tracking-wide"
               style={{ fontSize: labelSize }}
             >
               {label}

@@ -21,12 +21,12 @@ export default function CoverPage({
     <Page showAccent={false} showFooter={false}>
       {/* top black band */}
       <div className="absolute inset-x-0 top-0 h-14 bg-ink" />
-      <div className="absolute top-0 right-64 h-14 w-40 -skew-x-[30deg] bg-brand" />
+      <div className="absolute top-0 right-64 h-14 w-40 -skew-x-12 bg-brand" />
 
       <div className="relative flex h-full">
         {/* Left: title block */}
-        <div className="flex w-[46%] flex-col pt-28 pl-16">
-          <h1 className="font-extrabold text-[78px] text-ink leading-[1.04] tracking-tight">
+        <div className="flex w-1/2 flex-col pt-28 pl-16">
+          <h1 className="font-extrabold text-7xl text-ink leading-none tracking-tight">
             {title.split(" ").map((word) => (
               <span className="block" key={word}>
                 {word}
@@ -34,8 +34,8 @@ export default function CoverPage({
             ))}
           </h1>
 
-          <div className="mt-8 -ml-16 w-[420px] rounded-r-2xl bg-brand py-6 pr-8 pl-16">
-            <p className="font-semibold text-[22px] text-white leading-snug">
+          <div className="mt-8 -ml-16 w-105 rounded-r-2xl bg-brand py-6 pr-8 pl-16">
+            <p className="font-semibold text-2xl text-white leading-snug">
               “{subtitle}”
             </p>
           </div>
@@ -47,10 +47,10 @@ export default function CoverPage({
               🌐
             </span>
             <div className="leading-tight">
-              <p className="font-semibold text-[11px] text-zinc-400 uppercase tracking-widest">
+              <p className="font-semibold text-xs text-zinc-400 uppercase tracking-widest">
                 Website
               </p>
-              <p className="font-semibold text-[15px] text-brand-dark">
+              <p className="font-semibold text-base text-brand-dark">
                 {company.website}
               </p>
             </div>
@@ -58,10 +58,10 @@ export default function CoverPage({
         </div>
 
         {/* Right: logo + photo */}
-        <div className="flex w-[54%] flex-col items-end pt-24 pr-14">
+        <div className="flex w-1/2 flex-col items-end pt-24 pr-14">
           <BrandLogo variant="dark" />
           <SmartImage
-            className="mt-10 h-[420px] w-full rounded-tl-[80px] rounded-br-[80px] shadow-xl"
+            className="mt-10 h-105 w-full rounded-tl-4xl rounded-br-4xl shadow-xl"
             label={imageLabel}
             src={image}
           />
@@ -70,7 +70,7 @@ export default function CoverPage({
 
       {/* bottom black band */}
       <div className="absolute inset-x-0 bottom-0 h-10 bg-ink" />
-      <div className="absolute bottom-0 left-40 h-10 w-32 -skew-x-[30deg] bg-brand" />
+      <div className="absolute bottom-0 left-40 h-10 w-32 -skew-x-12 bg-brand" />
     </Page>
   );
 }

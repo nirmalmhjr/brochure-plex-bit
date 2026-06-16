@@ -55,17 +55,17 @@ export default function ServicesHubPage({
     <Page pageNumber={pageNumber}>
       {/* ── Left-aligned header ─────────────────────────────────────────── */}
       <header className="px-14 pt-9">
-        <h2 className="font-extrabold text-[36px] leading-[1.1] tracking-tight">
+        <h2 className="font-extrabold text-4xl leading-none tracking-tight">
           {title}{" "}
           {highlight && (
-            <span className="bg-gradient-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
               {highlight}
             </span>
           )}
         </h2>
-        <div className="mt-2 h-[3px] w-16 rounded-full bg-gradient-to-r from-brand to-fuchsia-400" />
+        <div className="mt-2 h-1 w-16 rounded-full bg-linear-to-r from-brand to-fuchsia-400" />
         {subtitle && (
-          <p className="mt-2 max-w-[560px] text-[12.5px] text-zinc-500 leading-relaxed">
+          <p className="mt-2 max-w-140 text-xs text-zinc-500 leading-relaxed">
             {subtitle}
           </p>
         )}
@@ -149,7 +149,7 @@ export default function ServicesHubPage({
             height: HUB_R * 2,
           }}
         >
-          <span className="font-black text-[16px] tracking-tight">PB</span>
+          <span className="font-black text-base tracking-tight">PB</span>
         </div>
 
         {/* ── Service items — large emoji + title, no card box ── */}
@@ -161,8 +161,8 @@ export default function ServicesHubPage({
               key={item.title}
               style={{ left: col.x - 75, top: col.iconY, width: 150 }}
             >
-              <span className="text-[48px] leading-none">{item.icon}</span>
-              <span className="mt-2 font-semibold text-[12px] text-zinc-700 leading-tight">
+              <span className="text-5xl leading-none">{item.icon}</span>
+              <span className="mt-2 font-semibold text-xs text-zinc-700 leading-tight">
                 {item.title}
               </span>
             </div>

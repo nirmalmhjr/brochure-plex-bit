@@ -7,7 +7,7 @@ export interface PageHeaderProps {
 }
 
 /**
- * Modern section heading: kicker pill + two-tone bold title + gradient rule.
+ * Modern section heading: kicker pill + two-tone bold title + linear rule.
  */
 export default function PageHeader({
   title,
@@ -20,24 +20,24 @@ export default function PageHeader({
   return (
     <header className={`px-14 pt-11 ${centered ? "text-center" : ""}`}>
       {kicker && (
-        <span className="mb-3 inline-block rounded-full bg-brand-soft px-4 py-1 font-bold text-[11px] text-brand-dark uppercase tracking-[0.18em]">
+        <span className="mb-3 inline-block rounded-full bg-brand-soft px-4 py-1 font-bold text-brand-dark text-xs uppercase tracking-widest">
           {kicker}
         </span>
       )}
-      <h2 className="font-extrabold text-[40px] leading-[1.12] tracking-tight">
+      <h2 className="font-extrabold text-4xl leading-none tracking-tight">
         {title}{" "}
         {highlight && (
-          <span className="bg-gradient-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
             {highlight}
           </span>
         )}
       </h2>
       <div
-        className={`mt-3 h-1 w-20 rounded-full bg-gradient-to-r from-brand to-fuchsia-400 ${centered ? "mx-auto" : ""}`}
+        className={`mt-3 h-1 w-20 rounded-full bg-linear-to-r from-brand to-fuchsia-400 ${centered ? "mx-auto" : ""}`}
       />
       {subtitle && (
         <p
-          className={`mt-3 max-w-4xl text-[13px] text-zinc-500 leading-relaxed ${centered ? "mx-auto" : ""}`}
+          className={`mt-3 max-w-4xl text-sm text-zinc-500 leading-relaxed ${centered ? "mx-auto" : ""}`}
         >
           {subtitle}
         </p>

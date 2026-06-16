@@ -30,9 +30,9 @@ export default function IntroPage({
   return (
     <Page pageNumber={pageNumber}>
       <div className="flex h-full">
-        <div className="flex w-[55%] flex-col">
+        <div className="flex w-7/12 flex-col">
           <PageHeader highlight={highlight} kicker={kicker} title={title} />
-          <div className="space-y-4 px-14 pt-6 text-[14.5px] text-zinc-600 leading-relaxed">
+          <div className="space-y-4 px-14 pt-6 text-sm text-zinc-600 leading-relaxed">
             {paragraphs.map((p) => (
               <p className="text-justify" key={p.slice(0, 24)}>
                 {p}
@@ -40,16 +40,16 @@ export default function IntroPage({
             ))}
           </div>
           {stamp && (
-            <p className="px-14 pt-7 font-extrabold text-[34px] text-ink tracking-tight">
+            <p className="px-14 pt-7 font-extrabold text-4xl text-ink tracking-tight">
               <span className="mr-3 text-brand">▸▸▸</span>
               {stamp}
             </p>
           )}
         </div>
 
-        <div className="flex w-[45%] items-center justify-center pr-14 pl-4">
+        <div className="flex w-5/12 items-center justify-center pr-14 pl-4">
           <SmartImage
-            className="h-[520px] w-full rounded-tl-[90px] rounded-br-[90px] shadow-lg"
+            className="h-130 w-full rounded-tl-4xl rounded-br-4xl shadow-lg"
             label={imageLabel ?? "Photo"}
             src={image}
           />

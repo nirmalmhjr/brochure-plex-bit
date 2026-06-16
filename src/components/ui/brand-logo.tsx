@@ -35,14 +35,14 @@ export default function BrandLogo({
   // Text fallback styled after the Plex Bit wordmark
   return (
     <div className={`leading-none ${className}`}>
-      <p className={`font-extrabold text-[26px] tracking-[0.18em] ${text}`}>
+      <p className={`font-extrabold text-2xl tracking-widest ${text}`}>
         {company.logoTop}
       </p>
-      <p className={`mt-1 font-semibold text-[12px] tracking-[0.42em] ${text}`}>
+      <p className={`mt-1 font-semibold text-xs tracking-widest ${text}`}>
         {company.logoBottom}
       </p>
       <p
-        className={`mt-1.5 font-medium text-[8px] uppercase tracking-[0.14em] ${sub}`}
+        className={`mt-1.5 font-medium text-xs uppercase tracking-widest ${sub}`}
       >
         {company.tagline}
       </p>

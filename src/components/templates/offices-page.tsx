@@ -35,10 +35,10 @@ export default function OfficesPage({
               label={office.name}
               src={office.image}
             />
-            <p className="mt-5 text-center font-bold text-[16px] text-brand">
+            <p className="mt-5 text-center font-bold text-base text-brand">
               {office.name}
             </p>
-            <p className="mt-1.5 text-center font-medium text-[13px] text-zinc-600 leading-relaxed">
+            <p className="mt-1.5 text-center font-medium text-sm text-zinc-600 leading-relaxed">
               {office.address}
             </p>
           </div>

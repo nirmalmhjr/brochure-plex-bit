@@ -26,7 +26,7 @@ export default function StatsPage({
     <Page pageNumber={pageNumber}>
       <div className="flex h-full">
         {/* Left panel — brand gradient */}
-        <div className="relative flex w-[42%] flex-col justify-center overflow-hidden bg-gradient-to-br from-brand-deep via-brand to-fuchsia-600 px-12 py-14">
+        <div className="relative flex w-5/12 flex-col justify-center overflow-hidden bg-gradient-to-br from-brand-deep via-brand to-fuchsia-600 px-12 py-14">
           {/* decorative circles */}
           <div
             aria-hidden
@@ -41,7 +41,7 @@ export default function StatsPage({
             className="absolute right-10 bottom-28 size-28 rounded-full bg-white/5"
           />
 
-          <h2 className="relative font-extrabold text-5xl text-white leading-[1.1] tracking-tight">
+          <h2 className="relative font-extrabold text-5xl text-white leading-none tracking-tight">
             {title}{" "}
             {highlight && <span className="text-fuchsia-200">{highlight}</span>}
           </h2>

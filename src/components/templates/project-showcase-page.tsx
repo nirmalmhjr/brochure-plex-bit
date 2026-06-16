@@ -51,8 +51,8 @@ function WebBadge({ url }: { url?: string }) {
     >
       <img alt="" className="size-4 object-contain" src={WEBSITE_ICON} />
       <span className="leading-tight">
-        <span className="block text-[9px] text-zinc-400">Visit it</span>
-        <span className="-mt-0.5 block font-bold text-[11px] text-zinc-700">
+        <span className="block text-xs text-zinc-400">Visit it</span>
+        <span className="-mt-0.5 block font-bold text-xs text-zinc-700">
           On Web
         </span>
       </span>
@@ -67,8 +67,8 @@ function LinkBadge({ kind }: { kind: keyof typeof BADGE_META }) {
     <span className="flex items-center gap-2 rounded-lg border border-zinc-200 bg-white px-3 py-1.5 shadow-sm">
       <img alt="" className="size-4 object-contain" src={meta.icon} />
       <span className="leading-tight">
-        <span className="block text-[9px] text-zinc-400">{meta.top}</span>
-        <span className="-mt-0.5 block font-bold text-[11px] text-zinc-700">
+        <span className="block text-xs text-zinc-400">{meta.top}</span>
+        <span className="-mt-0.5 block font-bold text-xs text-zinc-700">
           {meta.bottom}
         </span>
       </span>
@@ -151,7 +151,7 @@ export default function ProjectShowcasePage({
     <Page pageNumber={pageNumber}>
       <div className="flex h-full">
         {/* ── Left — category info panel ─────────────────────────────── */}
-        <aside className="relative flex w-[38%] shrink-0 flex-col overflow-hidden bg-linear-to-b from-brand-soft/40 via-white to-white px-12 py-12">
+        <aside className="relative flex w-2/5 shrink-0 flex-col overflow-hidden bg-linear-to-b from-brand-soft/40 via-white to-white px-12 py-12">
           {/* Decorative glow */}
           <div
             aria-hidden

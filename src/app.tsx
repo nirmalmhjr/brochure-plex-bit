@@ -11,9 +11,6 @@ import IconCardGridPage from "./components/templates/icon-card-grid-page";
 import IntroPage from "./components/templates/intro-page";
 import LogoGridPage from "./components/templates/logo-grid-page";
 import OfficesPage from "./components/templates/offices-page";
-// Kept for later — old project layouts (see commented blocks below)
-// import ProjectHighlightPage from "./components/templates/project-highlight-page";
-// import ProjectPairPage from "./components/templates/project-pair-page";
 import ProjectShowcasePage from "./components/templates/project-showcase-page";
 import ServicesDetailPage from "./components/templates/services-detail-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
@@ -68,22 +65,6 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     key="vision-mission"
     title="Company Vision"
   />,
-
-  // <PeopleGridPage
-  //   key="core-team"
-  //   title="Our Core"
-  //   highlight="Team Members"
-  //   subtitle={coreTeam.subtitle}
-  //   people={coreTeam.people}
-  // />,
-
-  // <PeopleGridPage
-  //   key="representatives"
-  //   title="Our International"
-  //   highlight="Representatives"
-  //   subtitle={representatives.subtitle}
-  //   people={representatives.people}
-  // />,
 
   <SolutionsPage
     key="solutions"
@@ -185,25 +166,6 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     title="Our Team"
   />,
 
-  // recognition page
-  // <RecognitionPage
-  //   columns={3}
-  //   highlight="Recognition"
-  //   key="recognition"
-  //   logos={recognition.logos}
-  //   subtitle={recognition.subtitle}
-  //   title="Our"
-  // />,
-
-  // <ChecklistPage
-  //   key="capabilities"
-  //   title={capabilities.title}
-  //   highlight={capabilities.highlight}
-  //   intro={capabilities.intro}
-  //   items={capabilities.items}
-  //   columns={1}
-  // />,
-
   <HourlyModelPage
     highlight={hourlyModel.highlight}
     intro={hourlyModel.intro}
@@ -229,19 +191,9 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     />
   )),
 
-  // OLD design ("Our Projects" — one hero page per project) — kept incase of reverting to old design
-  // ...projectPages[0].projects.map((project, qi) => (
-  //   <ProjectHighlightPage
-  //     index={qi + 1}
-  //     key={`project-${project.name}`}
-  //     project={project}
-  //     sectionLabel={`${projectPages[0].title} ${projectPages[0].highlight}`}
-  //   />
-  // )),
-
   // All project groups — showcase layout: category panel on the left,
-  // two project cards stacked on the right (new design, see brochure ref).
-  // One page per group, showing the first two projects only.
+  // two project cards stacked on the right. One page per group, showing
+  // the first two projects only.
   ...projectPages.map((page) => (
     <ProjectShowcasePage
       key={`${page.title}-${page.highlight}`}
@@ -252,26 +204,6 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     />
   )),
 
-  // OLD design (two plain project cards per page) — kept for later
-  // ...projectPages.slice(1).flatMap((page) => {
-  //   const pairs: (typeof page.projects)[] = [];
-  //   for (let i = 0; i < page.projects.length; i += 2) {
-  //     pairs.push(page.projects.slice(i, i + 2));
-  //   }
-  //   return pairs.map((pair) => (
-  //     <ProjectPairPage
-  //       key={pair.map((project) => project.name).join("-")}
-  //       projects={pair}
-  //       sectionLabel={`${page.title} ${page.highlight}`}
-  //     />
-  //   ));
-  // }),
-
-  // ...caseStudies.map((study) => (
-  //   <CaseStudyPage key={`case-${study.name}`} study={study} />
-  // )),
-
-  // why choose us
   <StatsPage
     highlight="Choose Us?"
     key="stats"
@@ -282,10 +214,8 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   />,
   <OfficesPage key="dev-offices" {...devOffices} />,
   <WorldMapPage key="world-map" />,
-  // <OfficesPage key="business-offices" {...businessOffices} />,
 
   <ContactPage key="contact" />,
-  // <ContactMapPage key="contact-map" />,
 ];
 
 export default function App() {

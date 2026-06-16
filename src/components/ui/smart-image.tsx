@@ -33,11 +33,11 @@ export default function SmartImage({
 
   return (
     <div
-      className={`grid place-items-center bg-gradient-to-br from-brand-soft via-zinc-100 to-zinc-200 ${className}`}
+      className={`grid place-items-center bg-linear-to-br from-brand-soft via-zinc-100 to-zinc-200 ${className}`}
     >
       <div className="text-center">
         <p className="text-2xl opacity-40">🖼️</p>
-        <p className="px-3 font-medium text-[11px] text-zinc-400 uppercase tracking-wider">
+        <p className="px-3 font-medium text-xs text-zinc-400 uppercase tracking-wider">
           {label}
         </p>
       </div>

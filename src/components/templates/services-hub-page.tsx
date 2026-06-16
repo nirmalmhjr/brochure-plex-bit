@@ -314,11 +314,11 @@ export default function ServicesHubPage({
 
             {/* Info card */}
             <div className="mt-2 w-full rounded-xl border border-zinc-200/80 bg-white px-3 py-2 shadow-md">
-              <span className="block font-bold text-[13px] text-zinc-800 leading-tight">
+              <span className="block font-bold text-sm text-zinc-800 leading-tight">
                 {s.title}
               </span>
               {s.desc && (
-                <span className="mt-0.5 line-clamp-2 block text-[10.5px] text-zinc-400 leading-snug">
+                <span className="mt-0.5 line-clamp-2 block text-xs text-zinc-400 leading-snug">
                   {s.desc}
                 </span>
               )}

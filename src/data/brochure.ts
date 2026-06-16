@@ -316,7 +316,6 @@ export const clients = {
       src: "/images/clients/machhapuchhre-bank.png",
     },
     { name: "Cult.fit", src: "/images/clients/cultfit.svg" },
-    { name: "CoachHQ", src: "/images/clients/coachHq.png" },
     { name: "FD Comsol", src: "/images/clients/fd-comsol.png" },
     { name: "Fergus", src: "/images/clients/fergus.svg" },
     { name: "Jason Outdoors", src: "/images/clients/jason_outdoors.png" },
@@ -324,6 +323,8 @@ export const clients = {
     { name: "Priceline", src: "/images/clients/priceline.png" },
     { name: "Striide", src: "/images/clients/striide.png" },
     { name: "Wealth AI", src: "/images/clients/wealth-ai.png" },
+    { name: "CoachHQ", src: "/images/clients/coach-hq.svg" },
+    { name: "Gymgrow", src: "/images/clients/grow-hq.svg" },
   ],
 };
 
@@ -1365,7 +1366,7 @@ export const caseStudies: CaseStudy[] = [
     image: "/images/case-studies/nlmk.png",
     desc: "NLMK Group, a major steel producer, is the largest in Russia and among the most efficient globally, with a production capacity exceeding 17 million tonnes per year. The company operates in Russia, Europe, and the U.S., providing steel products used in diverse industries such as construction and energy.",
     tech: [
-      "/images/case-studies/tech-stack-icons/power-bi.jpg",
+      "/images/case-studies/tech-stack-icons/power-bi.png",
       "/images/case-studies/tech-stack-icons/SAPs 4HANA .png",
     ],
     servicesSupplied: ["Design", "Development", "Support", "Maintenance"],

@@ -21,7 +21,7 @@ export default function ProjectPairPage({
             <p className="font-bold text-brand text-lg uppercase tracking-widest">
               {sectionLabel}
             </p>
-            <div className="mt-2 h-0.5 w-12 rounded-full bg-gradient-to-r from-brand to-fuchsia-500" />
+            <div className="mt-2 h-0.5 w-12 rounded-full bg-linear-to-r from-brand to-fuchsia-500" />
           </div>
           <span
             aria-hidden
@@ -58,7 +58,7 @@ export default function ProjectPairPage({
                 <h3 className="font-bold text-xl text-zinc-800 tracking-tight">
                   {project.name}
                 </h3>
-                <div className="my-2 h-0.5 w-8 rounded-full bg-gradient-to-r from-brand to-fuchsia-500" />
+                <div className="my-2 h-0.5 w-8 rounded-full bg-linear-to-r from-brand to-fuchsia-500" />
                 <p className="text-xs text-zinc-500 leading-relaxed">
                   {project.desc}
                 </p>

@@ -17,7 +17,7 @@ export default function LogoTile({
 
   return (
     <div
-      className={`flex items-center justify-center rounded-xl border border-zinc-100 bg-white px-4 py-2 shadow-[0_6px_20px_rgba(59,7,100,0.06)] transition-shadow duration-200 hover:shadow-[0_8px_24px_rgba(59,7,100,0.12)] ${className}`}
+      className={`flex items-center justify-center rounded-xl border border-zinc-100 bg-white px-4 py-2 shadow-lg transition-shadow duration-200 hover:shadow-xl ${className}`}
     >
       {src && !failed ? (
         <img
@@ -27,7 +27,7 @@ export default function LogoTile({
           src={src}
         />
       ) : (
-        <span className="text-center font-semibold text-[13px] text-zinc-600 leading-snug">
+        <span className="text-center font-semibold text-sm text-zinc-600 leading-snug">
           {name}
         </span>
       )}

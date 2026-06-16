@@ -67,7 +67,7 @@ export default function DedicatedModelPage({
       <div className="flex h-full">
         {/* ── Left panel — diagonal cut ── */}
         <div
-          className="z-10 flex-shrink-0"
+          className="z-10 shrink-0"
           style={{
             width: "40%",
             filter: "drop-shadow(6px 0 18px rgba(59,7,100,0.4))",
@@ -86,7 +86,7 @@ export default function DedicatedModelPage({
               <h1 className="font-black text-3xl text-white leading-tight">
                 {title}
                 <br />
-                <span className="bg-gradient-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent">
                   {highlight}
                 </span>
               </h1>
@@ -119,7 +119,7 @@ export default function DedicatedModelPage({
         </div>
 
         {/* ── Right panel — 2×3 icon card grid ── */}
-        <div className="relative flex flex-1 flex-col justify-center bg-gradient-to-br from-white to-brand-soft/30 py-10 pr-10 pl-10">
+        <div className="relative flex flex-1 flex-col justify-center bg-linear-to-br from-white to-brand-soft/30 py-10 pr-10 pl-10">
           <div className="pointer-events-none absolute -right-16 -bottom-16 size-64 rounded-full bg-brand/5" />
 
           <div className="grid grid-cols-2 gap-4">
@@ -128,7 +128,7 @@ export default function DedicatedModelPage({
               const icon = ITEM_ICONS[item.title];
               return (
                 <div
-                  className="flex items-start gap-4 rounded-2xl border border-zinc-100 bg-white p-5 shadow-[0_4px_20px_rgba(59,7,100,0.06)]"
+                  className="flex items-start gap-4 rounded-2xl border border-zinc-100 bg-white p-5 shadow-lg"
                   key={item.title}
                 >
                   <span
@@ -142,11 +142,11 @@ export default function DedicatedModelPage({
                     )}
                   </span>
                   <div>
-                    <p className="font-bold text-[13.5px] text-brand-dark leading-snug">
+                    <p className="font-bold text-brand-dark text-sm leading-snug">
                       {item.title}
                     </p>
                     {item.desc && (
-                      <p className="mt-1 text-[11.5px] text-zinc-500 leading-relaxed">
+                      <p className="mt-1 text-xs text-zinc-500 leading-relaxed">
                         {item.desc}
                       </p>
                     )}

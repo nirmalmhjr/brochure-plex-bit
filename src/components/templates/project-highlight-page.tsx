@@ -27,7 +27,7 @@ export default function ProjectHighlightPage({
             {project.name}
           </h2>
 
-          <div className="mt-4 mb-6 h-1 w-14 rounded-full bg-gradient-to-r from-brand to-fuchsia-500" />
+          <div className="mt-4 mb-6 h-1 w-14 rounded-full bg-linear-to-r from-brand to-fuchsia-500" />
 
           <p className="relative max-w-xs text-sm text-zinc-500 leading-relaxed">
             {project.desc}
@@ -35,7 +35,7 @@ export default function ProjectHighlightPage({
         </div>
 
         {/* Right — screenshot panel */}
-        <div className="relative flex flex-1 items-center justify-center overflow-hidden bg-gradient-to-br from-violet-50 via-white to-slate-50 px-12 py-10">
+        <div className="relative flex flex-1 items-center justify-center overflow-hidden bg-linear-to-br from-violet-50 via-white to-slate-50 px-12 py-10">
           {/* Decorative blobs */}
           <div className="absolute -top-16 -right-16 size-64 rounded-full bg-brand-soft opacity-50" />
           <div className="absolute -bottom-20 left-8 size-48 rounded-full bg-fuchsia-100 opacity-40" />

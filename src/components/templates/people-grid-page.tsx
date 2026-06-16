@@ -42,15 +42,15 @@ export default function PeopleGridPage({
                 label="Photo"
                 src={person.image}
               />
-              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand px-5 py-1 font-semibold text-[11px] text-white shadow">
+              <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-brand px-5 py-1 font-semibold text-white text-xs shadow">
                 {person.role}
               </span>
             </div>
-            <p className="mt-7 text-center font-bold text-[20px] text-brand-dark leading-snug">
+            <p className="mt-7 text-center font-bold text-brand-dark text-xl leading-snug">
               {person.name}
             </p>
             {person.blurb && (
-              <p className="mt-3 text-center text-[12px] text-zinc-500 leading-relaxed">
+              <p className="mt-3 text-center text-xs text-zinc-500 leading-relaxed">
                 {person.blurb}
               </p>
             )}

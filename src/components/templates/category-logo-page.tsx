@@ -45,11 +45,11 @@ function InlineLogo({ name, src }: LogoItem) {
           src={src}
         />
       ) : (
-        <span className="grid size-10 shrink-0 place-items-center rounded-md bg-white font-bold text-[11px] text-zinc-400 shadow-sm">
+        <span className="grid size-10 shrink-0 place-items-center rounded-md bg-white font-bold text-xs text-zinc-400 shadow-sm">
           {name.slice(0, 2)}
         </span>
       )}
-      {/* <span className="font-medium text-[13px] text-zinc-700">{name}</span> */}
+      {/* <span className="font-medium text-sm text-zinc-700">{name}</span> */}
     </div>
   );
 }
@@ -101,7 +101,7 @@ export default function CategoryLogoPage({
                   aria-hidden
                   className={`absolute inset-y-0 left-0 w-1.5 ${theme.accent}`}
                 />
-                <p className="font-semibold text-[16px] text-zinc-800">
+                <p className="font-semibold text-base text-zinc-800">
                   {cat.label}
                 </p>
                 <div
@@ -128,7 +128,7 @@ export default function CategoryLogoPage({
               key={cat.label}
             >
               <div className="bg-linear-to-r from-brand to-brand-dark px-5 py-2.5">
-                <p className="text-center font-bold text-[14px] text-white tracking-wide">
+                <p className="text-center font-bold text-sm text-white tracking-wide">
                   {cat.label}
                 </p>
               </div>

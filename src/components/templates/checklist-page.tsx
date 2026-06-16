@@ -36,18 +36,18 @@ export default function ChecklistPage({
       >
         {items.map((item) => (
           <div
-            className="flex items-start gap-4 rounded-2xl border border-zinc-100 bg-white p-4 shadow-[0_8px_30px_rgba(59,7,100,0.05)]"
+            className="flex items-start gap-4 rounded-2xl border border-zinc-100 bg-white p-4 shadow-xl"
             key={item.title}
           >
-            <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-gradient-to-br from-brand to-fuchsia-500 font-bold text-[13px] text-white shadow-brand/30 shadow-md">
+            <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-linear-to-br from-brand to-fuchsia-500 font-bold text-sm text-white shadow-brand/30 shadow-md">
               ✓
             </span>
             <div>
-              <p className="font-bold text-[15px] text-brand-dark leading-snug">
+              <p className="font-bold text-base text-brand-dark leading-snug">
                 {item.title}
               </p>
               {item.desc && (
-                <p className="mt-1 text-[12.5px] text-zinc-500 leading-relaxed">
+                <p className="mt-1 text-xs text-zinc-500 leading-relaxed">
                   {item.desc}
                 </p>
               )}

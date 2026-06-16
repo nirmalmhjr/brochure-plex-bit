@@ -45,7 +45,7 @@ export default function WhyChooseUsPage({
                 key={item.title}
               >
                 {/* Dark banner: icon + title */}
-                <div className="flex items-center gap-3 bg-gradient-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
+                <div className="flex items-center gap-3 bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
                   <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-white/20">
                     <img
                       alt={item.title}

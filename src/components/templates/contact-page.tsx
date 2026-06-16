@@ -17,7 +17,7 @@ export default function ContactPage() {
     <Page showAccent={false} showFooter={false}>
       <div className="flex h-full">
         {/* Left: contact details */}
-        <div className="flex w-[40%] flex-col justify-center pl-16">
+        <div className="flex w-2/5 flex-col justify-center pl-16">
           <div className="mb-3 h-1.5 w-16 rounded-full bg-brand" />
           <h2 className="font-extrabold text-5xl text-ink leading-tight tracking-tight">
             Get In Touch
@@ -51,7 +51,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right: Nepal map with location pin + callout */}
-        <div className="relative h-full w-[60%]">
+        <div className="relative h-full w-3/5">
           <SmartImage
             className="h-full w-full"
             imgClassName="h-full w-full object-contain -ml-12"
@@ -60,7 +60,7 @@ export default function ContactPage() {
           />
 
           <div className="absolute top-[55%] left-[64%]">
-            <div className="absolute -top-38 left-8 w-56 -translate-x-40 rounded-2xl bg-white px-5 py-3 text-center shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+            <div className="absolute -top-38 left-8 w-56 -translate-x-40 rounded-2xl bg-white px-5 py-3 text-center shadow-xl">
               <p className="font-medium text-ink text-sm leading-snug">
                 {company.address}
               </p>
