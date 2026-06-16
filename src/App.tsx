@@ -229,7 +229,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
     />
   )),
 
-  // --- OLD design ("Our Projects" — one hero page per project) — kept for later ---
+  // OLD design ("Our Projects" — one hero page per project) — kept incase of reverting to old design
   // ...projectPages[0].projects.map((project, qi) => (
   //   <ProjectHighlightPage
   //     index={qi + 1}
@@ -241,23 +241,18 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
 
   // All project groups — showcase layout: category panel on the left,
   // two project cards stacked on the right (new design, see brochure ref).
-  ...projectPages.flatMap((page) => {
-    const pairs: (typeof page.projects)[] = [];
-    for (let i = 0; i < page.projects.length; i += 2) {
-      pairs.push(page.projects.slice(i, i + 2));
-    }
-    return pairs.map((pair) => (
-      <ProjectShowcasePage
-        key={pair.map((project) => project.name).join("-")}
-        projects={pair}
-        subtitle={page.subtitle}
-        tags={page.tags}
-        title={`${page.title} ${page.highlight}`}
-      />
-    ));
-  }),
+  // One page per group, showing the first two projects only.
+  ...projectPages.map((page) => (
+    <ProjectShowcasePage
+      key={`${page.title}-${page.highlight}`}
+      projects={page.projects.slice(0, 2)}
+      subtitle={page.subtitle}
+      tags={page.tags}
+      title={`${page.title} ${page.highlight}`}
+    />
+  )),
 
-  // --- OLD design (two plain project cards per page) — kept for later ---
+  // OLD design (two plain project cards per page) — kept for later
   // ...projectPages.slice(1).flatMap((page) => {
   //   const pairs: (typeof page.projects)[] = [];
   //   for (let i = 0; i < page.projects.length; i += 2) {

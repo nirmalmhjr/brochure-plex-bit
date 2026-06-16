@@ -82,7 +82,7 @@ function ProjectRow({ project }: { project: Project }) {
   return (
     <div className="flex flex-1 items-center gap-6">
       {/* Screenshot */}
-      <div className="h-50 w-92 shrink-0 overflow-hidden rounded-2xl shadow-lg ring-1 ring-zinc-200">
+      <div className="h-48 w-92 shrink-0 overflow-hidden rounded-sm shadow-lg ring-1 ring-zinc-200">
         <SmartImage
           className="h-full w-full"
           imgClassName="h-full w-full object-contain"
@@ -167,7 +167,7 @@ export default function ProjectShowcasePage({
               <h2 className="font-extrabold text-3xl text-ink leading-tight tracking-tight">
                 {title}
               </h2>
-              <p className="text-sm text-zinc-400">backed by Plex Bit</p>
+              {/* <p className="text-sm text-zinc-400">backed by Plex Bit</p> */}
             </div>
           </div>
 
