@@ -558,6 +558,26 @@ export const apiIntegrations = {
           name: "iDEAL",
           src: "/images/api-integration/payment-integrations/i-deal.png",
         },
+        {
+          name: "Razorpay",
+          src: "/images/api-integration/payment-integrations/Razorpay.png",
+        },
+        {
+          name: "Alipay",
+          src: "/images/api-integration/payment-integrations/alipay.png",
+        },
+        {
+          name: "PayU",
+          src: "/images/api-integration/payment-integrations/payu.jpg",
+        },
+        {
+          name: "WeChat Pay",
+          src: "/images/api-integration/payment-integrations/we-chat-pay.png",
+        },
+        {
+          name: "Worldpay",
+          src: "/images/api-integration/payment-integrations/worldpay.png",
+        },
       ],
     },
     {
@@ -579,6 +599,14 @@ export const apiIntegrations = {
           name: "FedEx",
           src: "/images/api-integration/shipping-integrations/fedEx.png",
         },
+        {
+          name: "Aramex",
+          src: "/images/api-integration/shipping-integrations/aramex.svg",
+        },
+        {
+          name: "UPS",
+          src: "/images/api-integration/shipping-integrations/ups.jpeg",
+        },
       ],
     },
     {
@@ -599,10 +627,6 @@ export const apiIntegrations = {
         {
           name: "HubSpot",
           src: "/images/api-integration/crm-irm-integrations/hubspot.png",
-        },
-        {
-          name: "Odoo",
-          src: "/images/api-integration/crm-irm-integrations/odoo.png",
         },
         {
           name: "Oracle",
@@ -643,14 +667,25 @@ export const certifications = {
     "Our team is equipped with industry-recognized certifications, ensuring top-quality services and cutting-edge expertise. From advanced technical skills to specialized domains, our certifications reflect our commitment to excellence and continuous growth.",
   logos: [
     { name: "aws-certified", src: "/images/certifications/aws-certified.png" },
-    { name: "blockchains", src: "/images/certifications/blockchains.png" },
+    {
+      name: "aws-generative-ai-developer",
+      src: "/images/certifications/aws-generative-ai-developer.png",
+    },
+    {
+      name: "aws-ml-engineer",
+      src: "/images/certifications/aws-ml-engineer.png",
+    },
+    {
+      name: "azure-ai-engineer",
+      src: "/images/certifications/azure-ai-engineer.png",
+    },
     {
       name: "google-cloud-certifications",
       src: "/images/certifications/google-cloud-certified.png",
     },
     {
-      name: "istqb",
-      src: "/images/certifications/ISTQB-International_original.png",
+      name: "google-cloud-ml",
+      src: "/images/certifications/google-cloud-ml.png",
     },
     { name: "magneto", src: "/images/certifications/magneto.png" },
     {

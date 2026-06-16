@@ -178,7 +178,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
 
   <CertificationsPage
     certifications={certifications.logos}
-    columns={3}
+    columns={4}
     highlight="Certifications"
     key="certifications"
     subtitle={certifications.subtitle}
