@@ -1,6 +1,5 @@
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
-import SmartImage from "../ui/smart-image";
 
 interface RecognitionLogo {
   name: string;
@@ -23,8 +22,8 @@ export default function SolutionsPage({
   highlight,
   kicker,
   paragraphs,
-  image,
-  imageLabel,
+  // image,
+  // imageLabel,
   recognitionLogos,
 }: SolutionsPageProps) {
   return (
@@ -40,8 +39,16 @@ export default function SolutionsPage({
               </p>
             ))}
           </div>
+        </div>
+        {/* right panel */}
+        <div className="flex w-[45%] items-center justify-center pr-14 pl-4">
+          {/* <SmartImage
+            className="h-[520px] w-full rounded-tl-[90px] rounded-br-[90px] shadow-lg"
+            label={imageLabel ?? "Photo"}
+            src={image}
+          /> */}
           {recognitionLogos && recognitionLogos.length > 0 && (
-            <div className="flex gap-6 px-14 pt-10">
+            <div className="flex flex-wrap gap-10 px-14 pt-10">
               {recognitionLogos.map((logo) => (
                 <img
                   alt={logo.name}
@@ -52,14 +59,6 @@ export default function SolutionsPage({
               ))}
             </div>
           )}
-        </div>
-        {/* right panel */}
-        <div className="flex w-[45%] items-center justify-center pr-14 pl-4">
-          <SmartImage
-            className="h-[520px] w-full rounded-tl-[90px] rounded-br-[90px] shadow-lg"
-            label={imageLabel ?? "Photo"}
-            src={image}
-          />
         </div>
       </div>
     </Page>
