@@ -39,9 +39,9 @@ export function DollarCircleIcon(props: IconProps) {
         fontSize="20"
         fontWeight="bold"
         stroke="none"
+        style={{ transformOrigin: "12px 12px" }}
         textAnchor="middle"
         transform="scale(1, 1.2)"
-        style={{ transformOrigin: "12px 12px" }}
         x="12"
         y="17"
       >

@@ -725,6 +725,16 @@ export const recognition = {
     },
     { name: "Trustpilot", src: "/images/recognition/trust-pilot.png" },
   ],
+  awards: [
+    {
+      name: "web development",
+      src: "/images/recognition/behemoths-2025/award-web-developement.png",
+    },
+    {
+      name: "wordpress",
+      src: "/images/recognition/behemoths-2025/award-wordpress.png",
+    },
+  ],
 };
 
 // Working models

@@ -7,6 +7,7 @@ interface RecognitionLogo {
 }
 
 export interface SolutionsPageProps extends Pick<PageProps, "pageNumber"> {
+  awardsLogos?: RecognitionLogo[];
   highlight?: string;
   image?: string;
   imageLabel?: string;
@@ -25,6 +26,7 @@ export default function SolutionsPage({
   // image,
   // imageLabel,
   recognitionLogos,
+  awardsLogos,
 }: SolutionsPageProps) {
   return (
     <Page pageNumber={pageNumber}>
@@ -39,6 +41,18 @@ export default function SolutionsPage({
               </p>
             ))}
           </div>
+          {awardsLogos && awardsLogos.length > 0 && (
+            <div className="flex flex-wrap gap-10 px-14 pt-10">
+              {awardsLogos.map((logo) => (
+                <img
+                  alt={logo.name}
+                  className="size-60 object-contain"
+                  key={logo.name}
+                  src={logo.src}
+                />
+              ))}
+            </div>
+          )}
         </div>
         {/* right panel */}
         <div className="flex w-[45%] items-center justify-center pr-14 pl-4">

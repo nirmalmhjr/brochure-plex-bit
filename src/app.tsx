@@ -69,6 +69,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   <SolutionsPage
     key="solutions"
     {...solutions}
+    awardsLogos={recognition.awards}
     image="/images/company-pictures/provide-solutions.png"
     recognitionLogos={recognition.logos}
   />,
