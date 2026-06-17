@@ -54,13 +54,13 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
   <IntroPage
     key="welcome"
     {...welcome}
-    image="/images/company-pictures/welcome-to-our-company.png"
+    image="/images/office/office-image-3.png"
     stamp={`Since ${company.since}`}
   />,
 
   <VisionMissionPage
     highlight="& Mission"
-    image="/images/company-pictures/image.png"
+    image="/images/office/office-image-2.png"
     items={visionMission}
     key="vision-mission"
     title="Company Vision"
@@ -76,7 +76,7 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
 
   <WhyChooseUsPage
     highlight="Choose Us?"
-    image="/images/company-pictures/company-profile.png"
+    image="/images/office/office-image-1.png"
     items={whyChooseUs}
     key="why-choose-us"
     title="Why You Should"
