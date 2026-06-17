@@ -33,7 +33,7 @@ export default function TimelinePage({
         {steps.map((step, i) => {
           const above = i % 2 === 1; // 02, 04 → card above the line
           const card = (
-            <div className="w-full rounded-2xl border border-zinc-100 bg-white p-4 text-center shadow-xl">
+            <div className="w-full rounded-2xl border border-zinc-100 bg-white p-4 text-center drop-shadow-lg">
               <h3 className="font-bold text-brand-dark text-sm leading-snug">
                 {step.title}
               </h3>

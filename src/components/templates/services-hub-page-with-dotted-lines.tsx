@@ -58,7 +58,7 @@ export default function ServicesHubPage({
         <h2 className="font-extrabold text-4xl leading-none tracking-tight">
           {title}{" "}
           {highlight && (
-            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
               {highlight}
             </span>
           )}

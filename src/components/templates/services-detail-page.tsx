@@ -44,10 +44,10 @@ export default function ServicesDetailPage({
       <div className="grid grid-cols-3 gap-4 px-14 pt-8">
         {categories.map((category, index) => (
           <div
-            className={`${tileLayout[index]} flex flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-md`}
+            className={`${tileLayout[index]} flex flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white drop-shadow-md`}
             key={category.title}
           >
-            <div className="bg-gradient-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
+            <div className="bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
               <h3 className="font-bold text-lg text-white leading-tight">
                 {category.title}
               </h3>
@@ -56,7 +56,7 @@ export default function ServicesDetailPage({
             <ul className="flex flex-1 flex-col gap-3 p-4">
               {category.items.map((item) => (
                 <li className="flex items-start gap-2" key={item}>
-                  <span className="mt-1.5 size-2 shrink-0 rounded-full bg-gradient-to-br from-brand to-fuchsia-500" />
+                  <span className="mt-1.5 size-2 shrink-0 rounded-full bg-linear-to-br from-brand to-fuchsia-500" />
                   <span className="text-sm text-zinc-600 leading-snug">
                     {item}
                   </span>

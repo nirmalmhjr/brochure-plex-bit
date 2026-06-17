@@ -51,7 +51,7 @@ export default function IconCardGridPage({
             const Icon = item.icon;
             return (
               <div
-                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-zinc-200/70 bg-white p-6 text-center shadow-sm transition-all hover:-translate-y-1 hover:border-purple-200 hover:shadow-xl"
+                className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-zinc-200/70 bg-white p-6 text-center drop-shadow-sm transition-all hover:-translate-y-1 hover:border-purple-200 hover:shadow-xl"
                 key={item.title}
               >
                 {/* oversized ghost icon for depth */}

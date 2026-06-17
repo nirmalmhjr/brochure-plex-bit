@@ -47,7 +47,7 @@ export default function HourlyModelPage({
               <h1 className="font-black text-3xl text-white leading-tight">
                 {title}
                 <br />
-                <span className="bg-linear-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent">
+                <span className="bg-linear-to-r from-fuchsia-300 to-purple-300 bg-clip-text text-transparent print:text-fuchsia-200">
                   {highlight}
                 </span>
               </h1>

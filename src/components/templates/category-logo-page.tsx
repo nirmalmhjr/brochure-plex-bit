@@ -124,7 +124,7 @@ export default function CategoryLogoPage({
         <div className="grid grid-cols-2 gap-5 px-14 pt-7">
           {categories.map((cat) => (
             <div
-              className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm"
+              className="overflow-hidden rounded-2xl border border-zinc-200 bg-white drop-shadow-sm"
               key={cat.label}
             >
               <div className="bg-linear-to-r from-brand to-brand-dark px-5 py-2.5">

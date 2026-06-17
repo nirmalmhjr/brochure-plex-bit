@@ -37,7 +37,7 @@ function Label({
   const alignClass = ALIGN_CLASS[align];
   return (
     <div
-      className={`w-65 rounded-2xl border-2 border-zinc-200 bg-tranparent p-3 shadow-xs ${alignClass} `}
+      className={`w-65 rounded-2xl border-2 border-zinc-200 bg-tranparent p-3 drop-shadow-xs ${alignClass} `}
     >
       <p className="font-bold text-base text-ink">{name}</p>
       <p className="mt-0.5 text-sm text-zinc-500 leading-snug">{address}</p>

@@ -22,7 +22,7 @@ export default function ContactPage() {
           <h2 className="font-extrabold text-5xl text-ink leading-tight tracking-tight">
             Get In Touch
             <br />
-            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
               With Us
             </span>
           </h2>
@@ -60,7 +60,7 @@ export default function ContactPage() {
           />
 
           <div className="absolute top-[55%] left-[64%]">
-            <div className="absolute -top-38 left-8 w-56 -translate-x-40 rounded-2xl bg-white px-5 py-3 text-center shadow-xl">
+            <div className="absolute -top-38 left-8 w-56 -translate-x-40 rounded-2xl bg-white px-5 py-3 text-center drop-shadow-xl">
               <p className="font-medium text-ink text-sm leading-snug">
                 {company.address}
               </p>

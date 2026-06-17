@@ -88,5 +88,12 @@ body {
   * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    box-shadow: none !important;
+  }
+  /* Chrome's PDF export leaves a hairline border around gradient/clipped
+     text (background-clip: text); drop the gradient and fall back to a
+     solid color (set per-element via the print:text-* utility) instead. */
+  .bg-clip-text {
+    background-image: none !important;
   }
 }
