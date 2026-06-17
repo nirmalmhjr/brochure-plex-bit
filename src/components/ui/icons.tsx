@@ -10,26 +10,6 @@ const base: IconProps = {
   className: "size-5",
 };
 
-// export function DollarCircleIcon(props: IconProps) {
-//   return (
-//     <svg aria-hidden="true" {...base} {...props} viewBox="0 0 24 24">
-//       <circle cx="12" cy="12" r="10" />
-//       <text
-//         x="12"
-//         y="16.5"
-//         textAnchor="middle"
-//         fontSize="11"
-//         fontWeight="bold"
-//         fontFamily="Georgia, serif"
-//         fill="currentColor"
-//         stroke="none"
-//       >
-//         $
-//       </text>
-//     </svg>
-//   );
-// }
-
 export function DollarCircleIcon(props: IconProps) {
   return (
     <svg aria-hidden="true" {...base} {...props} viewBox="0 0 24 24">
@@ -90,6 +70,37 @@ export function PeopleIcon(props: IconProps) {
       <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
       <circle cx="9" cy="7" r="4" />
       <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+    </svg>
+  );
+}
+
+export function GlobeIcon(props: IconProps) {
+  return (
+    <svg aria-hidden="true" {...base} {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <line x1="2" x2="22" y1="12" y2="12" />
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  );
+}
+
+export function BarChartIcon(props: IconProps) {
+  return (
+    <svg aria-hidden="true" {...base} {...props}>
+      <line x1="18" x2="18" y1="20" y2="10" />
+      <line x1="12" x2="12" y1="20" y2="4" />
+      <line x1="6" x2="6" y1="20" y2="14" />
+      <line x1="2" x2="22" y1="20" y2="20" />
+    </svg>
+  );
+}
+
+export function TargetIcon(props: IconProps) {
+  return (
+    <svg aria-hidden="true" {...base} {...props}>
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
     </svg>
   );
 }

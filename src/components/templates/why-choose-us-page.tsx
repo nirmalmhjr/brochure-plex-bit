@@ -1,32 +1,43 @@
 import type React from "react";
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
-import { DollarCircleIcon } from "../ui/icons";
+import {
+  BarChartIcon,
+  DollarCircleIcon,
+  GlobeIcon,
+  TargetIcon,
+} from "../ui/icons";
 import SmartImage from "../ui/smart-image";
 
+// const iconMap: Record<string, React.ReactNode> = {
+//   "🌐": (
+//     <img
+//       alt="globe"
+//       className="size-5 brightness-0 invert"
+//       src="/images/icons/globe.svg"
+//     />
+//   ),
+//   "📊": (
+//     <img
+//       alt="chart"
+//       className="size-5 brightness-0 invert"
+//       src="/images/icons/chart.svg"
+//     />
+//   ),
+//   "🎯": (
+//     <img
+//       alt="target"
+//       className="size-5 brightness-0 invert"
+//       src="/images/icons/target.svg"
+//     />
+//   ),
+//   "💰": <DollarCircleIcon className="size-5 text-white" />,
+// };
 const iconMap: Record<string, React.ReactNode> = {
-  "🌐": (
-    <img
-      alt="globe"
-      className="size-5 brightness-0 invert"
-      src="/images/icons/globe.svg"
-    />
-  ),
-  "📊": (
-    <img
-      alt="chart"
-      className="size-5 brightness-0 invert"
-      src="/images/icons/chart.svg"
-    />
-  ),
-  "🎯": (
-    <img
-      alt="target"
-      className="size-5 brightness-0 invert"
-      src="/images/icons/target.svg"
-    />
-  ),
-  "💰": <DollarCircleIcon className="size-5 text-white" />,
+  "🌐": <GlobeIcon className="size-6 text-blue-500" />,
+  "📊": <BarChartIcon className="size-6 text-emerald-500" />,
+  "🎯": <TargetIcon className="size-6 text-rose-500" />,
+  "💰": <DollarCircleIcon className="size-6 text-amber-500" />,
 };
 
 interface WhyChooseUsItem {
@@ -64,9 +75,15 @@ export default function WhyChooseUsPage({
                 className="overflow-hidden rounded-2xl border border-zinc-100 bg-white shadow-md"
                 key={item.title}
               >
-                {/* Dark banner: icon + title */}
-                <div className="flex items-center gap-3 bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
+                {/* <div className="flex items-center gap-3 bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
                   <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-white/20">
+                    {iconMap[item.icon as string]}
+                  </span>
+                  <h3 className="font-bold text-sm text-white">{item.title}</h3>
+                </div> */}
+                {/* <div className="flex items-center gap-3 bg-white px-4 py-3"> */}
+                <div className="flex items-center gap-3 bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-zinc-100">
                     {iconMap[item.icon as string]}
                   </span>
                   <h3 className="font-bold text-sm text-white">{item.title}</h3>
