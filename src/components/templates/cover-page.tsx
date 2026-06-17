@@ -58,7 +58,7 @@ export default function CoverPage({
         </div>
 
         {/* Right: logo + photo */}
-        <div className="flex w-4/6 flex-col items-end pt-24 pr-14">
+        <div className="flex w-4/6 flex-col items-end pt-24 pr-10">
           <BrandLogo variant="dark" />
           <img
             alt={imageLabel}

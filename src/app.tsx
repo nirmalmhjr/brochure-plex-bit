@@ -49,12 +49,12 @@ import {
  * assigned automatically from the array order (cover = 0, unnumbered).
  */
 const pages: ReactElement<{ pageNumber?: number }>[] = [
-  <CoverPage image="/images/cover/cover.png" key="cover" />,
+  <CoverPage image="/images/cover/cover.jpeg" key="cover" />,
 
   <IntroPage
     key="welcome"
     {...welcome}
-    image="/images/office/office-image-3.png"
+    image="/images/office/office-image-5.png"
     stamp={`Since ${company.since}`}
   />,
 
