@@ -1,5 +1,5 @@
 import { Globe, Mail, MapPin, Phone } from "lucide-react";
-import { company } from "../../data/brochure";
+import { company } from "../../data/company";
 import Page, { type PageProps } from "../layout/page";
 import SmartImage from "../ui/smart-image";
 

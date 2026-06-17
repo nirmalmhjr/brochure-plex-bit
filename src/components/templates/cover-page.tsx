@@ -1,4 +1,4 @@
-import { company } from "../../data/brochure";
+import { company } from "../../data/company";
 import Page, { type PageProps } from "../layout/page";
 import BrandLogo from "../ui/brand-logo";
 import SlashAccent from "../ui/slash-accent";
@@ -62,7 +62,7 @@ export default function CoverPage({
           <BrandLogo variant="dark" />
           <img
             alt={imageLabel}
-            className="h-130 w-fit shrink-0 object-contain p-0 pl-2"
+            className="mt-8 h-110 w-fit shrink-0 object-contain p-0 pl-2"
             src={image}
           />
         </div>

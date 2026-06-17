@@ -1,4 +1,4 @@
-import type { CaseStudy } from "../../data/brochure";
+import type { CaseStudy } from "../../data/case-studies";
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
 import SmartImage from "../ui/smart-image";

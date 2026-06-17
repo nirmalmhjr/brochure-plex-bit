@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import type { CaseStudy } from "../../data/brochure";
+import type { CaseStudy } from "../../data/case-studies";
 import Page, { type PageProps } from "../layout/page";
 import { ClockIcon, PeopleIcon } from "../ui/icons";
 import SmartImage from "../ui/smart-image";

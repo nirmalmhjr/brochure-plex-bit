@@ -1,4 +1,4 @@
-import { company } from "../../data/brochure";
+import { company } from "../../data/company";
 import { useImageFallback } from "./use-image-fallback";
 
 /**

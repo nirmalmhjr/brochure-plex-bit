@@ -1,4 +1,4 @@
-import { devOffices } from "../../data/brochure";
+import { devOffices } from "../../data/offices";
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
 

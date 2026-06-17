@@ -42,7 +42,7 @@ import {
   welcome,
   whyChooseUs,
   workflow,
-} from "./data/brochure";
+} from "./data";
 
 /**
  * The brochure. Reorder / add / remove pages here — page numbers are

@@ -1,4 +1,4 @@
-import type { Project, ProjectBadge } from "../../data/brochure";
+import type { Project, ProjectBadge } from "../../data/projects";
 import Page, { type PageProps } from "../layout/page";
 import SmartImage from "../ui/smart-image";
 
