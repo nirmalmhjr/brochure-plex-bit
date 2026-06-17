@@ -40,9 +40,9 @@ export const welcome = {
   image: "/images/brand/office.jpg",
   imageLabel: "Office Photo",
   paragraphs: [
-    "Plex Bit Infosystems started in 2019 in Amsterdam, where our head office leads strategy and global partnerships. Our development center in Nepal showcases exceptional talent and creativity.",
-    "We are a 360-degree software development company focused on solving client problems and driving business growth. With teams in the Netherlands, Nepal, and India, we bring together business expertise, technical skills, and industry insights.",
-    "We offer innovative solutions in Web App Development, E-Commerce, Cloud Services, Graphic Design, Digital Marketing, QA, and AI Chatbot Development.",
+    "Founded in 2019 in Amsterdam, Plex Bit Infosystems is a premier AI-first software development company. While we built our reputation on robust web and mobile foundations, we have strategically evolved into a powerhouse for artificial intelligence, dedicated to solving complex business challenges through innovation.",
+    "With a global presence across the Netherlands, Nepal, and India, we unite strategic business expertise with elite technical talent. Our core focus is delivering Advanced Machine Learning, Generative AI, NLP, and AI-driven automation that fuels operational growth.",
+    "Beyond core AI development, we provide comprehensive technology consulting, cloud-native infrastructure, and expert staff augmentation. Whether through custom data engineering, cloud modernization, or specialized AI integration, we bridge the gap between complex data and actionable results. At Plex Bit Infosystems, we don’t just build software; we architect the intelligent, scalable solutions necessary to thrive in an AI- driven future.",
   ],
 };
 

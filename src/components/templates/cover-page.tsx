@@ -3,20 +3,18 @@ import Page, { type PageProps } from "../layout/page";
 import BrandLogo from "../ui/brand-logo";
 import SlashAccent from "../ui/slash-accent";
 
-
 export interface CoverPageProps extends Pick<PageProps, "pageNumber"> {
   image?: string;
   imageLabel?: string;
   subtitle?: string;
   title?: string;
-
 }
 
 export default function CoverPage({
   title = "Company Profile",
   subtitle = company.tagline,
   // image = "/images/company-pictures/company-profile.png",
-  image ,
+  image,
   imageLabel = "Cover Photo",
 }: CoverPageProps) {
   return (
@@ -60,11 +58,11 @@ export default function CoverPage({
         </div>
 
         {/* Right: logo + photo */}
-        <div className="flex w-4/6 flex-col items-end pt-24 pr-14 ">
+        <div className="flex w-4/6 flex-col items-end pt-24 pr-14">
           <BrandLogo variant="dark" />
           <img
-            className="pl-2 h-130 w-fit object-contain shrink-0  p-0"
             alt={imageLabel}
+            className="h-130 w-fit shrink-0 object-contain p-0 pl-2"
             src={image}
           />
         </div>

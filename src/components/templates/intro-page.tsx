@@ -32,7 +32,7 @@ export default function IntroPage({
       <div className="flex h-full">
         <div className="flex w-7/12 flex-col">
           <PageHeader highlight={highlight} kicker={kicker} title={title} />
-          <div className="space-y-4 px-14 pt-6 text-sm text-zinc-600 leading-relaxed">
+          <div className="space-y-6 px-14 pt-6 text-sm text-zinc-600 leading-relaxed">
             {paragraphs.map((p) => (
               <p className="text-justify" key={p.slice(0, 24)}>
                 {p}
