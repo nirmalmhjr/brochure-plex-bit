@@ -2,19 +2,21 @@ import { company } from "../../data/brochure";
 import Page, { type PageProps } from "../layout/page";
 import BrandLogo from "../ui/brand-logo";
 import SlashAccent from "../ui/slash-accent";
-import SmartImage from "../ui/smart-image";
+
 
 export interface CoverPageProps extends Pick<PageProps, "pageNumber"> {
   image?: string;
   imageLabel?: string;
   subtitle?: string;
   title?: string;
+
 }
 
 export default function CoverPage({
   title = "Company Profile",
   subtitle = company.tagline,
-  image = "/images/company-pictures/company-profile.png",
+  // image = "/images/company-pictures/company-profile.png",
+  image ,
   imageLabel = "Cover Photo",
 }: CoverPageProps) {
   return (
@@ -25,7 +27,7 @@ export default function CoverPage({
 
       <div className="relative flex h-full">
         {/* Left: title block */}
-        <div className="flex w-1/2 flex-col pt-28 pl-16">
+        <div className="flex w-2/6 flex-col pt-28 pl-16">
           <h1 className="font-extrabold text-7xl text-ink leading-none tracking-tight">
             {title.split(" ").map((word) => (
               <span className="block" key={word}>
@@ -58,11 +60,11 @@ export default function CoverPage({
         </div>
 
         {/* Right: logo + photo */}
-        <div className="flex w-1/2 flex-col items-end pt-24 pr-14">
+        <div className="flex w-4/6 flex-col items-end pt-24 pr-14 ">
           <BrandLogo variant="dark" />
-          <SmartImage
-            className="mt-10 h-105 w-full rounded-tl-4xl rounded-br-4xl shadow-xl"
-            label={imageLabel}
+          <img
+            className="pl-2 h-130 w-fit object-contain shrink-0  p-0"
+            alt={imageLabel}
             src={image}
           />
         </div>
