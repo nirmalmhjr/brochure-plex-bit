@@ -1,17 +1,37 @@
+import type React from "react";
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
+import { DollarCircleIcon } from "../ui/icons";
 import SmartImage from "../ui/smart-image";
 
-const iconSrcMap: Record<string, string> = {
-  "🌐": "/images/icons/globe.svg",
-  "📊": "/images/icons/chart.svg",
-  "🎯": "/images/icons/target.svg",
-  "💰": "/images/icons/coin.svg",
+const iconMap: Record<string, React.ReactNode> = {
+  "🌐": (
+    <img
+      alt="globe"
+      className="size-5 brightness-0 invert"
+      src="/images/icons/globe.svg"
+    />
+  ),
+  "📊": (
+    <img
+      alt="chart"
+      className="size-5 brightness-0 invert"
+      src="/images/icons/chart.svg"
+    />
+  ),
+  "🎯": (
+    <img
+      alt="target"
+      className="size-5 brightness-0 invert"
+      src="/images/icons/target.svg"
+    />
+  ),
+  "💰": <DollarCircleIcon className="size-5 text-white" />,
 };
 
 interface WhyChooseUsItem {
   desc?: string;
-  icon: string;
+  icon: string | React.ReactNode;
   title: string;
 }
 
@@ -47,11 +67,7 @@ export default function WhyChooseUsPage({
                 {/* Dark banner: icon + title */}
                 <div className="flex items-center gap-3 bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
                   <span className="grid size-8 shrink-0 place-items-center rounded-lg bg-white/20">
-                    <img
-                      alt={item.title}
-                      className="size-5 brightness-0 invert"
-                      src={iconSrcMap[item.icon] ?? ""}
-                    />
+                    {iconMap[item.icon as string]}
                   </span>
                   <h3 className="font-bold text-sm text-white">{item.title}</h3>
                 </div>

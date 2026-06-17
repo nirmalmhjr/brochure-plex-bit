@@ -10,11 +10,43 @@ const base: IconProps = {
   className: "size-5",
 };
 
+// export function DollarCircleIcon(props: IconProps) {
+//   return (
+//     <svg aria-hidden="true" {...base} {...props} viewBox="0 0 24 24">
+//       <circle cx="12" cy="12" r="10" />
+//       <text
+//         x="12"
+//         y="16.5"
+//         textAnchor="middle"
+//         fontSize="11"
+//         fontWeight="bold"
+//         fontFamily="Georgia, serif"
+//         fill="currentColor"
+//         stroke="none"
+//       >
+//         $
+//       </text>
+//     </svg>
+//   );
+// }
+
 export function DollarCircleIcon(props: IconProps) {
   return (
-    <svg aria-hidden="true" {...base} {...props}>
-      <circle cx="12" cy="12" r="10" />
-      <path d="M12 6v2m0 8v2M9 9.5A2.5 2.5 0 0 1 12 7a2.5 2.5 0 0 1 0 5 2.5 2.5 0 0 0 0 5 2.5 2.5 0 0 0 3-2.5" />
+    <svg aria-hidden="true" {...base} {...props} viewBox="0 0 24 24">
+      <text
+        fill="currentColor"
+        fontFamily="Georgia, serif"
+        fontSize="20"
+        fontWeight="bold"
+        stroke="none"
+        textAnchor="middle"
+        transform="scale(1, 1.2)"
+        style={{ transformOrigin: "12px 12px" }}
+        x="12"
+        y="17"
+      >
+        $
+      </text>
     </svg>
   );
 }

@@ -42,7 +42,7 @@ export const welcome = {
   paragraphs: [
     "Plex Bit Infosystems started in 2019 in Amsterdam, where our head office leads strategy and global partnerships. Our development center in Nepal showcases exceptional talent and creativity.",
     "We are a 360-degree software development company focused on solving client problems and driving business growth. With teams in the Netherlands, Nepal, and India, we bring together business expertise, technical skills, and industry insights.",
-    "We offer innovative solutions in Web App Development, E-Commerce, Cloud Services, Blockchain, Graphic Design, Digital Marketing, QA, and AI Chatbot Development.",
+    "We offer innovative solutions in Web App Development, E-Commerce, Cloud Services, Graphic Design, Digital Marketing, QA, and AI Chatbot Development.",
   ],
 };
 
@@ -804,7 +804,7 @@ export const capabilities = {
     { title: "E-Commerce Platform Development" },
     { title: "Web & Mobile Application Development" },
     { title: "Graphics Designing" },
-    { title: "Blockchain Development" },
+    // { title: "Blockchain Development" },
     { title: "Hire Remote Developers" },
     { title: "IT Consulting" },
   ],
