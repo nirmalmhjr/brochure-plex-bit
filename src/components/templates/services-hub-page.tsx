@@ -16,9 +16,9 @@ export interface ServicesHubPageProps extends Pick<PageProps, "pageNumber"> {
 // r is the radius of the hub
 // spokeR is the radius of the spokes
 const HUB_X = 820;
-const HUB_Y = 320;
+const HUB_Y = 390;
 const HUB_R = 50;
-const SPOKE_R = 228;
+const SPOKE_R = 190;
 // Max services rendered around the hub (must be ≤ colors/icon paths available)
 const MAX_SPOKES = 5;
 const TICK_DEGREES = [
@@ -74,7 +74,7 @@ export default function ServicesHubPage({
   return (
     <Page pageNumber={pageNumber}>
       {/* ── LEFT PANEL ────────────────────────────────────────────────── */}
-      <div className="absolute top-0 left-0 flex h-full w-80 flex-col justify-center px-14">
+      <div className="absolute top-0 left-0 flex h-full w-100 flex-col justify-center px-14">
         <span className="mb-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-brand-soft px-4 py-1.5 font-bold text-brand-dark text-xs uppercase tracking-widest">
           <span className="size-1.5 rounded-full bg-brand" />
           What we offer
@@ -83,16 +83,16 @@ export default function ServicesHubPage({
         <h2 className="pt-6 font-extrabold text-4xl text-zinc-900 leading-tight tracking-tight">
           {title}{" "}
           {highlight && (
-            <span className="bg-gradient-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
               {highlight}
             </span>
           )}
         </h2>
 
         <div className="mt-4 flex items-center gap-2">
-          <div className="h-0.5 w-10 rounded-full bg-gradient-to-r from-brand to-fuchsia-400" />
-          <div className="h-0.5 w-4 rounded-full bg-brand/20" />
-          <div className="h-0.5 w-2 rounded-full bg-brand/10" />
+          <div className="h-0.5 w-12 rounded-full bg-linear-to-r from-brand to-fuchsia-400" />
+          <div className="h-0.5 w-8 rounded-full bg-brand/20" />
+          <div className="h-0.5 w-4 rounded-full bg-brand/10" />
         </div>
 
         {subtitle && (
@@ -102,7 +102,7 @@ export default function ServicesHubPage({
         )}
 
         <div className="mt-8 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-fuchsia-500 font-black text-base text-white shadow-brand/30 shadow-md">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-brand to-fuchsia-500 font-black text-base text-white shadow-brand/30 shadow-md">
             {items.length}
           </div>
           <span className="font-semibold text-sm text-zinc-600">
@@ -113,8 +113,8 @@ export default function ServicesHubPage({
             </span>
           </span>
         </div>
-
-        <div className="absolute top-16 right-0 h-4/5 w-px bg-gradient-to-b from-transparent via-brand/15 to-transparent" />
+        {/* right linear gradient border */}
+        <div className="absolute top-16 right-0 h-4/5 w-px bg-linear-to-b from-transparent via-brand/15 to-transparent" />
       </div>
 
       {/* ── RIGHT RADIAL DIAGRAM ──────────────────────────────────────── */}
@@ -239,6 +239,80 @@ export default function ServicesHubPage({
             />
           ))}
 
+          {/* Connector lines between icon tile and text card */}
+          {spokes.map((s, i) => {
+            const dir =
+              (["up", "right", "right-down", "left-down", "left"] as const)[
+                i
+              ] ?? "right";
+            const ICON_HALF = 28;
+            const GAP = 24;
+            const lineProps = {
+              stroke: s.color.from,
+              strokeWidth: "1.5",
+              strokeOpacity: "0.55",
+              strokeDasharray: "4 3",
+            };
+            if (dir === "up") {
+              return (
+                <line
+                  key={`conn-${s.title}`}
+                  {...lineProps}
+                  x1={s.x}
+                  x2={s.x}
+                  y1={s.y - ICON_HALF}
+                  y2={s.y - ICON_HALF - GAP}
+                />
+              );
+            }
+            if (dir === "right") {
+              return (
+                <line
+                  key={`conn-${s.title}`}
+                  {...lineProps}
+                  x1={s.x + ICON_HALF}
+                  x2={s.x + ICON_HALF + GAP}
+                  y1={s.y}
+                  y2={s.y}
+                />
+              );
+            }
+            if (dir === "right-down") {
+              return (
+                <line
+                  key={`conn-${s.title}`}
+                  {...lineProps}
+                  x1={s.x + ICON_HALF}
+                  x2={s.x + ICON_HALF + GAP}
+                  y1={s.y + 20}
+                  y2={s.y + 60}
+                />
+              );
+            }
+            if (dir === "left-down") {
+              return (
+                <line
+                  key={`conn-${s.title}`}
+                  {...lineProps}
+                  x1={s.x + ICON_HALF}
+                  x2={s.x - ICON_HALF - GAP}
+                  y1={s.y - 30}
+                  y2={s.y + 44}
+                />
+              );
+            }
+            return (
+              <line
+                key={`conn-${s.title}`}
+                {...lineProps}
+                x1={s.x - ICON_HALF}
+                x2={s.x - ICON_HALF - GAP}
+                y1={s.y}
+                y2={s.y}
+              />
+            );
+          })}
+
           {/* Hub — outer glow → dashed ring → translucent ring → solid fill */}
           <circle
             cx={HUB_X}
@@ -286,34 +360,69 @@ export default function ServicesHubPage({
           </text>
         </svg>
 
-        {/* ── Service cards ─────────────────────────────────────────────── */}
+        {/* ── Service icon tiles (centered on spoke tip) ───────────────── */}
         {spokes.map((s) => (
           <div
-            className="absolute flex w-50 flex-col items-center text-center"
-            key={s.title}
-            style={{ left: s.x - 76, top: s.y - 28, width: 152 }}
+            className="absolute grid size-14 place-items-center rounded-2xl"
+            key={`icon-${s.title}`}
+            style={{
+              left: s.x - 28,
+              top: s.y - 28,
+              background: `linear-gradient(135deg, ${s.color.from}, ${s.color.to})`,
+              boxShadow: `0 6px 18px ${s.color.glow}, 0 2px 4px rgba(0,0,0,0.10)`,
+            }}
           >
-            {/* Gradient icon tile with SVG icon */}
-            <div
-              className="grid size-14 place-items-center rounded-2xl"
-              style={{
-                background: `linear-gradient(135deg, ${s.color.from}, ${s.color.to})`,
-                boxShadow: `0 6px 18px ${s.color.glow}, 0 2px 4px rgba(0,0,0,0.10)`,
-              }}
+            <svg
+              aria-hidden="true"
+              fill="white"
+              height="26"
+              viewBox="0 0 24 24"
+              width="26"
             >
-              <svg
-                aria-hidden="true"
-                fill="white"
-                height="26"
-                viewBox="0 0 24 24"
-                width="26"
-              >
-                <path d={s.iconPath} />
-              </svg>
-            </div>
+              <path d={s.iconPath} />
+            </svg>
+          </div>
+        ))}
 
-            {/* Info card */}
-            <div className="mt-2 w-full rounded-xl border border-zinc-200/80 bg-white px-3 py-2 shadow-md">
+        {/* ── Service text cards (direction based on spoke position) ────── */}
+        {spokes.map((s, i) => {
+          // 1=top, 2=upper-right, 3=lower-right, 4=lower-left, 5=upper-left
+          const dir =
+            (["up", "right", "right-down", "left-down", "left"] as const)[i] ??
+            "right";
+          const W = 150;
+          const ICON_HALF = 28; // size-14 = 56px
+          const GAP = 24;
+          let style: React.CSSProperties;
+          if (dir === "up") {
+            style = {
+              left: s.x - W / 2,
+              top: s.y - ICON_HALF - GAP - 120,
+              width: W,
+            };
+          } else if (dir === "right") {
+            style = { left: s.x + ICON_HALF + GAP, top: s.y - 36, width: W };
+          } else if (dir === "right-down") {
+            style = { left: s.x + ICON_HALF + GAP, top: s.y + 8, width: W };
+          } else if (dir === "left-down") {
+            style = {
+              left: s.x - ICON_HALF - GAP - W,
+              top: s.y + 8,
+              width: W,
+            };
+          } else {
+            style = {
+              left: s.x - ICON_HALF - GAP - W,
+              top: s.y - 36,
+              width: W,
+            };
+          }
+          return (
+            <div
+              className="absolute rounded-xl border border-zinc-200/80 bg-white px-3 py-2 shadow-md"
+              key={`card-${s.title}`}
+              style={style}
+            >
               <span className="block font-bold text-sm text-zinc-800 leading-tight">
                 {s.title}
               </span>
@@ -323,8 +432,8 @@ export default function ServicesHubPage({
                 </span>
               )}
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Page>
   );
