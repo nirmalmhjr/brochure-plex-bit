@@ -1,6 +1,7 @@
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
 import SmartImage from "../ui/smart-image";
+import { renderBold } from "../../hook/renderBold";
 
 export interface IntroPageProps extends Pick<PageProps, "pageNumber"> {
   highlight?: string;
@@ -11,13 +12,6 @@ export interface IntroPageProps extends Pick<PageProps, "pageNumber"> {
   /** Big text shown under the paragraphs, e.g. "Since 2019". */
   stamp?: string;
   title: string;
-}
-
-function renderBold(text: string) {
-  const parts = text.split(/\*\*(.*?)\*\*/g);
-  return parts.map((part, i) =>
-    i % 2 === 1 ? <strong key={`bold-${part}`}>{part}</strong> : part
-  );
 }
 
 /**
