@@ -15,7 +15,7 @@ export const projectPages: {
   title: string;
   highlight: string;
   // Category blurb shown on the left panel of the showcase page.
-  subtitle?: string;
+  subtitle?: string[];
   // Capability chips shown on the left panel of the showcase page.
   tags?: string[];
   projects: Project[];
@@ -23,8 +23,11 @@ export const projectPages: {
   {
     title: "Our",
     highlight: "Projects",
-    subtitle:
-      "We build innovative mobile and digital products that delight users and deliver real business value across platforms.",
+    subtitle: [
+      "At Plex Bit Infosystems, we transform ideas into innovative digital products that solve real-world challenges and create lasting business value. Every project is built with a focus on quality, scalability, and exceptional user experiences.",
+
+      "Our portfolio spans multiple industries and technologies, reflecting our ability to deliver tailored solutions that drive growth, improve efficiency, and help businesses stay ahead in a rapidly evolving digital landscape.",
+    ],
     tags: [
       "iOS Apps",
       "Android Apps",
@@ -76,8 +79,11 @@ export const projectPages: {
   {
     title: "Web Development",
     highlight: "Highlights",
-    subtitle:
-      "We craft scalable, high-performance web applications and platforms that streamline operations, automate workflows, and grow with your business.",
+    subtitle: [
+      "We build modern web applications that combine performance, security, and scalability to support long-term business success. From custom platforms to enterprise-grade systems, our solutions are designed to streamline operations and enhance productivity.",
+
+      "Using the latest technologies and development practices, we create reliable digital experiences that adapt to changing business needs while delivering seamless performance across devices and platforms.",
+    ],
     tags: [
       "Custom Web Apps",
       "SaaS Platforms",
@@ -129,8 +135,11 @@ export const projectPages: {
   {
     title: "E-Commerce",
     highlight: "Highlights",
-    subtitle:
-      "We build seamless online shopping experiences that drive conversions, optimize operations, and scale effortlessly across markets and devices.",
+    subtitle: [
+      "We create engaging e-commerce experiences that help brands attract customers, increase conversions, and grow their online presence. Every solution is designed to deliver a seamless shopping journey from product discovery to checkout.",
+
+      "From secure payment integrations to inventory and order management systems, we build scalable platforms that empower businesses to operate efficiently and expand confidently across markets.",
+    ],
     tags: [
       "Online Stores",
       "Marketplaces",
@@ -182,8 +191,11 @@ export const projectPages: {
   {
     title: "AI Development",
     highlight: "Highlights",
-    subtitle:
-      "We engineer intelligent solutions powered by machine learning, data analytics, and automation to unlock smarter decisions and richer experiences.",
+    subtitle: [
+      "We develop intelligent AI-powered solutions that help businesses automate processes, uncover valuable insights, and make smarter decisions. Our expertise spans machine learning, predictive analytics, and intelligent automation.",
+
+      "By transforming complex data into actionable outcomes, we enable organizations to improve efficiency, enhance customer experiences, and unlock new opportunities for innovation and growth.",
+    ],
     tags: [
       "Machine Learning",
       "Predictive Analytics",
@@ -221,8 +233,11 @@ export const projectPages: {
   {
     title: "Website Design",
     highlight: "Highlights",
-    subtitle:
-      "We design pixel-perfect, conversion-focused websites that blend bold visuals with intuitive experiences to elevate your brand online.",
+    subtitle: [
+      "We design visually stunning websites that combine creativity, functionality, and user-centered thinking. Every design is crafted to strengthen brand identity while delivering engaging and intuitive digital experiences.",
+
+      "From corporate websites to conversion-focused landing pages, we create responsive designs that build trust, improve engagement, and leave a lasting impression on your audience.",
+    ],
     tags: [
       "UI/UX Design",
       "Responsive Design",

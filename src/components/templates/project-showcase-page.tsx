@@ -12,7 +12,7 @@ import SmartImage from "../ui/smart-image";
 export interface ProjectShowcasePageProps
   extends Pick<PageProps, "pageNumber"> {
   projects: Project[];
-  subtitle?: string;
+  subtitle?: string | string[];
   tags?: string[];
   title: string;
 }
@@ -173,9 +173,11 @@ export default function ProjectShowcasePage({
 
           {/* Description */}
           {subtitle && (
-            <p className="relative mt-8 text-sm text-zinc-500 leading-relaxed">
-              {subtitle}
-            </p>
+            <div className="relative mt-8 space-y-3 text-sm text-zinc-500 leading-relaxed">
+              {(Array.isArray(subtitle) ? subtitle : [subtitle]).map((para) => (
+                <p key={para}>{para}</p>
+              ))}
+            </div>
           )}
 
           {/* Capability chips */}
