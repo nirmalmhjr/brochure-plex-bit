@@ -52,7 +52,7 @@ export default function VisionMissionPage({
           <div className="mx-2 w-px self-stretch bg-linear-to-b from-transparent via-brand/20 to-transparent" />
 
           {/* Right: Vision + Mission */}
-          <div className="flex w-7/12 flex-col justify-center gap-7 pl-8">
+          <div className="flex w-7/12 flex-col justify-center gap-10 pl-8">
             {items.map((item) => {
               const Icon = item.icon;
               return (
