@@ -11,7 +11,7 @@ export interface CaseStudyDetailPageProps
   study: CaseStudy;
 }
 
-/* ── Icon assets (kept as files in /public/images/icons, not inline) ──── */
+// Icon assets (kept as files in /public/images/icons, not inline)
 const WEBSITE_ICON = "/images/icons/globe.svg";
 const APP_STORE_ICON = "/images/icons/apple.svg";
 const GOOGLE_PLAY_ICON = "/images/icons/google-play.svg";
@@ -170,14 +170,6 @@ export default function CaseStudyDetailPage({
 
         {/*  project facts */}
         <div className="flex min-w-0 flex-1 flex-col">
-          {/* Eyebrow */}
-          {/* <div className="mb-3 flex items-center justify-between">
-            <span className="font-bold text-brand text-xs uppercase tracking-widest">
-              Case Study{index ? ` · 0${index}` : ""}
-            </span>
-            <span className="h-1 w-16 rounded-full bg-gradient-to-r from-brand to-fuchsia-400" />
-          </div> */}
-
           {/* Pills: team size + time frame */}
           <div className="grid grid-cols-2 gap-3">
             <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand to-brand-dark px-4 py-2.5 text-white shadow-sm">

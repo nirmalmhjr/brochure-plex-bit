@@ -2,11 +2,13 @@
 export type ProjectBadge = "case-study" | "app-store" | "google-play" | "web";
 
 export interface Project {
+  appStore?: string;
   // Link / availability badges rendered under the project card.
   badges?: ProjectBadge[];
-  desc: string;
+  desc: string | string[];
   image?: string;
   name: string;
+  playStore?: string;
   // Live site URL, shown on the "Visit on Web" badge.
   url?: string;
 }

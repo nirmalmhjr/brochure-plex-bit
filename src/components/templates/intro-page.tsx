@@ -13,6 +13,13 @@ export interface IntroPageProps extends Pick<PageProps, "pageNumber"> {
   title: string;
 }
 
+function renderBold(text: string) {
+  const parts = text.split(/\*\*(.*?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={`bold-${part}`}>{part}</strong> : part
+  );
+}
+
 /**
  * Title + rich text on the left, large image on the right.
  * Used for: Welcome, We Provide Solutions, …
@@ -35,7 +42,7 @@ export default function IntroPage({
           <div className="space-y-6 px-14 pt-6 text-sm text-zinc-600 leading-relaxed">
             {paragraphs.map((p) => (
               <p className="text-justify" key={p.slice(0, 24)}>
-                {p}
+                {renderBold(p)}
               </p>
             ))}
           </div>

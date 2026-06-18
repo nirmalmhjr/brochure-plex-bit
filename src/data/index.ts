@@ -23,6 +23,7 @@ export { recognition } from "./recognition";
 export { serviceDetails, services } from "./services";
 export { solutions } from "./solutions";
 export { stats } from "./stats";
+export { striide } from "./striide";
 export { coreTeam, representatives } from "./team";
 export { techStack } from "./tech-stack";
 export { visionMission } from "./vision-mission";

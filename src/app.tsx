@@ -11,6 +11,7 @@ import IconCardGridPage from "./components/templates/icon-card-grid-page";
 import IntroPage from "./components/templates/intro-page";
 import LogoGridPage from "./components/templates/logo-grid-page";
 import OfficesPage from "./components/templates/offices-page";
+import ProjectHighlightPageTemplateTwo from "./components/templates/project-highlight-page-template-2";
 import ProjectShowcasePage from "./components/templates/project-showcase-page";
 import ServicesDetailPage from "./components/templates/services-detail-page";
 import ServicesHubPage from "./components/templates/services-hub-page";
@@ -37,6 +38,7 @@ import {
   services,
   solutions,
   stats,
+  striide,
   techStack,
   visionMission,
   welcome,
@@ -191,6 +193,8 @@ const pages: ReactElement<{ pageNumber?: number }>[] = [
       study={study}
     />
   )),
+
+  <ProjectHighlightPageTemplateTwo key="striide" project={striide} />,
 
   // All project groups — showcase layout: category panel on the left,
   // two project cards stacked on the right. One page per group, showing
