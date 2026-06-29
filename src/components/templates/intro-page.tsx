@@ -1,7 +1,7 @@
+import { renderBold } from "../../hook/render-bold";
 import Page, { type PageProps } from "../layout/page";
 import PageHeader from "../layout/page-header";
 import SmartImage from "../ui/smart-image";
-import { renderBold } from "../../hook/renderBold";
 
 export interface IntroPageProps extends Pick<PageProps, "pageNumber"> {
   highlight?: string;

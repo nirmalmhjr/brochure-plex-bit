@@ -88,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
     desc: "Tawuniya, established in 1986, was the first national insurance company in Saudi Arabia to operate under the cooperative insurance model. It provides a wide range of insurance services, including health, motor, and property, and is regulated by the Saudi Central Bank (SAMA).",
     tech: [
       "/images/technology-stack/frontend/reactjs.png",
-      "/images/case-studies/tech-stack-icons/flutter.jpeg",
+      "/images/case-studies/tech-stack-icons/flutter.png",
       "/images/case-studies/tech-stack-icons/oracle-pl-sql.jpg",
       "/images/case-studies/tech-stack-icons/web-methods.webp",
       "/images/case-studies/tech-stack-icons/ui-path.png",

@@ -30,7 +30,7 @@ export const techStack = {
         },
         {
           name: "Flutter",
-          src: "/images/technology-stack/frontend/flutter.jpeg",
+          src: "/images/technology-stack/frontend/flutter.png",
         },
         {
           name: "JavaScript",
