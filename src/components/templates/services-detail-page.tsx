@@ -47,7 +47,7 @@ export default function ServicesDetailPage({
             className={`${tileLayout[index]} flex flex-col overflow-hidden rounded-2xl border border-zinc-100 bg-white drop-shadow-md`}
             key={category.title}
           >
-            <div className="bg-linear-to-br from-brand-deep via-brand to-fuchsia-500 px-4 py-3">
+            <div className="bg-linear-to-br from-brand-dark via-brand to-brand/90 px-4 py-3">
               <h3 className="font-bold text-lg text-white leading-tight">
                 {category.title}
               </h3>

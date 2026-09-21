@@ -83,7 +83,7 @@ export default function ServicesHubPage({
         <h2 className="pt-6 font-extrabold text-4xl text-zinc-700 leading-tight tracking-tight">
           {title}{" "}
           {highlight && (
-            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-brand/90 bg-clip-text text-transparent print:text-brand">
               {highlight}
             </span>
           )}
@@ -102,7 +102,7 @@ export default function ServicesHubPage({
         )}
 
         <div className="mt-8 flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-brand to-fuchsia-500 font-black text-base text-white shadow-brand/30 shadow-md">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-brand-dark via-brand to-brand/90 font-black text-base text-white shadow-brand/30 shadow-md">
             {items.length}
           </div>
           <span className="font-semibold text-sm text-zinc-600">

@@ -97,7 +97,7 @@ export default function ProjectHighlightPageTemplateTwo({
           </div>
 
           {/* Footer: website + optional store badges */}
-          <div className="mt-4 bg-linear-to-r from-brand-deep via-brand-dark to-brand px-5 py-3.5">
+          <div className="mt-4 bg-linear-to-r from-brand-dark via-brand to-brand-90 to-brand/90 px-5 py-3.5">
             <div className="flex flex-wrap items-center gap-2">
               {project.url && (
                 <a

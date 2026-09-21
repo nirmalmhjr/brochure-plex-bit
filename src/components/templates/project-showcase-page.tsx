@@ -160,7 +160,7 @@ export default function ProjectShowcasePage({
 
           {/* Icon + heading */}
           <div className="relative flex items-center gap-4">
-            <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-linear-to-br from-brand to-brand-dark shadow-lg">
+            <div className="grid size-16 shrink-0 place-items-center rounded-2xl bg-linear-to-br from-brand/80 via-brand to-brand-dark shadow-lg">
               <img alt="" className="size-8" src={categoryIcon(title)} />
             </div>
             <div>

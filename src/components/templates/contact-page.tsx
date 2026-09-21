@@ -19,7 +19,7 @@ export default function ContactPage() {
         {/* Left: contact details */}
         <div className="flex w-2/5 flex-col justify-center pl-16">
           <div className="mb-3 h-1.5 w-16 rounded-full bg-brand" />
-          <h2 className="font-extrabold text-5xl text-ink leading-tight tracking-tight">
+          <h2 className="font-extrabold text-5xl text-zinc-800 leading-tight tracking-tight">
             Get In Touch
             <br />
             <span className="bg-linear-to-r from-brand-dark via-brand to-brand/80 bg-clip-text text-transparent print:text-brand">
@@ -43,7 +43,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-9 inline-flex w-fit rounded-2xl bg-linear-to-br from-brand-deep/80 via-brand/90 to-fuchsia-500 px-8 py-4">
+          <div className="mt-9 inline-flex w-fit rounded-2xl bg-linear-to-br from-brand-deep/80 via-brand/90 to-brand/90 px-8 py-4">
             <p className="font-semibold text-white text-xl italic">
               “{company.tagline}”
             </p>

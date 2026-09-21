@@ -122,7 +122,7 @@ export default function DedicatedModelPage({
         <div className="relative flex flex-1 flex-col justify-center bg-linear-to-br from-white to-brand-soft/30 py-10 pr-10 pl-10">
           <div className="pointer-events-none absolute -right-16 -bottom-16 size-64 rounded-full bg-brand/5" />
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-6">
             {items.slice(0, 6).map((item, i) => {
               const accent = ACCENT_COLORS[i % ACCENT_COLORS.length];
               const icon = ITEM_ICONS[item.title];
@@ -142,7 +142,7 @@ export default function DedicatedModelPage({
                     )}
                   </span>
                   <div>
-                    <p className="font-bold text-brand-dark text-sm leading-snug">
+                    <p className="font-bold text-brand text-base leading-snug">
                       {item.title}
                     </p>
                     {item.desc && (

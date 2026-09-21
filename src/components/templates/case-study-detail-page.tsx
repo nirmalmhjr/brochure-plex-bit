@@ -132,7 +132,7 @@ export default function CaseStudyDetailPage({
           )}
 
           {/* Footer: website + optional store badges + caption */}
-          <div className="mt-4 bg-linear-to-r from-brand-deep via-brand-dark to-brand px-5 py-3.5">
+          <div className="mt-4 bg-linear-to-r from-brand-dark via-brand to-brand/90 px-5 py-3.5">
             <div className="flex flex-wrap items-center gap-2">
               {study.website && (
                 <a
@@ -172,13 +172,13 @@ export default function CaseStudyDetailPage({
         <div className="flex min-w-0 flex-1 flex-col">
           {/* Pills: team size + time frame */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand to-brand-dark px-4 py-2.5 text-white shadow-sm">
+            <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand-dark via-brand to-brand/90 px-4 py-2.5 text-white shadow-sm">
               <PeopleIcon className="size-4" />
               <span className="font-bold text-xs">
                 Team Size: {study.teamSize}
               </span>
             </div>
-            <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand-dark to-brand-deep px-4 py-2.5 text-white shadow-sm">
+            <div className="flex items-center gap-2.5 rounded-xl bg-linear-to-r from-brand-dark via-brand to-brand/90 px-4 py-2.5 text-white shadow-sm">
               <ClockIcon className="size-4" />
               <span className="font-bold text-xs">Time Frame:</span>
               <span className="font-bold text-xs">{study.timeFrame}</span>

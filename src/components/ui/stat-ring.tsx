@@ -19,13 +19,13 @@ export default function StatRing({
           width: sizePx,
           height: sizePx,
           background:
-            "conic-gradient(from 200deg, #7e22ce, #d946ef 55%, #ede9fe 55% 100%)",
+            "conic-gradient(from 200deg, var(--color-brand-dark), var(--color-brand) 47%, var(--color-brand-soft) 55% 100%)",
         }}
       >
         <div className="grid size-full place-items-center rounded-full bg-white">
           <div className="text-center">
             <p
-              className="font-extrabold text-brand-dark leading-none"
+              className="font-extrabold text-brand leading-none"
               style={{ fontSize }}
             >
               {value}

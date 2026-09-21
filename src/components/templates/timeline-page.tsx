@@ -34,10 +34,10 @@ export default function TimelinePage({
           const above = i % 2 === 1; // 02, 04 → card above the line
           const card = (
             <div className="w-full rounded-2xl border border-zinc-100 bg-white p-4 text-center drop-shadow-lg">
-              <h3 className="font-bold text-brand-dark text-sm leading-snug">
+              <h3 className="font-bold text-brand text-sm leading-snug">
                 {step.title}
               </h3>
-              <div className="mx-auto mt-2 h-0.5 w-8 rounded-full bg-linear-to-r from-brand to-fuchsia-400" />
+              <div className="mx-auto mt-2 h-0.5 w-8 rounded-full bg-linear-to-r from-brand-dark via-brand to-brand/90 " />
               <p className="mt-2 text-xs text-zinc-500 leading-relaxed">
                 {step.desc}
               </p>
@@ -78,7 +78,7 @@ export default function TimelinePage({
                     </span>
                   </>
                 )}
-                <span className="grid size-12 rotate-45 place-items-center rounded-xl bg-linear-to-br from-brand-dark via-brand to-fuchsia-500 shadow-brand/40 shadow-lg ring-4 ring-brand-soft">
+                <span className="grid size-12 rotate-45 place-items-center rounded-xl bg-linear-to-br from-brand-dark via-brand to-brand/90 shadow-brand/40 shadow-lg ring-4 ring-brand-soft">
                   <span className="-rotate-45 font-extrabold text-base text-white">
                     {String(i + 1).padStart(2, "0")}
                   </span>

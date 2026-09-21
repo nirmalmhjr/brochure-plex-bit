@@ -60,7 +60,7 @@ export default function IconCardGridPage({
                   className="pointer-events-none absolute -right-3 -bottom-3 size-24 text-purple-100/70 transition-colors group-hover:text-purple-200/70"
                   strokeWidth={1.25}
                 />
-                <span className="relative flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-800 via-brand to-fuchsia-500 text-white shadow-lg shadow-purple-700/25 transition-transform group-hover:scale-105">
+                <span className="relative flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-dark via-brand to-brand/90 text-white shadow-lg shadow-purple-700/25 transition-transform group-hover:scale-105">
                   <Icon size={26} strokeWidth={1.75} />
                 </span>
                 <h3 className="relative mt-4 font-bold text-base text-zinc-900 tracking-tight">
@@ -71,7 +71,7 @@ export default function IconCardGridPage({
                     {item.desc}
                   </p>
                 )}
-                <span className="relative mt-3 h-1 w-8 rounded-full bg-gradient-to-r from-purple-700 to-fuchsia-400 transition-all group-hover:w-14" />
+                <span className="relative mt-3 h-1 w-8 rounded-full bg-gradient-to-r from-brand-dark  to-brand/80 transition-all group-hover:w-14" />
               </div>
             );
           })}
