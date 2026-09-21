@@ -22,7 +22,7 @@ export default function ContactPage() {
           <h2 className="font-extrabold text-5xl text-ink leading-tight tracking-tight">
             Get In Touch
             <br />
-            <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
+            <span className="bg-linear-to-r from-brand-dark via-brand to-brand/80 bg-clip-text text-transparent print:text-brand">
               With Us
             </span>
           </h2>

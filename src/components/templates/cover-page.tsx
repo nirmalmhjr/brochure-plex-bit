@@ -26,7 +26,7 @@ export default function CoverPage({
       <div className="relative flex h-full">
         {/* Left: title block */}
         <div className="flex w-2/6 flex-col pt-28 pl-16">
-          <h1 className="font-extrabold text-7xl text-ink leading-none tracking-tight">
+          <h1 className="font-extrabold text-7xl text-zinc-800 leading-none tracking-tight">
             {title.split(" ").map((word) => (
               <span className="block" key={word}>
                 {word}

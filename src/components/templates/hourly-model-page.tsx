@@ -33,7 +33,7 @@ export default function HourlyModelPage({
           }}
         >
           <div
-            className="relative flex h-full flex-col justify-between bg-brand-deep px-10 py-12"
+            className="relative flex h-full flex-col justify-between bg-[color-mix(in_srgb,var(--color-brand)_80%,black)] px-10 py-12"
             style={{ clipPath: "polygon(0 0, 100% 0, 82% 100%, 0 100%)" }}
           >
             {/* decorative blobs */}
@@ -99,7 +99,7 @@ export default function HourlyModelPage({
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <p className="font-bold text-brand-dark text-sm leading-snug">
+                    <p className="font-bold text-brand text-base leading-snug">
                       {item.title}
                     </p>
                     {item.desc && (
@@ -126,7 +126,7 @@ export default function HourlyModelPage({
                     {String(i + 4).padStart(2, "0")}
                   </span>
                   <div>
-                    <p className="font-bold text-brand-dark text-sm leading-snug">
+                    <p className="font-bold text-brand text-base leading-snug">
                       {item.title}
                     </p>
                     {item.desc && (

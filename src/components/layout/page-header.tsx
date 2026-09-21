@@ -25,9 +25,9 @@ export default function PageHeader({
         </span>
       )}
       <h2 className="font-extrabold text-4xl leading-none tracking-tight">
-        {title}{" "}
+        <span className="text-zinc-700">{title} </span>
         {highlight && (
-          <span className="bg-linear-to-r from-brand-dark via-brand to-fuchsia-500 bg-clip-text text-transparent print:text-brand">
+          <span className="bg-linear-to-r from-brand via-brand to-brand/90 bg-clip-text text-transparent print:text-brand">
             {highlight}
           </span>
         )}

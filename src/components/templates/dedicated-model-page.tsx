@@ -74,7 +74,7 @@ export default function DedicatedModelPage({
           }}
         >
           <div
-            className="relative flex h-full flex-col justify-between bg-brand-deep px-10 py-12"
+            className="relative flex h-full flex-col justify-between bg-[color-mix(in_srgb,var(--color-brand)_65%,black)] px-10 py-12"
             style={{ clipPath: "polygon(0 0, 100% 0, 82% 100%, 0 100%)" }}
           >
             <div className="pointer-events-none absolute -top-14 -right-10 size-52 rounded-full bg-brand/40" />

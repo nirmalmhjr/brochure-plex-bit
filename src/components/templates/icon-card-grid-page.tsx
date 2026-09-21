@@ -60,7 +60,7 @@ export default function IconCardGridPage({
                   className="pointer-events-none absolute -right-3 -bottom-3 size-24 text-purple-100/70 transition-colors group-hover:text-purple-200/70"
                   strokeWidth={1.25}
                 />
-                <span className="relative flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-800 via-purple-700 to-fuchsia-500 text-white shadow-lg shadow-purple-700/25 transition-transform group-hover:scale-105">
+                <span className="relative flex size-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-800 via-brand to-fuchsia-500 text-white shadow-lg shadow-purple-700/25 transition-transform group-hover:scale-105">
                   <Icon size={26} strokeWidth={1.75} />
                 </span>
                 <h3 className="relative mt-4 font-bold text-base text-zinc-900 tracking-tight">
