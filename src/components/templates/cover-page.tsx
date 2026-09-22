@@ -1,3 +1,4 @@
+import { Globe } from "lucide-react";
 import { company } from "../../data/company";
 import Page, { type PageProps } from "../layout/page";
 import BrandLogo from "../ui/brand-logo";
@@ -43,8 +44,8 @@ export default function CoverPage({
           <SlashAccent className="mt-8" />
 
           <div className="mt-auto mb-12 flex items-center gap-3">
-            <span className="grid size-10 place-items-center rounded-full bg-brand text-lg text-white">
-              🌐
+            <span className="grid size-10 place-items-center rounded-full bg-brand text-white">
+              <Globe size={18} />
             </span>
             <div className="leading-tight">
               <p className="font-semibold text-xs text-zinc-400 uppercase tracking-widest">

@@ -16,7 +16,7 @@ export default function BrandLogo({
   const src =
     variant === "light"
       ? "/images/brand/logo-white.png"
-      : "/images/brand/logo.svg";
+      : "/images/brand/logo.png";
   const { failed, ref } = useImageFallback(src);
   const text = variant === "light" ? "text-white" : "text-brand-dark";
   const sub = variant === "light" ? "text-white/70" : "text-zinc-500";
